@@ -2,8 +2,13 @@
 title: Module's Requirements
 ---
 
+## Introduction
+
+This orientation sensor module is designed to provide reliable tilt and acceleration data for the rover system. The module integrates a 3-axis digital accelerometer with a microcontroller to measure orientation across X, Y, and Z axes. Built around a surface-mounted design philosophy, the module operates entirely at 3.3V and communicates with the main rover controller via standard serial protocols (UART or I²C). This document outlines the technical requirements that guide the design, component selection, and implementation of the orientation sensing subsystem.
+
 ## Module Requirements
-The following sections document the requirements that the this module need to fulfills to .....
+
+The following table documents the requirements that this module must fulfill to successfully integrate with the rover system and provide accurate orientation data.
 
 | **Requirement Description**                     | **Measure of Threshold**                     | **Target Measure**                        | **Stretch Requirement (Y-N)** |
 | ----------------------------------------------- | -------------------------------------------- | ----------------------------------------- | ----------------------------- |
