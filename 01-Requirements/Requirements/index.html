@@ -830,35 +830,71 @@
 <thead>
 <tr>
 <th><strong>Requirement Description</strong></th>
-<th><strong>Measure of<br> Threshold</strong></th>
-<th><strong>Target<br>Measure</strong></th>
-<th style="text-align: center;"><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
+<th><strong>Measure of Threshold</strong></th>
+<th><strong>Target Measure</strong></th>
+<th><strong>Stretch Requirement (Y-N)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Surface mounted, 3.3V switching power regulatore</td>
-<td>3.2 Volts</td>
-<td>3.3 Volts</td>
-<td style="text-align: center;">No</td>
+<td>Surface-mounted 3.3 V switching power regulator</td>
+<td>Output ≥ 3.2 V under load</td>
+<td>Regulated 3.3 V output</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Surface mounted microcontroller</td>
-<td>1 PIC or ESP</td>
-<td>8-bit PIC</td>
-<td style="text-align: center;">No</td>
+<td>Surface-mounted microcontroller</td>
+<td>One MCU operating at 3.3 V</td>
+<td>ESP32 <strong>or</strong> 8-bit PIC MCU</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Wireless Communication</td>
-<td>Able to send or receive a Wi-Fi data</td>
-<td>Send and receive Wi-Fi Data to MQTT</td>
-<td style="text-align: center;">Yes</td>
+<td>Serial orientation sensor</td>
+<td>At least one permitted digital serial sensor</td>
+<td>3-axis digital accelerometer (I²C or SPI)</td>
+<td>No</td>
 </tr>
 <tr>
-<td><em>Rest are items your modules needs to support the task you are covering for the team's device.</em></td>
-<td>---</td>
-<td>---</td>
-<td style="text-align: center;"><strong>NO</strong></td>
+<td>Orientation data measurement</td>
+<td>Detect acceleration in X, Y, Z axes</td>
+<td>Reliable tilt/orientation data</td>
+<td>No</td>
+</tr>
+<tr>
+<td>MCU–sensor communication</td>
+<td>Successful serial communication</td>
+<td>I²C communication with accelerometer</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Power compatibility</td>
+<td>All components operate at 3.3 V</td>
+<td>Single 3.3 V power domain</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Mechanical integration</td>
+<td>Sensor rigidly mounted to PCB</td>
+<td>Fixed orientation aligned to rover axes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Motor control</td>
+<td>Not required</td>
+<td>No motor or motor driver present</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Data interface to main rover controller</td>
+<td>Able to transmit orientation data</td>
+<td>UART or I²C data output</td>
+<td>No</td>
+</tr>
+<tr>
+<td>PCB implementation</td>
+<td>All ICs surface mounted</td>
+<td>Fully SMD-based PCB design</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
