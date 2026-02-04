@@ -5,20 +5,8 @@ tags:
 - tag2
 ---
 
-## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
+## Block Diagram
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
+This diagram shows the system architecture for Team 305, including the ESP32 as the central processor, the MPU9250 gyroscope connected via I2C, the Red LED output, Upstream/Downstream headers for team interconnection, and the 12V to 3.3V power supply chain.
 
-
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
-
-![Example of Indivial Block diagram ](individual-block-diagram.png)
+![Block Diagram — Ragul Raj RG, Team 305](individual-block-diagram.png)
