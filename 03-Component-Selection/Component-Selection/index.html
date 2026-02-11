@@ -994,6 +994,61 @@
 </li>
 </ol>
 <p><strong>Rationale:</strong> We selected the ESP32-S3-WROOM-1-N4 due to its superior Wi-Fi capabilities, dual-core processor for multitasking, and compatibility with sensor interfaces like I2C and SPI. This selection aligns with the course description.</p>
+<p><strong>Sensor (Gyroscope)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Cost &amp; Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SparkFun MPU-9250 Breakout (SEN-13762)</td>
+<td>9-axis IMU (3-axis gyro, accel, magnetometer), supports I2C/SPI</td>
+<td>Product marked obsolete, 3.3V logic only</td>
+<td>$19.95 <a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011">DigiKey</a></td>
+</tr>
+<tr>
+<td>SparkFun 9DoF IMU Breakout – ICM-20948 (SEN-15335)</td>
+<td>9-axis IMU, Qwiic compatible, I2C/SPI, improved performance over MPU-9250</td>
+<td>Not MPU-9250 (different registers), 3.3V logic</td>
+<td>$14.95 <a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/15335/10279707">DigiKey</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice</strong></p>
+<ol>
+<li>
+<p>SparkFun MPU-9250 Breakout (SEN-13762)</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="13762.png" data-desc-position="bottom"><img alt="" src="13762.png"></a></p>
+<ul>
+<li>$19.95 each</li>
+<li><a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011">DigiKey</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9-axis IMU (gyro, accel, magnetometer)</td>
+<td>Product marked obsolete</td>
+</tr>
+<tr>
+<td>Supports I2C/SPI</td>
+<td>3.3V logic only</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Rationale:</strong> We selected the SparkFun MPU-9250 Breakout (SEN-13762) for its 9-axis sensing and I2C/SPI compatibility.</p>
 <p><strong>Additional Recommended Components</strong></p>
 <ol>
 <li>Boot and Enable Buttons</li>
