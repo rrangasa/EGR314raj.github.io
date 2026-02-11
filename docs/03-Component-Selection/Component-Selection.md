@@ -1,8 +1,8 @@
 ---
-title: Module's Selected Major Components
+title: Major Components
 ---
 
-## Module's Selected Major Components
+## Major Components
 
 The following sections are the selected major components necessary for the sensor (gyroscope) subsystem of Team 305.
 
@@ -54,10 +54,10 @@ Microcontroller selection is documented on a separate page: [Microcontroller](Mi
 
 1. SparkFun MPU-9250 Breakout (SEN-13762)
 
-    ![SparkFun MPU-9250 Breakout]((https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/13762-01a.jpg))
+    ![SparkFun MPU-9250 Breakout]([(https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/13762-01a.jpg)](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true))
 
     * $19.95 each
-    * [DigiKey](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true)
+    * [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011)
 
     | Pros                                         | Cons                                                    |
     | -------------------------------------------- | ------------------------------------------------------- |
