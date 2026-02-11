@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#microcontroller" class="md-skip">
+        <a href="#project-specific-requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -617,9 +617,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#project-specific-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project-Specific Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       Microcontroller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microcontroller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-resource-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-S3-WROOM-1 Resource Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-compatibility-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral Compatibility Research
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-pinout-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 Pinout Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-allocation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Allocation Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-approval-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Approval Checklist
     </span>
   </a>
   
@@ -814,9 +892,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#project-specific-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project-Specific Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       Microcontroller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microcontroller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-resource-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-S3-WROOM-1 Resource Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-compatibility-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral Compatibility Research
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-pinout-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 Pinout Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-allocation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Allocation Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-approval-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Approval Checklist
     </span>
   </a>
   
@@ -847,6 +1003,47 @@
 
   <h1>Microcontroller</h1>
 
+<h2 id="project-specific-requirements">Project-Specific Requirements</h2>
+<p>Before selecting a microcontroller, the following project-specific requirements were determined based on the navigation sensor subsystem block diagram:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPI subsystems</td>
+<td>0</td>
+</tr>
+<tr>
+<td>UART subsystems</td>
+<td>1 (teammate communication)</td>
+</tr>
+<tr>
+<td>I2C subsystems</td>
+<td>1 (MPU9250 gyroscope)</td>
+</tr>
+<tr>
+<td>Power pins</td>
+<td>2 (3.3V, GND)</td>
+</tr>
+<tr>
+<td>Programming pins</td>
+<td>EN, BOOT, TX, RX (USB serial)</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>2+ (LED, pushbutton for testing)</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>I2C (SDA, SCL), UART (RX, TX)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total pins needed:</strong> ~10–12 (power, ground, programming, I2C, LED, button).</p>
 <h2 id="microcontroller">Microcontroller</h2>
 <table>
 <thead>
@@ -878,7 +1075,117 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Choice</strong></p>
+<h3 id="esp32-s3-wroom-1-resource-analysis">ESP32-S3-WROOM-1 Resource Analysis</h3>
+<p>Research was conducted using the <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> to compare project needs against available resources:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Project Need</th>
+<th>ESP32-S3 Available</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I2C</td>
+<td>1</td>
+<td>2 controllers</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>1</td>
+<td>3 controllers</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>2+</td>
+<td>~36 (minus flash/PSRAM)</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>3.3V</td>
+<td>3.3V</td>
+<td>Meets</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>0</td>
+<td>4 controllers</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>0</td>
+<td>2 SAR ADCs</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>0</td>
+<td>LEDC channels</td>
+<td>Exceeds</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resources that meet or exceed needs:</strong> The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the MPU9250, LED, pushbutton, and teammate communication. Power requirements (3.3V) align with the AP63203WU-7 regulator. No critical requirements are unmet.</p>
+<p><strong>Resources that exceed needs:</strong> SPI, ADC, and PWM are not required for this subsystem but are available for future expansion. The dual-core processor and Wi-Fi/Bluetooth capabilities also exceed current needs.</p>
+<p><strong>Resources that do not meet needs:</strong> None. All project requirements are satisfied.</p>
+<h2 id="team-role">Team Role</h2>
+<p>I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: <strong>Sensing</strong> — integrating and calibrating the MPU9250 gyroscope for navigation data; <strong>Actuation</strong> — none; <strong>Display</strong> — none; <strong>Power</strong> — ensuring the 3.3V rail from the AP63203WU-7 regulator is suitable for the ESP32 and MPU9250; <strong>Communication</strong> — UART for inter-module communication with teammates and I2C for the gyroscope sensor.</p>
+<h2 id="peripheral-compatibility-research">Peripheral Compatibility Research</h2>
+<p>Compatibility between the ESP32-S3 and MPU9250 was verified through online research. The assignment notes that the BNO085 IMU has compatibility issues with ESP32 systems running CircuitPython; the MPU9250 is a different device with established support.</p>
+<p><strong>Libraries and examples:</strong>
+- <a href="https://github.com/micropython-IMU/micropython-mpu9x50">micropython-mpu9x50</a> — MicroPython driver for MPU9250, MPU9150, and MPU6050; supports I2C connection and provides calibrated accelerometer, gyroscope, and magnetometer data.
+- <a href="https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all">SparkFun MPU-9250 Hookup Guide</a> — Arduino-based examples with full initialization, calibration, and AHRS algorithms.</p>
+<p><strong>Interface complexity:</strong> The MPU9250 uses I2C only (SDA, SCL). It requires initialization (<code>initMPU9250</code>), magnetometer setup (<code>initAK8963</code>), and calibration (<code>calibrateMPU9250</code>) before reading data. This is more involved than a single read function but is well-documented; no low-level library authoring is expected. If using CircuitPython, availability should be verified; Arduino and MicroPython have proven support.</p>
+<h2 id="esp32-pinout-diagram">ESP32 Pinout Diagram</h2>
+<p>The pinout diagram for the ESP32-S3-WROOM-1 surface-mount module is from the <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> (Pin Layout / Pin Description section).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../esp32-s3-wroom-1-pinout.png" data-desc-position="bottom"><img alt="ESP32-S3-WROOM-1 Pinout" src="../esp32-s3-wroom-1-pinout.png"></a></p>
+<p><em>Note: Screenshot or extract the Pin Layout / Pin Description figure from the datasheet PDF and save as <code>esp32-s3-wroom-1-pinout.png</code> in this directory.</em></p>
+<h2 id="pin-allocation-table">Pin Allocation Table</h2>
+<p>Each peripheral is allocated to specific pins on the ESP32-S3. GPIO26–32 are reserved for internal SPI flash/PSRAM and should be avoided.</p>
+<table>
+<thead>
+<tr>
+<th>Peripheral</th>
+<th>Pin(s)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Power</strong></td>
+<td>3V3, GND</td>
+<td>Per module</td>
+</tr>
+<tr>
+<td><strong>UART</strong></td>
+<td>TX (GPIO43), RX (GPIO44)</td>
+<td>USB serial / teammate communication</td>
+</tr>
+<tr>
+<td><strong>I2C</strong></td>
+<td>SDA (GPIO8), SCL (GPIO9)</td>
+<td>MPU9250 (avoids GPIO26–32)</td>
+</tr>
+<tr>
+<td><strong>GPIO</strong></td>
+<td>GPIO21 (LED), GPIO0 (button)</td>
+<td>LED and pushbutton for testing</td>
+</tr>
+<tr>
+<td><strong>Programming</strong></td>
+<td>EN, BOOT, IO0</td>
+<td>Per dev board</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pin allocation analysis:</strong> Sufficient pins are available. I2C uses GPIO8/9 to avoid conflicted flash/PSRAM pins (GPIO26–32). GPIO0 is a strapping pin (boot mode); if used as a button, ensure a pull-up and that it does not impact boot behavior. Exact pin numbers should be validated against the datasheet and your dev board (e.g., ESP32-S3-DevKitC-1).</p>
+<h2 id="choice">Choice</h2>
 <ol>
 <li>
 <p>ESP32-S3-WROOM-1-N4</p>
@@ -915,7 +1222,21 @@
 </table>
 </li>
 </ol>
-<p><strong>Rationale:</strong> We selected the ESP32-S3-WROOM-1-N4 due to its superior Wi-Fi capabilities, dual-core processor for multitasking, and compatibility with sensor interfaces like I2C and SPI. This selection aligns with the course description.</p>
+<p><strong>Final Rationale:</strong> The ESP32-S3-WROOM-1-N4 is the optimal choice for the IMU subsystem based on the following data-driven rationale:</p>
+<ul>
+<li><strong>Meets requirements:</strong> Provides 1 I2C interface (MPU9250), 1 UART (teammate communication), GPIO for LED and pushbutton, and 3.3V operation compatible with the AP63203WU-7 regulator and MPU9250.</li>
+<li><strong>Exceeds requirements:</strong> Offers 2 I2C controllers, 3 UART interfaces, and abundant GPIO beyond current needs, with dual-core processing and Wi-Fi/Bluetooth for future expansion.</li>
+<li><strong>Compatibility:</strong> MPU9250 has proven MicroPython (<a href="https://github.com/micropython-IMU/micropython-mpu9x50">micropython-mpu9x50</a>) and Arduino support (<a href="https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all">SparkFun Hookup Guide</a>); no known major conflicts analogous to BNO085 + CircuitPython.</li>
+<li><strong>Team coordination:</strong> Per assignment instructions, at least one team member uses an ESP32; this selection fulfills that role.</li>
+<li><strong>Block diagram alignment:</strong> Serves as the central processor with I2C sensor interface, LED output, and UART for interconnection, matching the navigation sensor subsystem design.</li>
+</ul>
+<h2 id="post-approval-checklist">Post-Approval Checklist</h2>
+<p>After instructor approval of the microcontroller choice:</p>
+<ul>
+<li><strong>Microchip samples:</strong> N/A — ESP32 selected; PIC teammates may order free samples from Microchip (avoid BGA, QFN, flip chips for Peralta Labs).</li>
+<li><strong>MPLabX / MCC / Melody:</strong> N/A — required for PIC only.</li>
+<li><strong>ESP32:</strong> Finalize pinout and pin allocation; order ESP32-S3-WROOM-1 modules if needed for upcoming assignments.</li>
+</ul>
 
 
 
