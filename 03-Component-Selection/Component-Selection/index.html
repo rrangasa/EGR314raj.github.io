@@ -932,7 +932,80 @@
 <p><strong>For each of the following sections, use <ins>one of the two styles</ins> given near the end. <em>REMOVE THIS NOTE</em></strong></p>
 </blockquote>
 <h3 id="power-management">Power Management</h3>
-<p>(<strong>remove this note/placeholder</strong>: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} <strong>THAT WERE SELECTED</strong>)</p>
+<p>A voltage regulator is required to step down the input voltage to a steady <strong>3.3 V</strong> for the ESP32 and sensors.</p>
+<p><strong>Power Regulation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Cost &amp; Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AP63203WU-7</td>
+<td>Simple design, low cost</td>
+<td>Low efficiency</td>
+<td>$1.38 <a href="#">DigiKey</a></td>
+</tr>
+<tr>
+<td>LM2596</td>
+<td>High efficiency, more robust</td>
+<td>Larger size</td>
+<td>$6.70 <a href="#">DigiKey</a></td>
+</tr>
+<tr>
+<td>HT7333</td>
+<td>Ultra-low quiescent current</td>
+<td>Limited current output</td>
+<td>$2.65 <a href="#">DigiKey</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice</strong></p>
+<ol>
+<li>
+<p>AP63203WU-7</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="ap63203-regulator.png" data-desc-position="bottom"><img alt="" src="ap63203-regulator.png"></a></p>
+<ul>
+<li>$1.38 each</li>
+<li><a href="#">DigiKey</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple design</td>
+<td>Low efficiency</td>
+</tr>
+<tr>
+<td>Low cost</td>
+<td></td>
+</tr>
+<tr>
+<td>SMD compatible</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Rationale:</strong> The AP63203WU-7 was chosen for simplicity, affordability, and SMD compatibility.</p>
+<p><strong>Power Input</strong></p>
+<p>A <strong>DC Barrel Jack Adapter</strong> was selected to provide consistent external power for the ESP32 and sensors.</p>
+<p><strong>Additional Recommended Components</strong></p>
+<ol>
+<li>Boot and Enable Buttons</li>
+<li>Decoupling Capacitors (10 µF, 0.1 µF)</li>
+<li>LED Indicators</li>
+</ol>
 <p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management">"Appendix - Component Selection Process - Power Mangement"</a> selection.</p>
 <h3 id="sensor">Sensor</h3>
 <p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your  <strong>SELECTED</strong> sensor is shown. Otherwise, remove this section.)</p>
