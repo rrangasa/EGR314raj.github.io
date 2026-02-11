@@ -66,6 +66,30 @@ A **DC Barrel Jack Adapter** was selected to provide consistent external power f
 
 **Rationale:** We selected the ESP32-S3-WROOM-1-N4 due to its superior Wi-Fi capabilities, dual-core processor for multitasking, and compatibility with sensor interfaces like I2C and SPI. This selection aligns with the course description.
 
+**Sensor (Gyroscope)**
+
+| Option                  | Advantages                                              | Disadvantages                                      | Cost & Link   |
+| ----------------------- | ------------------------------------------------------- | -------------------------------------------------- | ------------- |
+| SparkFun MPU-9250 Breakout (SEN-13762) | 9-axis IMU (3-axis gyro, accel, magnetometer), supports I2C/SPI | Product marked obsolete, 3.3V logic only | $19.95 [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011) |
+| SparkFun 9DoF IMU Breakout – ICM-20948 (SEN-15335) | 9-axis IMU, Qwiic compatible, I2C/SPI, improved performance over MPU-9250 | Not MPU-9250 (different registers), 3.3V logic | $14.95 [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/15335/10279707) |
+
+
+**Choice**
+
+1. SparkFun MPU-9250 Breakout (SEN-13762)
+
+    ![](13762.png)
+
+    * $19.95 each
+    * [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011)
+
+    | Pros                                         | Cons                                                    |
+    | -------------------------------------------- | ------------------------------------------------------- |
+    | 9-axis IMU (gyro, accel, magnetometer)        | Product marked obsolete                                 |
+    | Supports I2C/SPI                              | 3.3V logic only                                         |
+
+**Rationale:** We selected the SparkFun MPU-9250 Breakout (SEN-13762) for its 9-axis sensing and I2C/SPI compatibility.
+
 **Additional Recommended Components**
 
 1. Boot and Enable Buttons
