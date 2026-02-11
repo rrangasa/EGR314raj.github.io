@@ -54,7 +54,7 @@ Microcontroller selection is documented on a separate page: [Microcontroller](Mi
 
 1. SparkFun MPU-9250 Breakout (SEN-13762)
 
-    ![SparkFun MPU-9250 Breakout]([(https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/13762-01a.jpg)](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true))
+    ![SparkFun MPU-9250 Breakout](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true)
 
     * $19.95 each
     * [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011)
