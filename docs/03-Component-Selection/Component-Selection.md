@@ -10,7 +10,42 @@ The following sections are the selected major components necessary for  .....
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} **THAT WERE SELECTED**)
+A voltage regulator is required to step down the input voltage to a steady **3.3 V** for the ESP32 and sensors.
+
+**Power Regulation**
+
+| Option        | Advantages                    | Disadvantages        | Cost & Link   |
+| ------------- | ----------------------------- | -------------------- | ------------- |
+| AP63203WU-7   | Simple design, low cost        | Low efficiency       | $1.38 [DigiKey](#) |
+| LM2596        | High efficiency, more robust   | Larger size          | $6.70 [DigiKey](#) |
+| HT7333        | Ultra-low quiescent current    | Limited current output | $2.65 [DigiKey](#) |
+
+**Choice**
+
+1. AP63203WU-7
+
+    ![](ap63203-regulator.png)
+
+    * $1.38 each
+    * [DigiKey](#)
+
+    | Pros                         | Cons              |
+    | ---------------------------- | ----------------- |
+    | Simple design                | Low efficiency    |
+    | Low cost                     |                   |
+    | SMD compatible               |                   |
+
+**Rationale:** The AP63203WU-7 was chosen for simplicity, affordability, and SMD compatibility.
+
+**Power Input**
+
+A **DC Barrel Jack Adapter** was selected to provide consistent external power for the ESP32 and sensors.
+
+**Additional Recommended Components**
+
+1. Boot and Enable Buttons
+2. Decoupling Capacitors (10 µF, 0.1 µF)
+3. LED Indicators
 
 For more details, review the ["Appendix - Component Selection Process - Power Mangement"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management) selection.
 
