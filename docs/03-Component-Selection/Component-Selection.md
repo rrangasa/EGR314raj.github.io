@@ -78,7 +78,7 @@ A **DC Barrel Jack Adapter** was selected to provide consistent external power f
 
 1. SparkFun MPU-9250 Breakout (SEN-13762)
 
-    ![](13762.png)
+    ![SparkFun MPU-9250 Breakout]((https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/13762-01a.jpg))
 
     * $19.95 each
     * [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011)
