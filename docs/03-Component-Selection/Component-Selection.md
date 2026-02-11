@@ -16,15 +16,15 @@ A voltage regulator is required to step down the input voltage to a steady **3.3
 
 | Option        | Advantages                    | Disadvantages        | Cost & Link   |
 | ------------- | ----------------------------- | -------------------- | ------------- |
-| AP63203WU-7   | Simple design, low cost        | Low efficiency       | $1.38 [DigiKey](#) |
-| LM2596        | High efficiency, more robust   | Larger size          | $6.70 [DigiKey](#) |
-| HT7333        | Ultra-low quiescent current    | Limited current output | $2.65 [DigiKey](#) |
+| AP63203WU-7   | Simple design, low cost        | Low efficiency       | $1.38 [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410777617&gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB) |
+| LM2596        | High efficiency, more robust   | Larger size          | $6.70 [DigiKey](https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-ADJ-NOPB/363705) |
+| HT7333        | Ultra-low quiescent current    | Limited current output | $2.65 [DigiKey](https://www.digikey.com/en/products/detail/umw/HT7333-A/17635230) |
 
 **Choice**
 
 1. AP63203WU-7
 
-    ![](ap63203-regulator.png)
+    ![AP63203WU-7]([ap63203-regulator.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg))
 
     * $1.38 each
     * [DigiKey](#)
