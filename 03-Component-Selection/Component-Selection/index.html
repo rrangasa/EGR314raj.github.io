@@ -15,7 +15,7 @@
         <link rel="prev" href="../../02-Block-Diagram/Block-Diagram/">
       
       
-        <link rel="next" href="../../04-BOM/BOM/">
+        <link rel="next" href="../Microcontroller/">
       
       
       <link rel="icon" href="../../static/logo314.png">
@@ -509,6 +509,8 @@
       
         
       
+        
+      
     
     
       
@@ -621,6 +623,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microcontroller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microcontroller
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -925,75 +948,7 @@
 <p><strong>Rationale:</strong> The AP63203WU-7 was chosen for simplicity, affordability, and SMD compatibility.</p>
 <p><strong>Power Input</strong></p>
 <p>A <strong>DC Barrel Jack Adapter</strong> was selected to provide consistent external power for the ESP32 and sensor.</p>
-<p><strong>Microcontroller</strong></p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Advantages</th>
-<th>Disadvantages</th>
-<th>Cost &amp; Link</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ESP32-S3-WROOM-1-N4</td>
-<td>Built-in Wi-Fi/Bluetooth, supports I2C/SPI/UART, low power modes, 4MB Flash</td>
-<td>3.3V logic may require level shifters for certain peripherals</td>
-<td>$2.95 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></td>
-</tr>
-<tr>
-<td>ESP8266</td>
-<td>Affordable, simple to use</td>
-<td>Limited GPIO pins, lacks dual-core processor</td>
-<td>$1.60 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP8266EX/8028401">DigiKey</a></td>
-</tr>
-<tr>
-<td>PIC18F47K42-I/PT</td>
-<td>8-bit PIC® XLP™ MCU, 128 KB Flash, up to 64 MHz, 36 I/O, ADC/SPI/I²C/UART peripherals</td>
-<td>Requires external programmer/debugger, less powerful than higher-end MCUs</td>
-<td>$3.50 <a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47K42-I-PT/7561733">DigiKey</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Choice</strong></p>
-<ol>
-<li>
-<p>ESP32-S3-WROOM-1-N4</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true" data-desc-position="bottom"><img alt="AP63203WU-7" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true"></a></p>
-<ul>
-<li>$2.95 each</li>
-<li><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Superior Wi-Fi capabilities</td>
-<td>3.3V logic may require level shifters for some peripherals</td>
-</tr>
-<tr>
-<td>Dual-core processor for multitasking</td>
-<td></td>
-</tr>
-<tr>
-<td>Compatibility with I2C and SPI sensor interfaces</td>
-<td></td>
-</tr>
-<tr>
-<td>Low power modes, 4MB Flash</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ol>
-<p><strong>Rationale:</strong> We selected the ESP32-S3-WROOM-1-N4 due to its superior Wi-Fi capabilities, dual-core processor for multitasking, and compatibility with sensor interfaces like I2C and SPI. This selection aligns with the course description.</p>
+<p>Microcontroller selection is documented on a separate page: <a href="../Microcontroller/">Microcontroller</a>.</p>
 <p><strong>Sensor (Gyroscope)</strong></p>
 <table>
 <thead>
@@ -1110,13 +1065,13 @@
         
         
           
-          <a href="../../04-BOM/BOM/" class="md-footer__link md-footer__link--next" aria-label="Next: Module Bill of Materials">
+          <a href="../Microcontroller/" class="md-footer__link md-footer__link--next" aria-label="Next: Microcontroller">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Module Bill of Materials
+                Microcontroller
               </div>
             </div>
             <div class="md-footer__button md-icon">
