@@ -6,11 +6,10 @@ title: Module's Selected Major Components
 
 The following sections are the selected major components necessary for  .....
 
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
-
 ### Power Management
 
-A voltage regulator is required to step down the input voltage to a steady **3.3 V** for the ESP32 and sensors.
+To ensure stable operation of the ESP32 and connected sensors, we require a voltage regulator that steps down the input voltage to a steady 3.3V.
+
 
 **Power Regulation**
 
@@ -24,10 +23,10 @@ A voltage regulator is required to step down the input voltage to a steady **3.3
 
 1. AP63203WU-7
 
-    ![AP63203WU-7]([ap63203-regulator.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg))
+    ![AP63203WU-7](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/313/MFG_AP6320x.jpg?hidebanner=true)
 
     * $1.38 each
-    * [DigiKey](#)
+    * [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410777617&gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB)
 
     | Pros                         | Cons              |
     | ---------------------------- | ----------------- |
