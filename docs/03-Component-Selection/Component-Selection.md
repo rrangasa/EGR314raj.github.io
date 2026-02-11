@@ -40,6 +40,8 @@ To ensure stable operation of the ESP32 and connected sensors, we require a volt
 
 A **DC Barrel Jack Adapter** was selected to provide consistent external power for the ESP32 and sensor.
 
+The power budget, including component currents, rail assignment, regulator selection, and external source verification, is documented on a separate page: [Power Budget](Power-Budget.md).
+
 Microcontroller selection is documented on a separate page: [Microcontroller](Microcontroller.md).
 
 **Sensor (Gyroscope)**
