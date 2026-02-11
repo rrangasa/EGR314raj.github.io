@@ -612,42 +612,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sensor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -860,42 +824,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sensor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -996,59 +924,46 @@
 </ol>
 <p><strong>Rationale:</strong> The AP63203WU-7 was chosen for simplicity, affordability, and SMD compatibility.</p>
 <p><strong>Power Input</strong></p>
-<p>A <strong>DC Barrel Jack Adapter</strong> was selected to provide consistent external power for the ESP32 and sensors.</p>
-<p><strong>Additional Recommended Components</strong></p>
-<ol>
-<li>Boot and Enable Buttons</li>
-<li>Decoupling Capacitors (10 µF, 0.1 µF)</li>
-<li>LED Indicators</li>
-</ol>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management">"Appendix - Component Selection Process - Power Mangement"</a> selection.</p>
-<h3 id="sensor">Sensor</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your  <strong>SELECTED</strong> sensor is shown. Otherwise, remove this section.)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor">"Appendix - Component Selection Process - Sensor"</a> selection.</p>
-<h3 id="actuator">Actuator</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your <strong>Selected</strong> the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator">"Appendix - Component Selection Process - Actuator"</a> selection.</p>
-<hr>
-<blockquote>
-<p>Remove the following before submitting! Use them to present the selected components</p>
-</blockquote>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
+<p>A <strong>DC Barrel Jack Adapter</strong> was selected to provide consistent external power for the ESP32 and sensor.</p>
+<p><strong>Microcontroller</strong></p>
 <table>
 <thead>
 <tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th>Option</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Cost &amp; Link</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>Built-in Wi-Fi/Bluetooth, supports I2C/SPI/UART, low power modes, 4MB Flash</td>
+<td>3.3V logic may require level shifters for certain peripherals</td>
+<td>$2.95 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></td>
+</tr>
+<tr>
+<td>ESP8266</td>
+<td>Affordable, simple to use</td>
+<td>Limited GPIO pins, lacks dual-core processor</td>
+<td>$1.60 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP8266EX/8028401">DigiKey</a></td>
+</tr>
+<tr>
+<td>PIC18F47K42-I/PT</td>
+<td>8-bit PIC® XLP™ MCU, 128 KB Flash, up to 64 MHz, 36 I/O, ADC/SPI/I²C/UART peripherals</td>
+<td>Requires external programmer/debugger, less powerful than higher-end MCUs</td>
+<td>$3.50 <a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47K42-I-PT/7561733">DigiKey</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
+<p><strong>Choice</strong></p>
 <ol>
 <li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<p>ESP32-S3-WROOM-1-N4</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true" data-desc-position="bottom"><img alt="AP63203WU-7" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true"></a></p>
 <ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
+<li>$2.95 each</li>
+<li><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></li>
 </ul>
 <table>
 <thead>
@@ -1059,22 +974,32 @@
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td>Superior Wi-Fi capabilities</td>
+<td>3.3V logic may require level shifters for some peripherals</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td>Dual-core processor for multitasking</td>
+<td></td>
 </tr>
 <tr>
-<td>Meets surface mount constraint of project</td>
+<td>Compatibility with I2C and SPI sensor interfaces</td>
+<td></td>
+</tr>
+<tr>
+<td>Low power modes, 4MB Flash</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 </li>
 </ol>
-<p><strong>Rationale:</strong> A clock oscillator is easier ...</p>
+<p><strong>Rationale:</strong> We selected the ESP32-S3-WROOM-1-N4 due to its superior Wi-Fi capabilities, dual-core processor for multitasking, and compatibility with sensor interfaces like I2C and SPI. This selection aligns with the course description.</p>
+<p><strong>Additional Recommended Components</strong></p>
+<ol>
+<li>Boot and Enable Buttons</li>
+<li>Decoupling Capacitors (10 µF, 0.1 µF)</li>
+<li>LED Indicators</li>
+</ol>
 
 
 
