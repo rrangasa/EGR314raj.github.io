@@ -9,16 +9,16 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/02-Microcontroller-Selection/pic-table/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03-Component-Selection/Power-Budget/">
       
       
-        <link rel="prev" href="../esp-32-table/">
+        <link rel="prev" href="../Microcontroller/">
       
       
-        <link rel="next" href="../../03-Power-Budget/Power-Budget/">
+        <link rel="next" href="../../04-BOM/BOM/">
       
       
-      <link rel="icon" href="../../../static/logo314.png">
+      <link rel="icon" href="../../static/logo314.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
             
 
@@ -26,14 +26,14 @@
 
     
       
-        <title>Appendix - Controller Table for the PIC - EGR 314 Ragul Raj's Data Sheet</title>
+        <title>Power Budget - EGR 314 Ragul Raj's Data Sheet</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,7 +63,7 @@
     
 
 
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#power-budget" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,9 +106,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="EGR 314 Ragul Raj's Data Sheet" class="md-header__button md-logo" aria-label="EGR 314 Ragul Raj's Data Sheet" data-md-component="logo">
+    <a href="../.." title="EGR 314 Ragul Raj's Data Sheet" class="md-header__button md-logo" aria-label="EGR 314 Ragul Raj's Data Sheet" data-md-component="logo">
       
-  <img src="../../../static/logo314.svg" alt="logo">
+  <img src="../../static/logo314.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Appendix - Controller Table for the PIC
+              Power Budget
             
           </span>
         </div>
@@ -195,7 +200,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -214,7 +219,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../01-Requirements/Requirements/" class="md-tabs__link">
+        <a href="../../01-Requirements/Requirements/" class="md-tabs__link">
           
   
     
@@ -234,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../02-Block-Diagram/Block-Diagram/" class="md-tabs__link">
+        <a href="../../02-Block-Diagram/Block-Diagram/" class="md-tabs__link">
           
   
     
@@ -250,11 +255,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../03-Component-Selection/Component-Selection/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Component-Selection/" class="md-tabs__link">
           
   
     
@@ -274,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../04-BOM/BOM/" class="md-tabs__link">
+        <a href="../../04-BOM/BOM/" class="md-tabs__link">
           
   
     
@@ -294,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../05-Schematic/schematic/" class="md-tabs__link">
+        <a href="../../05-Schematic/schematic/" class="md-tabs__link">
           
   
     
@@ -310,13 +317,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Appendix/" class="md-tabs__link">
           
   
     
@@ -357,9 +362,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="EGR 314 Ragul Raj's Data Sheet" class="md-nav__button md-logo" aria-label="EGR 314 Ragul Raj's Data Sheet" data-md-component="logo">
+    <a href="../.." title="EGR 314 Ragul Raj's Data Sheet" class="md-nav__button md-logo" aria-label="EGR 314 Ragul Raj's Data Sheet" data-md-component="logo">
       
-  <img src="../../../static/logo314.svg" alt="logo">
+  <img src="../../static/logo314.svg" alt="logo">
 
     </a>
     EGR 314 Ragul Raj's Data Sheet
@@ -386,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +431,7 @@
         
   
   
-    <a href="../../../01-Requirements/Requirements/" class="md-nav__link">
+    <a href="../../01-Requirements/Requirements/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -472,7 +477,7 @@
         
   
   
-    <a href="../../../02-Block-Diagram/Block-Diagram/" class="md-nav__link">
+    <a href="../../02-Block-Diagram/Block-Diagram/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -495,47 +500,228 @@
       
   
   
+    
   
   
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
-  
-    <a href="../../../03-Component-Selection/Component-Selection/" class="md-nav__link">
+    
+    
       
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     03 Component Selection
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03 Component Selection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major Components
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microcontroller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microcontroller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Power Budget
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Power Budget
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-a-major-components-and-absolute-maximum-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section A: Major Components and Absolute Maximum Current
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-b-power-rail-assignment-and-25-safety-margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section B: Power Rail Assignment and 25% Safety Margin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-c-voltage-regulator-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section C: Voltage Regulator Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-d-external-power-source-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section D: External Power Source Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-e-battery-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section E: Battery Life
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -568,7 +754,7 @@
         
   
   
-    <a href="../../../04-BOM/BOM/" class="md-nav__link">
+    <a href="../../04-BOM/BOM/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -614,7 +800,7 @@
         
   
   
-    <a href="../../../05-Schematic/schematic/" class="md-nav__link">
+    <a href="../../05-Schematic/schematic/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -637,8 +823,6 @@
       
   
   
-    
-  
   
   
     
@@ -659,302 +843,33 @@
     
     
       
-        
-        
-      
       
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
+  
+  
+    <a href="../../Appendix/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Appendix
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Appendix
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../01-Componet-Selection/Component-Selection-Process/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    01 Componet Selection
-  </span>
-  
-
       
         <span class="md-nav__icon md-icon"></span>
       
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    02 Microcontroller Selection
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7_3">
-            <span class="md-nav__icon md-icon"></span>
-            02 Microcontroller Selection
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../esp-32-table/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Appendix - Controller Table for the ESP32
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Appendix - Controller Table for the PIC
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../03-Power-Budget/Power-Budget/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    03 Power Budget
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../04-Examples-to-Remove/another-subfile/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    04 Examples to Remove
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -978,6 +893,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-a-major-components-and-absolute-maximum-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section A: Major Components and Absolute Maximum Current
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-b-power-rail-assignment-and-25-safety-margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section B: Power Rail Assignment and 25% Safety Margin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-c-voltage-regulator-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section C: Voltage Regulator Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-d-external-power-source-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section D: External Power Source Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-e-battery-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section E: Battery Life
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -991,7 +986,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/Appendix/02-Microcontroller-Selection/pic-table.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/03-Component-Selection/Power-Budget.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
     </a>
@@ -999,159 +994,166 @@
   
 
 
-  <h1>Appendix - Controller Table for the PIC</h1>
+  <h1>Power Budget</h1>
 
+<h2 id="power-budget">Power Budget</h2>
+<p>This document presents the power budget for the navigation sensor subsystem of Team 305, covering major components, power rail assignment, regulator selection, and external power source verification.</p>
+<hr>
+<h2 id="section-a-major-components-and-absolute-maximum-current">Section A: Major Components and Absolute Maximum Current</h2>
+<p>All major components from <a href="../Component-Selection/">Component Selection</a> that require power are listed below with their absolute maximum current from datasheets. Regulators, power sources, resistors, and capacitors are not listed. Per assignment instructions, resistors and capacitors are not considered major components; the LED indicator is excluded from this budget.</p>
 <table>
 <thead>
 <tr>
-<th>PIC Info</th>
-<th>Answer</th>
-<th>Help</th>
+<th>Component</th>
+<th>Absolute Maximum Current</th>
+<th>Datasheet Reference</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Model</td>
-<td>?</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>250 mA</td>
+<td><a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> §6.4 (Wi-Fi TX peak ~240–250 mA; 250 mA used for worst case)</td>
 </tr>
 <tr>
-<td>Product Page URL</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
-</tr>
-<tr>
-<td>Datasheet URL(s)</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
-</tr>
-<tr>
-<td>Application Notes URL(s)</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
-</tr>
-<tr>
-<td>Vendor link</td>
-<td>?</td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
-</tr>
-<tr>
-<td>Code Examples</td>
-<td>?</td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
-</tr>
-<tr>
-<td>External Resources URL(s)</td>
-<td>?</td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
-</tr>
-<tr>
-<td>Unit cost</td>
-<td>?</td>
-<td>Find in the Microchip online store, or Digikey</td>
-</tr>
-<tr>
-<td>Absolute Maximum Current for entire IC</td>
-<td>?</td>
-<td>Find in the microcontroller datasheet</td>
-</tr>
-<tr>
-<td>Supply Voltage Range</td>
-<td>?</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
-</tr>
-<tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Maximum GPIO current <br> (per pin)</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Required Programming Hardware, Cost, URL</td>
-<td>?</td>
-<td>found on the microcontroller's product page</td>
-</tr>
-<tr>
-<td>Works with MPLabX?</td>
-<td>?</td>
-<td>Required.  See <a href="https://www.microchip.com/development-tools">Microchip Development Tools</a></td>
-</tr>
-<tr>
-<td>Works with Microchip Code Configurator?</td>
-<td>?</td>
-<td>Can be validated in MPLabX.  Screenshot required.</td>
+<td>SparkFun MPU-9250 Breakout (SEN-13762)</td>
+<td>6.5 mA</td>
+<td><a href="https://invensense.tdk.com/download-pdf/mpu-9250-datasheet/">MPU-9250 Product Spec</a> §3.4 Electrical Specifications (VDD max)</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Total (components only):</strong> 256.5 mA</p>
+<hr>
+<h2 id="section-b-power-rail-assignment-and-25-safety-margin">Section B: Power Rail Assignment and 25% Safety Margin</h2>
+<p>Each major component is assigned to a single power rail. The design uses one 3.3 V logic rail.</p>
 <table>
 <thead>
 <tr>
-<th>Module</th>
-<th># Available</th>
-<th>Needed</th>
-<th>Associated Pins (or * for any)</th>
+<th>Power Rail</th>
+<th>Components</th>
+<th>Current (mA)</th>
+<th>+25% Margin (mA)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GPIO</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>ADC</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>UART</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>SPI</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>I2C</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>ICSP</td>
-<td>?</td>
-<td>1</td>
-<td>?</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td><strong>3.3 V</strong></td>
+<td>ESP32-S3-WROOM-1-N4, MPU-9250</td>
+<td>256.5</td>
+<td>320.6</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Regulator output requirement:</strong> ≥ 320.6 mA at 3.3 V</p>
+<hr>
+<h2 id="section-c-voltage-regulator-selection">Section C: Voltage Regulator Selection</h2>
+<p>For the 3.3 V rail, the following regulator options were evaluated. This selection aligns with the <a href="../Component-Selection/">Power Regulation</a> discussion in Component Selection.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Input Range</th>
+<th>Output</th>
+<th>Max Current</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AP63203WU-7</td>
+<td>3.8–32 V</td>
+<td>3.3 V fixed</td>
+<td>2 A</td>
+<td>Simple design, low cost, SMD compatible</td>
+<td>Low efficiency</td>
+<td>$1.38 <a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426">DigiKey</a></td>
+</tr>
+<tr>
+<td>LM2596S-ADJ</td>
+<td>4–40 V</td>
+<td>Adj (3.3 V)</td>
+<td>3 A</td>
+<td>Higher efficiency, more robust</td>
+<td>Larger size</td>
+<td>$6.70 <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-ADJ-NOPB/363705">DigiKey</a></td>
+</tr>
+<tr>
+<td>HT7333-A</td>
+<td>2.5–12 V</td>
+<td>3.3 V fixed</td>
+<td>250 mA</td>
+<td>Ultra-low quiescent current</td>
+<td>Limited current output; may not meet 320 mA with margin</td>
+<td>$2.65 <a href="https://www.digikey.com/en/products/detail/umw/HT7333-A/17635230">DigiKey</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis:</strong> The HT7333-A (250 mA max) is insufficient for the 320.6 mA budget. The AP63203WU-7 (2 A) exceeds 320 mA and accepts 12 V input from the wall adapter. The LM2596 is also suitable but larger and more expensive.</p>
+<p><strong>Regulator Choice:</strong> AP63203WU-7 — Rationale: simplicity, affordability, SMD compatibility, and sufficient headroom for the 3.3 V rail. See <a href="../Component-Selection/">Component-Selection.md</a> for full rationale.</p>
+<hr>
+<h2 id="section-d-external-power-source-verification">Section D: External Power Source Verification</h2>
+<p><strong>External source:</strong> 12 V DC wall adapter (barrel jack).</p>
+<p>The AP63203WU-7 accepts 3.8–32 V input; 12 V is within range. For a 3.3 V output with ~320 mA load, the input current at the regulator is approximately:</p>
+<p>I_in ≈ 320 mA × (3.3 / 12) / efficiency ≈ 100–120 mA (efficiency ~85–90%)</p>
+<table>
+<thead>
+<tr>
+<th>External Source</th>
+<th>Voltage</th>
+<th>Rated Current</th>
+<th>Regulators Fed</th>
+<th>Total Required</th>
+<th>Remaining</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12 V DC wall adapter (barrel jack)</td>
+<td>12 V</td>
+<td>1 A</td>
+<td>AP63203WU-7</td>
+<td>~120 mA</td>
+<td>~880 mA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confirmation:</strong> Total Remaining Current Available ≥ 0. A 12 V, 1 A adapter provides adequate margin for the subsystem.</p>
+<hr>
+<h2 id="section-e-battery-life">Section E: Battery Life</h2>
+<p>Section E is not applicable; this design uses a regulated 12 V wall adapter.</p>
+<hr>
+<h2 id="power-budget-summary">Power Budget Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Rail</th>
+<th>Components</th>
+<th>Current (mA)</th>
+<th>+25% (mA)</th>
+<th>Regulator Choice</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.3 V</td>
+<td>ESP32-S3-WROOM-1-N4, MPU-9250</td>
+<td>256.5</td>
+<td>320.6</td>
+<td>AP63203WU-7</td>
+<td>12 V wall adapter</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="data-sources">Data Sources</h2>
+<ul>
+<li><a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> — §6.4 Current Consumption</li>
+<li><a href="https://invensense.tdk.com/download-pdf/mpu-9250-datasheet/">MPU-9250 Product Specification</a> — §3.4 Electrical Specifications</li>
+<li><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426">AP63203WU-7</a> — Input 3.8–32 V, 2 A output</li>
+</ul>
 
 
 
@@ -1190,7 +1192,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../esp-32-table/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Appendix - Controller Table for the ESP32">
+          <a href="../Microcontroller/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Microcontroller">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -1200,20 +1202,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Appendix - Controller Table for the ESP32
+                Microcontroller
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../03-Power-Budget/Power-Budget/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix - Power Budget">
+          <a href="../../04-BOM/BOM/" class="md-footer__link md-footer__link--next" aria-label="Next: Module Bill of Materials">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Appendix - Power Budget
+                Module Bill of Materials
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1258,12 +1260,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
