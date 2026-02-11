@@ -4,7 +4,7 @@ title: Module's Selected Major Components
 
 ## Module's Selected Major Components
 
-The following sections are the selected major components necessary for  .....
+The following sections are the selected major components necessary for the sensor (gyroscope) subsystem of Team 305.
 
 ### Power Management
 
