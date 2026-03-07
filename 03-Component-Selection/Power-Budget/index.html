@@ -755,9 +755,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#low-power-mode-esp32-modem-sleep-mpu-9250-sleep-leds-off" class="md-nav__link">
+  <a href="#low-power-mode-esp32-modem-sleep-lsm9ds1-power-down-leds-off" class="md-nav__link">
     <span class="md-ellipsis">
-      Low-Power Mode (ESP32 modem-sleep, MPU-9250 sleep, LEDs off)
+      Low-Power Mode (ESP32 modem-sleep, LSM9DS1 power-down, LEDs off)
     </span>
   </a>
   
@@ -1090,9 +1090,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#low-power-mode-esp32-modem-sleep-mpu-9250-sleep-leds-off" class="md-nav__link">
+  <a href="#low-power-mode-esp32-modem-sleep-lsm9ds1-power-down-leds-off" class="md-nav__link">
     <span class="md-ellipsis">
-      Low-Power Mode (ESP32 modem-sleep, MPU-9250 sleep, LEDs off)
+      Low-Power Mode (ESP32 modem-sleep, LSM9DS1 power-down, LEDs off)
     </span>
   </a>
   
@@ -1209,12 +1209,12 @@
 </tr>
 <tr>
 <td>MCP9250-BREAKOUT-BOARD1</td>
-<td>MPU-9250 (SparkFun breakout)</td>
+<td>LSM9DS1 (Adafruit breakout)</td>
 <td>3.3V</td>
-<td>3.7 mA</td>
-<td>3.7 mA</td>
-<td>12.2 mW</td>
-<td>Gyro + Accel + Mag all active; 8 µA in sleep</td>
+<td>4.5 mA</td>
+<td>4.5 mA</td>
+<td>14.9 mW</td>
+<td>Gyro + Accel + Mag all active; ~6 µA in power-down</td>
 </tr>
 <tr>
 <td>D2</td>
@@ -1284,8 +1284,8 @@
 <tbody>
 <tr>
 <td>Total 3.3V load</td>
-<td>~251 mA</td>
-<td>~829 mW</td>
+<td>~252 mA</td>
+<td>~832 mW</td>
 </tr>
 <tr>
 <td>LM2575 max output</td>
@@ -1294,7 +1294,7 @@
 </tr>
 <tr>
 <td>Headroom</td>
-<td>749 mA</td>
+<td>748 mA</td>
 <td>—</td>
 </tr>
 </tbody>
@@ -1317,7 +1317,7 @@
 <tbody>
 <tr>
 <td>Output power delivered</td>
-<td>829 mW</td>
+<td>832 mW</td>
 </tr>
 <tr>
 <td>Efficiency</td>
@@ -1325,11 +1325,11 @@
 </tr>
 <tr>
 <td>Input power required</td>
-<td>829 / 0.77 ≈ 1077 mW</td>
+<td>832 / 0.77 ≈ 1081 mW</td>
 </tr>
 <tr>
 <td>12V input current</td>
-<td>1077 mW / 12V ≈ 89.7 mA</td>
+<td>1081 mW / 12V ≈ 90.1 mA</td>
 </tr>
 <tr>
 <td>LM2575 quiescent current</td>
@@ -1337,7 +1337,7 @@
 </tr>
 <tr>
 <td>Total 12V draw</td>
-<td>~95 mA</td>
+<td>~95.1 mA</td>
 </tr>
 </tbody>
 </table>
@@ -1442,8 +1442,8 @@
 <tbody>
 <tr>
 <td>U4 LM2575 input power</td>
-<td>~89.7 mA</td>
-<td>~1077 mW</td>
+<td>~90.1 mA</td>
+<td>~1081 mW</td>
 </tr>
 <tr>
 <td>LM2575 quiescent</td>
@@ -1452,8 +1452,8 @@
 </tr>
 <tr>
 <td><strong>Total 12V draw</strong></td>
-<td><strong>~94.7 mA</strong></td>
-<td><strong>~1137 mW</strong></td>
+<td><strong>~95.1 mA</strong></td>
+<td><strong>~1141 mW</strong></td>
 </tr>
 <tr>
 <td>F1 fuse rating</td>
@@ -1483,9 +1483,9 @@
 <td>792 mW</td>
 </tr>
 <tr>
-<td>MPU-9250 IMU</td>
-<td>3.7 mA</td>
-<td>12 mW</td>
+<td>LSM9DS1 IMU</td>
+<td>4.5 mA</td>
+<td>15 mW</td>
 </tr>
 <tr>
 <td>LEDs (D2+D3+D4+D5)</td>
@@ -1504,8 +1504,8 @@
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>~252 mA</strong></td>
-<td><strong>~831 mW</strong></td>
+<td><strong>~253 mA</strong></td>
+<td><strong>~834 mW</strong></td>
 </tr>
 <tr>
 <td>LM2575 max output</td>
@@ -1514,12 +1514,12 @@
 </tr>
 <tr>
 <td>Headroom</td>
-<td>~748 mA</td>
+<td>~747 mA</td>
 <td>—</td>
 </tr>
 </tbody>
 </table>
-<h3 id="low-power-mode-esp32-modem-sleep-mpu-9250-sleep-leds-off">Low-Power Mode (ESP32 modem-sleep, MPU-9250 sleep, LEDs off)</h3>
+<h3 id="low-power-mode-esp32-modem-sleep-lsm9ds1-power-down-leds-off">Low-Power Mode (ESP32 modem-sleep, LSM9DS1 power-down, LEDs off)</h3>
 <table>
 <thead>
 <tr>
@@ -1535,9 +1535,9 @@
 <td>66 mW</td>
 </tr>
 <tr>
-<td>MPU-9250 sleep</td>
-<td>0.008 mA</td>
-<td>0.03 mW</td>
+<td>LSM9DS1 power-down</td>
+<td>0.006 mA</td>
+<td>0.02 mW</td>
 </tr>
 <tr>
 <td>All LEDs off</td>
@@ -1584,12 +1584,12 @@
 <td><a href="http://www.vishay.com/docs/88525/1n5817.pdf">1N5817/1N5819 datasheet</a></td>
 </tr>
 <tr>
-<td>MPU-9250</td>
-<td><a href="https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf">MPU-9250 Product Specification</a></td>
+<td>LSM9DS1</td>
+<td><a href="https://www.st.com/resource/en/datasheet/lsm9ds1.pdf">LSM9DS1 Datasheet</a></td>
 </tr>
 <tr>
-<td>SparkFun MPU-9250 Breakout</td>
-<td><a href="https://github.com/sparkfun/MPU-9250_Breakout">GitHub — SparkFun MPU-9250 Breakout</a></td>
+<td>Adafruit LSM9DS1 Breakout (3387)</td>
+<td><a href="https://www.adafruit.com/product/3387">Adafruit Product Page</a></td>
 </tr>
 </tbody>
 </table>
