@@ -846,36 +846,28 @@
 <p></p><center>
 <font size="6">Ragul Raj's Datasheet</font><br>
 as part of<br>
-<font size="8"> Project Name</font><br>
+<font size="8"> Gyroscope Subsystem</font><br>
 for<br>
 <font size="5"> Team 305 </font><br><p></p>
 <p><strong>Submission: May, 05, 2026</strong>
 </p></center><p></p>
 <h2 id="introduction">Introduction</h2>
-<ul>
-<li><strong>This needs to be updated so that a reader gets an idea of the purpose of this datasheet.</strong></li>
-</ul>
+<p>This datasheet documents the design and implementation of the Gyroscope (Navigation Sensor) Subsystem for Team 305's rover project in EGR 314. The subsystem provides real-time orientation and motion data to the rover by integrating a 9-axis IMU with a WiFi-capable microcontroller. All major design decisions — component selection, power budgeting, schematic design, and PCB layout — are captured here as a standalone reference for this individual subsystem.</p>
 <h3 id="project-summary">Project Summary</h3>
-<ul>
-<li>This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.</li>
-<li>Add context that ties into the link to your <a href="https://egr314-s-2026-30.github.io/EGR314-S-2026-305.github.io/">team report.</a></li>
-</ul>
+<p>Team 305 is developing a multi-module rover system where each team member is responsible for an individual subsystem. This subsystem focuses on <strong>navigation sensing</strong> — detecting the rover's tilt, acceleration, and heading using an inertial measurement unit (IMU). The module is built around the <strong>ESP32-S3-WROOM-1</strong> microcontroller and the <strong>SparkFun MPU-9250 Breakout</strong> (9-axis gyroscope, accelerometer, and magnetometer). The ESP32 communicates with the MPU-9250 over <strong>I2C</strong> and relays orientation data to other rover subsystems via <strong>UART</strong>.</p>
+<p>The power architecture uses a <strong>12V DC barrel jack</strong> input stepped down to <strong>3.3V</strong> through an <strong>LM2575-3.3BU</strong> buck regulator, supplying all active components on a single 3.3V rail. The design includes status LEDs, I2C pull-ups, overcurrent protection (1A fuse), and a USB Micro-B connector for programming and debug.</p>
+<p>For the full team report, see the <a href="https://egr314-s-2026-30.github.io/EGR314-S-2026-305.github.io/">Team 305 Report</a>.</p>
 <h3 id="my-contribution">My Contribution</h3>
+<p>I am responsible for the <strong>IMU (Inertial Measurement Unit) subsystem</strong> on Team 305. My work covers sensor integration, power regulation, and serial communication for the navigation module. The key areas of this datasheet are:</p>
 <ul>
-<li>This needs to be updated to reflect a team introduction</li>
-<li>
-<p>Content should also help an unfamiliar reader navigate to areas of interest. Key sections:</p>
-</li>
-<li>
-<p><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Component-Selection/">Major Components</a></p>
-</li>
-<li><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Microcontroller/">Microcontroller</a></li>
-<li><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Power-Budget/">Power Budget</a></li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/01-Requirements/Requirements/">Requirements</a> — Module requirements including power compatibility, sensor interface, and mechanical integration</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/02-Block-Diagram/Block-Diagram/">Block Diagram</a> — System-level block diagram showing the ESP32, MPU-9250, power chain, and interconnections</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Component-Selection/">Major Components</a> — Selection and rationale for the voltage regulator, gyroscope sensor, and supporting components</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Microcontroller/">Microcontroller</a> — ESP32-S3-WROOM-1 selection, pin allocation, and peripheral compatibility analysis</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Power-Budget/">Power Budget</a> — Full power budget covering all 3.3V consumers, regulator efficiency, and worst-case/low-power analysis</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/04-BOM/BOM/">BOM</a> — Bill of materials for all components used in the subsystem</li>
+<li><a href="https://rrangasa.github.io/EGR314raj.github.io/05-Schematic/schematic/">Schematic</a> — KiCad schematic with PDF and project file downloads</li>
 </ul>
-<p>To review the details listed of the material used to construct the subsection, you can review it in the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/">"BOM"</a> section of the datasheet.</p>
-<blockquote>
-<p>Continue for all the remaining/missing sections.</p>
-</blockquote>
 
 
 
