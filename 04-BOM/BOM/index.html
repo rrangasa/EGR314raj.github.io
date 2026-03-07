@@ -653,27 +653,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Table)
+      Bill of Materials
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#resource" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Image)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resouce" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resouce
+      Resource
     </span>
   </a>
   
@@ -831,27 +822,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Table)
+      Bill of Materials
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#resource" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Image)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resouce" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resouce
+      Resource
     </span>
   </a>
   
@@ -883,12 +865,8 @@
   <h1>Module Bill of Materials</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Written context needs to added!</p>
-<blockquote>
-<p>Pick <strong>ONLY</strong> one of the two examples show below. <strong>Remove</strong> the other example. <strong>REMOVE notations within the remaining section about being an example.</strong>  </p>
-</blockquote>
-<h2 id="bill-of-materials-example-as-table">Bill of Materials (Example as Table)</h2>
-<p><em>Table ##: An example of one approach to adding your BOM table to this section.</em></p>
+<p>The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12V barrel jack input, an LM2575-3.3BU buck regulator for a single 3.3V rail, an ESP32-S3-WROOM-1 microcontroller, and a SparkFun MPU-9250 breakout for 9-axis inertial sensing.</p>
+<h2 id="bill-of-materials">Bill of Materials</h2>
 <table>
 <thead>
 <tr>
@@ -896,7 +874,7 @@
 <th style="text-align: left;"><strong>Qty</strong></th>
 <th style="text-align: left;"><strong>Unit Cost</strong></th>
 <th style="text-align: left;"><strong>Total Cost</strong></th>
-<th style="text-align: left;"><strong>Manufacture</strong></th>
+<th style="text-align: left;"><strong>Manufacturer</strong></th>
 <th style="text-align: left;"><strong>Manufacturer #</strong></th>
 <th style="text-align: left;"><strong>Vendor Link</strong></th>
 <th style="text-align: left;"><strong>Datasheet Link</strong></th>
@@ -905,39 +883,284 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">8-bit SIPO/SISO Shift Register, SOIC-16 package</td>
+<td style="text-align: left;">ESP32-S3-WROOM-1-N4, WiFi+BLE MCU Module, 2.4 GHz</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">$0.49</td>
-<td style="text-align: left;">$ 0.49</td>
-<td style="text-align: left;">NXP</td>
-<td style="text-align: left;">74HC595D,112</td>
-<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550">DigiKey</a></td>
-<td style="text-align: left;"><a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf">datasheet link</a></td>
+<td style="text-align: left;">$3.30</td>
+<td style="text-align: left;">$3.30</td>
+<td style="text-align: left;">Espressif</td>
+<td style="text-align: left;">ESP32-S3-WROOM-1-N4</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></td>
+<td style="text-align: left;"><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Datasheet</a></td>
 <td style="text-align: left;">U1</td>
 </tr>
 <tr>
-<td style="text-align: left;">0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">0.2750</td>
-<td style="text-align: left;">$2.75</td>
-<td style="text-align: left;">KEMET</td>
-<td style="text-align: left;">C0805F104K5RACTU</td>
-<td style="text-align: left;">PRLTA 109</td>
-<td style="text-align: left;">n/a</td>
-<td style="text-align: left;">C2, C4, C6, C7, C8, C9, C10, C11, C12, C16</td>
+<td style="text-align: left;">LM2575D2T-3.3R4G, 3.3V 1A Step-Down Switching Regulator, TO-263-5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$2.70</td>
+<td style="text-align: left;">$2.70</td>
+<td style="text-align: left;">ON Semiconductor</td>
+<td style="text-align: left;">LM2575D2T-3.3R4G</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/919910">DigiKey</a></td>
+<td style="text-align: left;"><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf">Datasheet</a></td>
+<td style="text-align: left;">U4</td>
+</tr>
+<tr>
+<td style="text-align: left;">MPU-9250 9-Axis IMU Breakout Board (Gyro/Accel/Mag)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$15.00</td>
+<td style="text-align: left;">$15.00</td>
+<td style="text-align: left;">SparkFun / InvenSense</td>
+<td style="text-align: left;">SEN-13762</td>
+<td style="text-align: left;"><a href="https://www.sparkfun.com/products/13762">SparkFun</a></td>
+<td style="text-align: left;"><a href="https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf">Datasheet</a></td>
+<td style="text-align: left;">MCP9250-BREAKOUT-BOARD1</td>
+</tr>
+<tr>
+<td style="text-align: left;">1N5819 Schottky Barrier Rectifier Diode, 40V 1A, DO-41</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.42</td>
+<td style="text-align: left;">$0.42</td>
+<td style="text-align: left;">Vishay</td>
+<td style="text-align: left;">1N5819-E3/54</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/4897">DigiKey</a></td>
+<td style="text-align: left;"><a href="http://www.vishay.com/docs/88525/1n5817.pdf">Datasheet</a></td>
+<td style="text-align: left;">D1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Red LED, 0805 SMD</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">$0.25</td>
+<td style="text-align: left;">$0.50</td>
+<td style="text-align: left;">Lite-On</td>
+<td style="text-align: left;">LTST-C171KRKT</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171KRKT/386800">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">D3, D5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Blue LED, 0805 SMD</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">Lite-On</td>
+<td style="text-align: left;">LTST-C171TBKT</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171TBKT/573585">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">D2</td>
+</tr>
+<tr>
+<td style="text-align: left;">White LED, 0805 SMD</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">Lite-On</td>
+<td style="text-align: left;">LTST-C171CKT</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171CKT/269250">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">D4</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.1 µF Ceramic Capacitor, 25V, X7R, 0805</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">Samsung</td>
+<td style="text-align: left;">CL21B104KBCNNNC</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B104KBCNNNC/3886661">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">C2, C3, C4</td>
+</tr>
+<tr>
+<td style="text-align: left;">100 µF Electrolytic Capacitor, 25V</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.45</td>
+<td style="text-align: left;">$0.45</td>
+<td style="text-align: left;">Panasonic</td>
+<td style="text-align: left;">EEE-1EA101XP</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEE-1EA101XP/766102">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">C5</td>
+</tr>
+<tr>
+<td style="text-align: left;">330 µF Electrolytic Capacitor, 25V</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">$0.55</td>
+<td style="text-align: left;">$1.10</td>
+<td style="text-align: left;">Panasonic</td>
+<td style="text-align: left;">EEE-1EA331UP</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEE-1EA331UP/7672625">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">C1, C6</td>
+</tr>
+<tr>
+<td style="text-align: left;">470 Ω Resistor, 0805, 1/8W, 5%</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">$0.60</td>
+<td style="text-align: left;">Yageo</td>
+<td style="text-align: left;">RC0805JR-07470RL</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/RC0805JR-07470RL/728304">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">R2, R8, R9, R10, R11, R12</td>
+</tr>
+<tr>
+<td style="text-align: left;">22 Ω Resistor, 0805, 1/8W, 5%</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">$0.20</td>
+<td style="text-align: left;">Yageo</td>
+<td style="text-align: left;">RC0805JR-0722RL</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/RC0805JR-0722RL/728218">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">R3, R4</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.1 kΩ Resistor, 0805, 1/8W, 5%</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">Yageo</td>
+<td style="text-align: left;">RC0805JR-075K1L</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/RC0805JR-075K1L/728286">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">R6</td>
+</tr>
+<tr>
+<td style="text-align: left;">10 kΩ Resistor, 0805, 1/8W, 5%</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">$0.10</td>
+<td style="text-align: left;">$0.40</td>
+<td style="text-align: left;">Yageo</td>
+<td style="text-align: left;">RC0805JR-0710KL</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/RC0805JR-0710KL/728241">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">R7, R13, R14, R15</td>
+</tr>
+<tr>
+<td style="text-align: left;">200 µH Inductor, 1A rated, Radial THT</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$2.00</td>
+<td style="text-align: left;">$2.00</td>
+<td style="text-align: left;">Bourns</td>
+<td style="text-align: left;">RLB0914-201KL</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/bourns-inc/RLB0914-201KL/1971023">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">L2</td>
+</tr>
+<tr>
+<td style="text-align: left;">1A Fast-Blow Fuse, Axial</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$0.50</td>
+<td style="text-align: left;">$0.50</td>
+<td style="text-align: left;">Littelfuse</td>
+<td style="text-align: left;">0217001.MXP</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0217001-MXP/777752">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">F1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fuse Holder, PCB Mount</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$1.00</td>
+<td style="text-align: left;">$1.00</td>
+<td style="text-align: left;">Littelfuse</td>
+<td style="text-align: left;">01000056Z</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/01000056Z/777109">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">F1 (holder)</td>
+</tr>
+<tr>
+<td style="text-align: left;">USB Micro-B Connector, SMD, Right Angle</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$1.20</td>
+<td style="text-align: left;">$1.20</td>
+<td style="text-align: left;">Amphenol</td>
+<td style="text-align: left;">10118194-0001LF</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118194-0001LF/2785389">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">J1</td>
+</tr>
+<tr>
+<td style="text-align: left;">DC Barrel Jack, 2.1 mm Center Pin, with Switch, THT</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$1.50</td>
+<td style="text-align: left;">$1.50</td>
+<td style="text-align: left;">CUI Devices</td>
+<td style="text-align: left;">PJ-002A</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/cui-devices/PJ-002A/96962">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">J3</td>
+</tr>
+<tr>
+<td style="text-align: left;">1×8 Male Pin Header, 2.54 mm Pitch, THT</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">$0.60</td>
+<td style="text-align: left;">$1.80</td>
+<td style="text-align: left;">Sullins</td>
+<td style="text-align: left;">PRPC008SAAN-RC</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC008SAAN-RC/2775268">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">J2, J4, J5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tactile Push Button Switch, 6 mm, SPST, THT</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">$0.35</td>
+<td style="text-align: left;">$0.70</td>
+<td style="text-align: left;">TE Connectivity</td>
+<td style="text-align: left;">1825910-6</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/te-connectivity-alcoswitch-switches/1825910-6/1632536">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">SW1, SW2</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-Pin Jumper Header + Shunt Cap</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">$0.30</td>
+<td style="text-align: left;">$0.60</td>
+<td style="text-align: left;">Sullins</td>
+<td style="text-align: left;">SPC02SYAN</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPC02SYAN/76375">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">JP1, JP3</td>
+</tr>
+<tr>
+<td style="text-align: left;">PCB Test Point, Loop Style, THT</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">$0.20</td>
+<td style="text-align: left;">$4.00</td>
+<td style="text-align: left;">Keystone</td>
+<td style="text-align: left;">5000</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326">DigiKey</a></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">TP1–TP33 (as populated)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>$38.97</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
-<p>Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.</p>
-<ul>
-<li>You could also import your BOM via a screenshot of the spreadsheet created BOM</li>
-</ul>
-<h2 id="bill-of-materials-example-as-image">Bill of Materials (Example as Image)</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../BOM-Screenshot.png" data-desc-position="bottom"><img _2000_="&quot;2000&quot;" alt="" src="../BOM-Screenshot.png" style="style" width:="width:"></a>
-<strong>Figure ##:</strong> Example Bill of Materials as a screenshot.</p>
-<p>As you can see, the text can be difficult to read without opening the image.</p>
-<h2 id="resouce">Resouce</h2>
-<p>The Bill of Material as a PDF download is available <a href="../PDF_For_BOM_EXAMPLE.pdf"><em>here</em></a>.</p>
+<h2 id="resource">Resource</h2>
+<p>The Bill of Materials spreadsheet is available for download: <a href="../Gyro_Subsystem_BOM.xlsx">Gyro_Subsystem_BOM.xlsx</a>.</p>
 
 
 
