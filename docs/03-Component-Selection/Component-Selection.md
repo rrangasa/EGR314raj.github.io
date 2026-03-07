@@ -56,7 +56,7 @@ Microcontroller selection is documented on a separate page: [Microcontroller](Mi
 
 1. Adafruit LSM9DS1 9-DOF Breakout (3387)
 
-    ![LSM9DS1](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2718/MFG_3387.jpg?hidebanner=true)
+    ![LSM9DS1](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2274/MFG_3387.JPG?hidebanner=true)
 
     * $22.50 each
     * [DigiKey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3387/6623863)
