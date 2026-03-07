@@ -4,83 +4,160 @@ title: Power Budget
 
 ## Power Budget
 
-This document presents the power budget for the navigation sensor subsystem of Team 305, covering major components, power rail assignment, regulator selection, and external power source verification.
+This document presents the power budget for the Gyroscope Subsystem, covering power architecture, rail assignments, active and passive component current draw, regulator efficiency, and complete system power analysis.
 
 ---
 
-## Section A: Major Components and Absolute Maximum Current
+## Power Architecture Overview
 
-All major components from [Component Selection](Component-Selection.md) that require power are listed below with their absolute maximum current from datasheets. Regulators, power sources, resistors, and capacitors are not listed. Per assignment instructions, resistors and capacitors are not considered major components; the LED indicator is excluded from this budget.
-
-| Component | Absolute Maximum Current | Datasheet Reference |
-| --------- | ------------------------ | ------------------- |
-| ESP32-S3-WROOM-1-N4 | 250 mA | [ESP32-S3-WROOM-1 datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) §6.4 (Wi-Fi TX peak ~240–250 mA; 250 mA used for worst case) |
-| SparkFun MPU-9250 Breakout (SEN-13762) | 6.5 mA | [MPU-9250 Product Spec](https://invensense.tdk.com/download-pdf/mpu-9250-datasheet/) §3.4 Electrical Specifications (VDD max) |
-
-**Total (components only):** 256.5 mA
+```
+12V (J3 Barrel Jack) → F1 (1A Fuse) → U4 LM2575-3.3BU → 3.3V Rail
+                                         ↓ (D1 catch diode, L2 filter)
+                                  All components run from 3.3V
+```
 
 ---
 
-## Section B: Power Rail Assignment and 25% Safety Margin
+## Section A: Rail 1 — 12V Input (from J3)
 
-Each major component is assigned to a single power rail. The design uses one 3.3 V logic rail.
-
-| Power Rail | Components | Current (mA) | +25% Margin (mA) |
-| ---------- | ---------- | ------------ | ---------------- |
-| **3.3 V** | ESP32-S3-WROOM-1-N4, MPU-9250 | 256.5 | 320.6 |
-
-**Regulator output requirement:** ≥ 320.6 mA at 3.3 V
+| Component | Role | Notes |
+| --------- | ---- | ----- |
+| J3 | DC Barrel Jack (12V in) | Power source — provides up to system limit |
+| F1 | 1A Fuse | Blows if total 12V draw exceeds ~1A; protects wiring |
+| U4 LM2575-3.3BU | Buck regulator input | The only significant 12V consumer |
 
 ---
 
-## Section C: Voltage Regulator Selection
+## Section B: Rail 2 — 3.3V Output (from U4)
 
-For the 3.3 V rail, the following regulator options were evaluated. This selection aligns with the [Power Regulation](Component-Selection.md) discussion in Component Selection.
+### Active Consumers
 
-| Option | Input Range | Output | Max Current | Pros | Cons | Cost |
-| ------ | ---------- | ------ | ----------- | ---- | ---- | ---- |
-| AP63203WU-7 | 3.8–32 V | 3.3 V fixed | 2 A | Simple design, low cost, SMD compatible | Low efficiency | $1.38 [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426) |
-| LM2596S-ADJ | 4–40 V | Adj (3.3 V) | 3 A | Higher efficiency, more robust | Larger size | $6.70 [DigiKey](https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-ADJ-NOPB/363705) |
-| HT7333-A | 2.5–12 V | 3.3 V fixed | 250 mA | Ultra-low quiescent current | Limited current output; may not meet 320 mA with margin | $2.65 [DigiKey](https://www.digikey.com/en/products/detail/umw/HT7333-A/17635230) |
+| Ref | Component | Voltage | Typical Current | Max Current | Power (typ) | Notes |
+| --- | --------- | ------- | --------------- | ----------- | ----------- | ----- |
+| U1 | ESP32-S3-WROOM-1 | 3.3V | 240 mA | 355 mA (WiFi Tx peak) | 792 mW | WiFi active TX mode; drops to ~20–68 mA in modem-sleep, 240 µA light-sleep, 7 µA deep-sleep |
+| MCP9250-BREAKOUT-BOARD1 | MPU-9250 (SparkFun breakout) | 3.3V | 3.7 mA | 3.7 mA | 12.2 mW | Gyro + Accel + Mag all active; 8 µA in sleep |
+| D2 | Blue LED (status) | 3.3V | 0.64 mA | — | 2.1 mW | Vf ≈ 3.0V; limited by R2 (470Ω); (3.3−3.0)/470 |
+| D3 | Red LED (status) | 3.3V | 2.77 mA | — | 9.1 mW | Vf ≈ 2.0V; limited by R8 (470Ω); (3.3−2.0)/470 |
+| D4 | White LED (status) | 3.3V | 0.64 mA | — | 2.1 mW | Vf ≈ 3.0V; limited by R11 (470Ω) |
+| D5 | Red LED (power indicator) | 3.3V | 2.77 mA | — | 9.1 mW | Vf ≈ 2.0V; limited by R12 (470Ω) |
+| R6 | I2C pull-up (5.1 kΩ) | 3.3V | 0.65 mA | — | 2.1 mW | Per line; 3.3V/5.1kΩ; there are 2 I2C lines (SDA+SCL) |
+| R15 | Boot/enable pull-up (10 kΩ) | 3.3V | 0.33 mA | — | 1.1 mW | ESP32 boot pin |
 
-**Analysis:** The HT7333-A (250 mA max) is insufficient for the 320.6 mA budget. The AP63203WU-7 (2 A) exceeds 320 mA and accepts 12 V input from the wall adapter. The LM2596 is also suitable but larger and more expensive.
+### 3.3V Rail Totals (Worst Case: WiFi Active, All LEDs On)
 
-**Regulator Choice:** AP63203WU-7 — Rationale: simplicity, affordability, SMD compatibility, and sufficient headroom for the 3.3 V rail. See [Component-Selection.md](Component-Selection.md) for full rationale.
-
----
-
-## Section D: External Power Source Verification
-
-**External source:** 12 V DC wall adapter (barrel jack).
-
-The AP63203WU-7 accepts 3.8–32 V input; 12 V is within range. For a 3.3 V output with ~320 mA load, the input current at the regulator is approximately:
-
-I_in ≈ 320 mA × (3.3 / 12) / efficiency ≈ 100–120 mA (efficiency ~85–90%)
-
-| External Source | Voltage | Rated Current | Regulators Fed | Total Required | Remaining |
-| --------------- | ------- | ------------ | -------------- | -------------- | --------- |
-| 12 V DC wall adapter (barrel jack) | 12 V | 1 A | AP63203WU-7 | ~120 mA | ~880 mA |
-
-**Confirmation:** Total Remaining Current Available ≥ 0. A 12 V, 1 A adapter provides adequate margin for the subsystem.
+| | Current | Power |
+| - | ------- | ----- |
+| Total 3.3V load | ~251 mA | ~829 mW |
+| LM2575 max output | 1000 mA | 3300 mW |
+| Headroom | 749 mA | — |
 
 ---
 
-## Section E: Battery Life
+## Section C: Voltage Regulator (U4: LM2575-3.3BU)
 
-Section E is not applicable; this design uses a regulated 12 V wall adapter.
+- **Datasheet:** [LM2575](http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf)
+- **Vin:** 12V | **Vout:** 3.3V (fixed) | **Iout max:** 1A
+- **Switching frequency:** 52 kHz
+- **Typical efficiency:** ~77% at ~250 mA output load
+
+| Parameter | Value |
+| --------- | ----- |
+| Output power delivered | 829 mW |
+| Efficiency | ~77% |
+| Input power required | 829 / 0.77 ≈ 1077 mW |
+| 12V input current | 1077 mW / 12V ≈ 89.7 mA |
+| LM2575 quiescent current | ~5 mA (from Vin) |
+| Total 12V draw | ~95 mA |
 
 ---
 
-## Power Budget Summary
+## Section D: Passive/Protection Components
 
-| Rail | Components | Current (mA) | +25% (mA) | Regulator Choice | Source |
-| ---- | ---------- | ------------ | --------- | ---------------- | ------ |
-| 3.3 V | ESP32-S3-WROOM-1-N4, MPU-9250 | 256.5 | 320.6 | AP63203WU-7 | 12 V wall adapter |
+| Ref | Component | Purpose | Power Notes |
+| --- | --------- | ------- | ----------- |
+| D1 | 1N5819 Schottky (40V, 1A) | Catch/flyback diode for buck converter | Conducts inductor freewheeling current; Vf ≈ 0.34V @ 1A; dissipates heat inside regulator loop, not a separate load. [Datasheet](http://www.vishay.com/docs/88525/1n5817.pdf) |
+| L2 | 200 µH inductor | Buck output filter | Energy storage only; minimal I²R losses at ~250 mA; no quiescent draw |
+| F1 | 1A fuse | 12V overcurrent protection | Negligible Vdrop/power at normal current |
+| R3, R4 | 22 Ω | USB D+/D− impedance matching | Negligible (USB signal lines, not power) |
+| C1–C6 | Decoupling/filter caps | Noise suppression on 3.3V and sensor rails | No static power consumption |
+
+---
+
+## Section E: Connector Power Summary
+
+| Ref | Component | Current Handling | Notes |
+| --- | --------- | ---------------- | ----- |
+| J3 | DC Barrel Jack + Switch | Up to fuse limit (1A at 12V = 12W max protected) | Input power source |
+| J1 | USB Micro-B | Up to 500 mA at 5V (USB spec) | Used for programming only; does NOT power the 3.3V rail through the buck regulator |
+| J2, J4 | 8-pin I/O headers | Carries 3.3V and signal lines | Power drawn depends on other subsystems connected |
+| J5 | 8-pin debug header | Signal only | Negligible |
+
+J1 (USB) feeds the ESP32's USB interface for flashing. The 3.3V rail is only sourced from J3 (12V barrel) → U4 regulator. These are separate.
+
+---
+
+## Section F: Battery Life
+
+Section F is not applicable; this design uses a regulated 12V wall adapter.
+
+---
+
+## Complete Power Budget Summary
+
+### Worst Case (WiFi TX active, all LEDs on)
+
+**12V Input Consumption:**
+
+| | Current | Power |
+| - | ------- | ----- |
+| U4 LM2575 input power | ~89.7 mA | ~1077 mW |
+| LM2575 quiescent | ~5 mA | 60 mW |
+| **Total 12V draw** | **~94.7 mA** | **~1137 mW** |
+| F1 fuse rating | 1A | 12W |
+| Safety margin | ~905 mA remaining | — |
+
+**3.3V Rail Consumption:**
+
+| Component | Current | Power |
+| --------- | ------- | ----- |
+| ESP32-S3-WROOM-1 (WiFi TX) | 240 mA | 792 mW |
+| MPU-9250 IMU | 3.7 mA | 12 mW |
+| LEDs (D2+D3+D4+D5) | 6.8 mA | 22 mW |
+| I2C pull-ups (×2) | 1.3 mA | 4 mW |
+| Boot pull-up (R15) | 0.3 mA | 1 mW |
+| **Total** | **~252 mA** | **~831 mW** |
+| LM2575 max output | 1000 mA | — |
+| Headroom | ~748 mA | — |
+
+### Low-Power Mode (ESP32 modem-sleep, MPU-9250 sleep, LEDs off)
+
+| | Current | Power |
+| - | ------- | ----- |
+| ESP32 modem-sleep | ~20 mA | 66 mW |
+| MPU-9250 sleep | 0.008 mA | 0.03 mW |
+| All LEDs off | 0 mA | 0 mW |
+| Pull-ups | 1.6 mA | 5.3 mW |
+| Total 3.3V | ~22 mA | ~71 mW |
+| 12V draw | ~8 mA | ~96 mW |
 
 ---
 
 ## Data Sources
 
-- [ESP32-S3-WROOM-1 datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) — §6.4 Current Consumption
-- [MPU-9250 Product Specification](https://invensense.tdk.com/download-pdf/mpu-9250-datasheet/) — §3.4 Electrical Specifications
-- [AP63203WU-7](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426) — Input 3.8–32 V, 2 A output
+| Component | Datasheet |
+| --------- | --------- |
+| ESP32-S3-WROOM-1 (U1) | [ESP32-S3-WROOM-1 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) |
+| LM2575-3.3BU (U4) | [LM2575 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf) |
+| 1N5819 (D1) | [1N5817/1N5819 datasheet](http://www.vishay.com/docs/88525/1n5817.pdf) |
+| MPU-9250 | [MPU-9250 Product Specification](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf) |
+| SparkFun MPU-9250 Breakout | [GitHub — SparkFun MPU-9250 Breakout](https://github.com/sparkfun/MPU-9250_Breakout) |
+
+---
+
+## Design Notes
+
+1. **ESP32 dominates the budget** at 240 mA — over 95% of the 3.3V load. If power is a concern, use modem-sleep or deep-sleep when not transmitting.
+2. **LM2575 has 749 mA of headroom** — plenty of margin for the current design, even if J2/J4 connectors supply other boards.
+3. **The 1A fuse (F1) is well within limits** at ~95 mA 12V draw — it would only blow if the regulator output were shorted (~833 mA at 12V input with 1A output short) or if far more load were added.
+4. **Blue/White LEDs draw very little** due to the high forward voltage (~3V) leaving only 0.3V across the 470Ω resistor. You may want to reduce the resistor to 100Ω to make them brighter.
+5. **LM2575 efficiency at low loads drops below 77%** — at modem-sleep loads the 12V draw is still dominated by the LM2575's own quiescent current (~5 mA).
