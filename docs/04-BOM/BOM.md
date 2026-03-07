@@ -1,34 +1,41 @@
 ---
 title: Module Bill of Materials
-tags:
-- tag1
-- tag2
 ---
 
 ## Overview
-Written context needs to added!
 
->Pick **ONLY** one of the two examples show below. **Remove** the other example. **REMOVE notations within the remaining section about being an example.**  
+The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12V barrel jack input, an LM2575-3.3BU buck regulator for a single 3.3V rail, an ESP32-S3-WROOM-1 microcontroller, and a SparkFun MPU-9250 breakout for 9-axis inertial sensing.
 
-## Bill of Materials (Example as Table)
+## Bill of Materials
 
-*Table ##: An example of one approach to adding your BOM table to this section.*
+| **Part Name/Description** | **Qty** | **Unit Cost** | **Total Cost** | **Manufacturer** | **Manufacturer #** | **Vendor Link** | **Datasheet Link** | **Schematic Reference Designators** |
+|:--------------------------|:--------|:--------------|:---------------|:-----------------|:--------------------|:----------------|:--------------------|:------------------------------------|
+| ESP32-S3-WROOM-1-N4, WiFi+BLE MCU Module, 2.4 GHz | 1 | $3.30 | $3.30 | Espressif | ESP32-S3-WROOM-1-N4 | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) | U1 |
+| LM2575D2T-3.3R4G, 3.3V 1A Step-Down Switching Regulator, TO-263-5 | 1 | $2.70 | $2.70 | ON Semiconductor | LM2575D2T-3.3R4G | [DigiKey](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/919910) | [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf) | U4 |
+| MPU-9250 9-Axis IMU Breakout Board (Gyro/Accel/Mag) | 1 | $15.00 | $15.00 | SparkFun / InvenSense | SEN-13762 | [SparkFun](https://www.sparkfun.com/products/13762) | [Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf) | MCP9250-BREAKOUT-BOARD1 |
+| 1N5819 Schottky Barrier Rectifier Diode, 40V 1A, DO-41 | 1 | $0.42 | $0.42 | Vishay | 1N5819-E3/54 | [DigiKey](https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/4897) | [Datasheet](http://www.vishay.com/docs/88525/1n5817.pdf) | D1 |
+| Red LED, 0805 SMD | 2 | $0.25 | $0.50 | Lite-On | LTST-C171KRKT | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171KRKT/386800) | — | D3, D5 |
+| Blue LED, 0805 SMD | 1 | $0.30 | $0.30 | Lite-On | LTST-C171TBKT | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171TBKT/573585) | — | D2 |
+| White LED, 0805 SMD | 1 | $0.30 | $0.30 | Lite-On | LTST-C171CKT | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171CKT/269250) | — | D4 |
+| 0.1 µF Ceramic Capacitor, 25V, X7R, 0805 | 3 | $0.10 | $0.30 | Samsung | CL21B104KBCNNNC | [DigiKey](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B104KBCNNNC/3886661) | — | C2, C3, C4 |
+| 100 µF Electrolytic Capacitor, 25V | 1 | $0.45 | $0.45 | Panasonic | EEE-1EA101XP | [DigiKey](https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEE-1EA101XP/766102) | — | C5 |
+| 330 µF Electrolytic Capacitor, 25V | 2 | $0.55 | $1.10 | Panasonic | EEE-1EA331UP | [DigiKey](https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEE-1EA331UP/7672625) | — | C1, C6 |
+| 470 Ω Resistor, 0805, 1/8W, 5% | 6 | $0.10 | $0.60 | Yageo | RC0805JR-07470RL | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC0805JR-07470RL/728304) | — | R2, R8, R9, R10, R11, R12 |
+| 22 Ω Resistor, 0805, 1/8W, 5% | 2 | $0.10 | $0.20 | Yageo | RC0805JR-0722RL | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC0805JR-0722RL/728218) | — | R3, R4 |
+| 5.1 kΩ Resistor, 0805, 1/8W, 5% | 1 | $0.10 | $0.10 | Yageo | RC0805JR-075K1L | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC0805JR-075K1L/728286) | — | R6 |
+| 10 kΩ Resistor, 0805, 1/8W, 5% | 4 | $0.10 | $0.40 | Yageo | RC0805JR-0710KL | [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC0805JR-0710KL/728241) | — | R7, R13, R14, R15 |
+| 200 µH Inductor, 1A rated, Radial THT | 1 | $2.00 | $2.00 | Bourns | RLB0914-201KL | [DigiKey](https://www.digikey.com/en/products/detail/bourns-inc/RLB0914-201KL/1971023) | — | L2 |
+| 1A Fast-Blow Fuse, Axial | 1 | $0.50 | $0.50 | Littelfuse | 0217001.MXP | [DigiKey](https://www.digikey.com/en/products/detail/littelfuse-inc/0217001-MXP/777752) | — | F1 |
+| Fuse Holder, PCB Mount | 1 | $1.00 | $1.00 | Littelfuse | 01000056Z | [DigiKey](https://www.digikey.com/en/products/detail/littelfuse-inc/01000056Z/777109) | — | F1 (holder) |
+| USB Micro-B Connector, SMD, Right Angle | 1 | $1.20 | $1.20 | Amphenol | 10118194-0001LF | [DigiKey](https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118194-0001LF/2785389) | — | J1 |
+| DC Barrel Jack, 2.1 mm Center Pin, with Switch, THT | 1 | $1.50 | $1.50 | CUI Devices | PJ-002A | [DigiKey](https://www.digikey.com/en/products/detail/cui-devices/PJ-002A/96962) | — | J3 |
+| 1×8 Male Pin Header, 2.54 mm Pitch, THT | 3 | $0.60 | $1.80 | Sullins | PRPC008SAAN-RC | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC008SAAN-RC/2775268) | — | J2, J4, J5 |
+| Tactile Push Button Switch, 6 mm, SPST, THT | 2 | $0.35 | $0.70 | TE Connectivity | 1825910-6 | [DigiKey](https://www.digikey.com/en/products/detail/te-connectivity-alcoswitch-switches/1825910-6/1632536) | — | SW1, SW2 |
+| 2-Pin Jumper Header + Shunt Cap | 2 | $0.30 | $0.60 | Sullins | SPC02SYAN | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPC02SYAN/76375) | — | JP1, JP3 |
+| PCB Test Point, Loop Style, THT | 20 | $0.20 | $4.00 | Keystone | 5000 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326) | — | TP1–TP33 (as populated) |
+| | | | | | | | | |
+| | | **Total** | **$38.97** | | | | | |
 
-| **Part Name/Description** | **Qty** | **Unit Cost** | **Total Cost** | **Manufacture** | **Manufacturer #** | **Vendor Link** |**Datasheet Link** | **Schematic Reference Designators** |
-|:--------------------|:----|:---------------|:-----|:--------|:-----|:-----|:----|:-----|
-8-bit SIPO/SISO Shift Register, SOIC-16 package | 1 | $0.49 | $ 0.49 | NXP | 74HC595D,112 | [DigiKey](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550) | [datasheet link](https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf) | U1 |
-0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package |10 | 0.2750 | $2.75 | KEMET | C0805F104K5RACTU | PRLTA 109 |n/a | C2, C4, C6, C7, C8, C9, C10, C11, C12, C16
+## Resource
 
-Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.
-
-* You could also import your BOM via a screenshot of the spreadsheet created BOM
-
-## Bill of Materials (Example as Image)
-![](BOM-Screenshot.png){style width: "2000"}
-**Figure ##:** Example Bill of Materials as a screenshot.
-
-As you can see, the text can be difficult to read without opening the image.
-
-## Resouce
-
-The Bill of Material as a PDF download is available [*here*](PDF_For_BOM_EXAMPLE.pdf).
+The Bill of Materials spreadsheet is available for download: [Gyro_Subsystem_BOM.xlsx](Gyro_Subsystem_BOM.xlsx).
