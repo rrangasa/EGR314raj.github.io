@@ -10,7 +10,7 @@ Before selecting a microcontroller, the following project-specific requirements 
 | ---------------- | -------------------------------- |
 | SPI subsystems   | 0                                |
 | UART subsystems  | 1 (teammate communication)       |
-| I2C subsystems   | 1 (MPU9250 gyroscope)            |
+| I2C subsystems   | 1 (LSM9DS1 gyroscope)            |
 | Power pins       | 2 (3.3V, GND)                    |
 | Programming pins | EN, BOOT, TX, RX (USB serial)    |
 | GPIO             | 2+ (LED, pushbutton for testing) |
@@ -40,7 +40,7 @@ Research was conducted using the [ESP32-S3-WROOM-1 datasheet](https://documentat
 | ADC      | 0            | 2 SAR ADCs         | Exceeds     |
 | PWM      | 0            | LEDC channels      | Exceeds     |
 
-**Resources that meet or exceed needs:** The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the MPU9250, LED, pushbutton, and teammate communication. Power requirements (3.3V) align with the AP63203WU-7 regulator. No critical requirements are unmet.
+**Resources that meet or exceed needs:** The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the LSM9DS1, LED, pushbutton, and teammate communication. Power requirements (3.3V) align with the LM2575-3.3BU regulator. No critical requirements are unmet.
 
 **Resources that exceed needs:** SPI, ADC, and PWM are not required for this subsystem but are available for future expansion. The dual-core processor and Wi-Fi/Bluetooth capabilities also exceed current needs.
 
@@ -48,17 +48,18 @@ Research was conducted using the [ESP32-S3-WROOM-1 datasheet](https://documentat
 
 ## Team Role
 
-I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: **Sensing** — integrating and calibrating the MPU9250 gyroscope for navigation data; **Actuation** — none; **Display** — none; **Power** — ensuring the 3.3V rail from the AP63203WU-7 regulator is suitable for the ESP32 and MPU9250; **Communication** — UART for inter-module communication with teammates and I2C for the gyroscope sensor.
+I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: **Sensing** — integrating and calibrating the LSM9DS1 gyroscope for navigation data; **Actuation** — none; **Display** — none; **Power** — ensuring the 3.3V rail from the LM2575-3.3BU regulator is suitable for the ESP32 and LSM9DS1; **Communication** — UART for inter-module communication with teammates and I2C for the gyroscope sensor.
 
 ## Peripheral Compatibility Research
 
-Compatibility between the ESP32-S3 and MPU9250 was verified through online research. The assignment notes that the BNO085 IMU has compatibility issues with ESP32 systems running CircuitPython; the MPU9250 is a different device with established support.
+Compatibility between the ESP32-S3 and LSM9DS1 was verified through online research. The assignment notes that the BNO085 IMU has compatibility issues with ESP32 systems running CircuitPython; the LSM9DS1 is a different device with established support across multiple platforms.
 
 **Libraries and examples:**
-- [micropython-mpu9x50](https://github.com/micropython-IMU/micropython-mpu9x50) — MicroPython driver for MPU9250, MPU9150, and MPU6050; supports I2C connection and provides calibrated accelerometer, gyroscope, and magnetometer data.
-- [SparkFun MPU-9250 Hookup Guide](https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all) — Arduino-based examples with full initialization, calibration, and AHRS algorithms.
+- [Adafruit_LSM9DS1 (Arduino)](https://github.com/adafruit/Adafruit_LSM9DS1) — Arduino library for the LSM9DS1; supports I2C and SPI, provides calibrated accelerometer, gyroscope, and magnetometer data.
+- [Adafruit CircuitPython LSM9DS1](https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1) — CircuitPython driver for the LSM9DS1 with full I2C/SPI support.
+- [Adafruit LSM9DS1 Tutorial](https://learn.adafruit.com/adafruit-lsm9ds1-accelerometer-plus-gyro-plus-magnetometer-9-dof-breakout/overview) — Wiring diagrams, pinouts, assembly instructions, and example code.
 
-**Interface complexity:** The MPU9250 uses I2C only (SDA, SCL). It requires initialization (`initMPU9250`), magnetometer setup (`initAK8963`), and calibration (`calibrateMPU9250`) before reading data. This is more involved than a single read function but is well-documented; no low-level library authoring is expected. If using CircuitPython, availability should be verified; Arduino and MicroPython have proven support.
+**Interface complexity:** The LSM9DS1 uses I2C (SDA, SCL) with two I2C addresses (one for accel/gyro, one for magnetometer). It requires initialization of both the accelerometer/gyroscope subsystem and the magnetometer subsystem before reading data. This is well-documented through Adafruit's library and tutorial; no low-level library authoring is expected. Both Arduino and CircuitPython have proven support.
 
 ## ESP32 Pinout Diagram
 
@@ -76,7 +77,7 @@ Each peripheral is allocated to specific pins on the ESP32-S3. GPIO26–32 are r
 | --------------- | ----------------------------- | ---------------------------------------- |
 | **Power**       | 3V3, GND                      | Per module                                |
 | **UART**        | TX (GPIO43), RX (GPIO44)      | USB serial / teammate communication      |
-| **I2C**         | SDA (GPIO8), SCL (GPIO9)      | MPU9250 (avoids GPIO26–32)               |
+| **I2C**         | SDA (GPIO8), SCL (GPIO9)      | LSM9DS1 (avoids GPIO26–32)               |
 | **GPIO**        | GPIO21 (LED), GPIO0 (button)  | LED and pushbutton for testing           |
 | **Programming**| EN, BOOT, IO0                 | Per dev board                            |
 
@@ -100,9 +101,9 @@ Each peripheral is allocated to specific pins on the ESP32-S3. GPIO26–32 are r
 
 **Final Rationale:** The ESP32-S3-WROOM-1-N4 is the optimal choice for the IMU subsystem based on the following data-driven rationale:
 
-- **Meets requirements:** Provides 1 I2C interface (MPU9250), 1 UART (teammate communication), GPIO for LED and pushbutton, and 3.3V operation compatible with the AP63203WU-7 regulator and MPU9250.
+- **Meets requirements:** Provides 1 I2C interface (LSM9DS1), 1 UART (teammate communication), GPIO for LED and pushbutton, and 3.3V operation compatible with the LM2575-3.3BU regulator and LSM9DS1.
 - **Exceeds requirements:** Offers 2 I2C controllers, 3 UART interfaces, and abundant GPIO beyond current needs, with dual-core processing and Wi-Fi/Bluetooth for future expansion.
-- **Compatibility:** MPU9250 has proven MicroPython ([micropython-mpu9x50](https://github.com/micropython-IMU/micropython-mpu9x50)) and Arduino support ([SparkFun Hookup Guide](https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all)); no known major conflicts analogous to BNO085 + CircuitPython.
+- **Compatibility:** LSM9DS1 has proven Arduino ([Adafruit_LSM9DS1](https://github.com/adafruit/Adafruit_LSM9DS1)) and CircuitPython ([Adafruit CircuitPython LSM9DS1](https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1)) support; no known major conflicts analogous to BNO085 + CircuitPython.
 - **Team coordination:** Per assignment instructions, at least one team member uses an ESP32; this selection fulfills that role.
 - **Block diagram alignment:** Serves as the central processor with I2C sensor interface, LED output, and UART for interconnection, matching the navigation sensor subsystem design.
 

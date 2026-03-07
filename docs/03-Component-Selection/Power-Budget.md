@@ -35,7 +35,7 @@ This document presents the power budget for the Gyroscope Subsystem, covering po
 | Ref | Component | Voltage | Typical Current | Max Current | Power (typ) | Notes |
 | --- | --------- | ------- | --------------- | ----------- | ----------- | ----- |
 | U1 | ESP32-S3-WROOM-1 | 3.3V | 240 mA | 355 mA (WiFi Tx peak) | 792 mW | WiFi active TX mode; drops to ~20–68 mA in modem-sleep, 240 µA light-sleep, 7 µA deep-sleep |
-| MCP9250-BREAKOUT-BOARD1 | MPU-9250 (SparkFun breakout) | 3.3V | 3.7 mA | 3.7 mA | 12.2 mW | Gyro + Accel + Mag all active; 8 µA in sleep |
+| MCP9250-BREAKOUT-BOARD1 | LSM9DS1 (Adafruit breakout) | 3.3V | 4.5 mA | 4.5 mA | 14.9 mW | Gyro + Accel + Mag all active; ~6 µA in power-down |
 | D2 | Blue LED (status) | 3.3V | 0.64 mA | — | 2.1 mW | Vf ≈ 3.0V; limited by R2 (470Ω); (3.3−3.0)/470 |
 | D3 | Red LED (status) | 3.3V | 2.77 mA | — | 9.1 mW | Vf ≈ 2.0V; limited by R8 (470Ω); (3.3−2.0)/470 |
 | D4 | White LED (status) | 3.3V | 0.64 mA | — | 2.1 mW | Vf ≈ 3.0V; limited by R11 (470Ω) |
@@ -47,9 +47,9 @@ This document presents the power budget for the Gyroscope Subsystem, covering po
 
 | | Current | Power |
 | - | ------- | ----- |
-| Total 3.3V load | ~251 mA | ~829 mW |
+| Total 3.3V load | ~252 mA | ~832 mW |
 | LM2575 max output | 1000 mA | 3300 mW |
-| Headroom | 749 mA | — |
+| Headroom | 748 mA | — |
 
 ---
 
@@ -62,12 +62,12 @@ This document presents the power budget for the Gyroscope Subsystem, covering po
 
 | Parameter | Value |
 | --------- | ----- |
-| Output power delivered | 829 mW |
+| Output power delivered | 832 mW |
 | Efficiency | ~77% |
-| Input power required | 829 / 0.77 ≈ 1077 mW |
-| 12V input current | 1077 mW / 12V ≈ 89.7 mA |
+| Input power required | 832 / 0.77 ≈ 1081 mW |
+| 12V input current | 1081 mW / 12V ≈ 90.1 mA |
 | LM2575 quiescent current | ~5 mA (from Vin) |
-| Total 12V draw | ~95 mA |
+| Total 12V draw | ~95.1 mA |
 
 ---
 
@@ -110,9 +110,9 @@ Section F is not applicable; this design uses a regulated 12V wall adapter.
 
 | | Current | Power |
 | - | ------- | ----- |
-| U4 LM2575 input power | ~89.7 mA | ~1077 mW |
+| U4 LM2575 input power | ~90.1 mA | ~1081 mW |
 | LM2575 quiescent | ~5 mA | 60 mW |
-| **Total 12V draw** | **~94.7 mA** | **~1137 mW** |
+| **Total 12V draw** | **~95.1 mA** | **~1141 mW** |
 | F1 fuse rating | 1A | 12W |
 | Safety margin | ~905 mA remaining | — |
 
@@ -121,20 +121,20 @@ Section F is not applicable; this design uses a regulated 12V wall adapter.
 | Component | Current | Power |
 | --------- | ------- | ----- |
 | ESP32-S3-WROOM-1 (WiFi TX) | 240 mA | 792 mW |
-| MPU-9250 IMU | 3.7 mA | 12 mW |
+| LSM9DS1 IMU | 4.5 mA | 15 mW |
 | LEDs (D2+D3+D4+D5) | 6.8 mA | 22 mW |
 | I2C pull-ups (×2) | 1.3 mA | 4 mW |
 | Boot pull-up (R15) | 0.3 mA | 1 mW |
-| **Total** | **~252 mA** | **~831 mW** |
+| **Total** | **~253 mA** | **~834 mW** |
 | LM2575 max output | 1000 mA | — |
-| Headroom | ~748 mA | — |
+| Headroom | ~747 mA | — |
 
-### Low-Power Mode (ESP32 modem-sleep, MPU-9250 sleep, LEDs off)
+### Low-Power Mode (ESP32 modem-sleep, LSM9DS1 power-down, LEDs off)
 
 | | Current | Power |
 | - | ------- | ----- |
 | ESP32 modem-sleep | ~20 mA | 66 mW |
-| MPU-9250 sleep | 0.008 mA | 0.03 mW |
+| LSM9DS1 power-down | 0.006 mA | 0.02 mW |
 | All LEDs off | 0 mA | 0 mW |
 | Pull-ups | 1.6 mA | 5.3 mW |
 | Total 3.3V | ~22 mA | ~71 mW |
@@ -149,8 +149,8 @@ Section F is not applicable; this design uses a regulated 12V wall adapter.
 | ESP32-S3-WROOM-1 (U1) | [ESP32-S3-WROOM-1 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) |
 | LM2575-3.3BU (U4) | [LM2575 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf) |
 | 1N5819 (D1) | [1N5817/1N5819 datasheet](http://www.vishay.com/docs/88525/1n5817.pdf) |
-| MPU-9250 | [MPU-9250 Product Specification](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf) |
-| SparkFun MPU-9250 Breakout | [GitHub — SparkFun MPU-9250 Breakout](https://github.com/sparkfun/MPU-9250_Breakout) |
+| LSM9DS1 | [LSM9DS1 Datasheet](https://www.st.com/resource/en/datasheet/lsm9ds1.pdf) |
+| Adafruit LSM9DS1 Breakout (3387) | [Adafruit Product Page](https://www.adafruit.com/product/3387) |
 
 ---
 

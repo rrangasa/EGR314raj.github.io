@@ -4,7 +4,7 @@ title: Module Bill of Materials
 
 ## Overview
 
-The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12V barrel jack input, an LM2575-3.3BU buck regulator for a single 3.3V rail, an ESP32-S3-WROOM-1 microcontroller, and a SparkFun MPU-9250 breakout for 9-axis inertial sensing.
+The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12V barrel jack input, an LM2575-3.3BU buck regulator for a single 3.3V rail, an ESP32-S3-WROOM-1 microcontroller, and an Adafruit LSM9DS1 breakout for 9-axis inertial sensing.
 
 ## Bill of Materials
 
@@ -12,7 +12,7 @@ The following bill of materials lists every component used in the Gyroscope Subs
 |:--------------------------|:--------|:--------------|:---------------|:-----------------|:--------------------|:----------------|:--------------------|:------------------------------------|
 | ESP32-S3-WROOM-1-N4, WiFi+BLE MCU Module, 2.4 GHz | 1 | $3.30 | $3.30 | Espressif | ESP32-S3-WROOM-1-N4 | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) | U1 |
 | LM2575D2T-3.3R4G, 3.3V 1A Step-Down Switching Regulator, TO-263-5 | 1 | $2.70 | $2.70 | ON Semiconductor | LM2575D2T-3.3R4G | [DigiKey](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/919910) | [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf) | U4 |
-| MPU-9250 9-Axis IMU Breakout Board (Gyro/Accel/Mag) | 1 | $15.00 | $15.00 | SparkFun / InvenSense | SEN-13762 | [SparkFun](https://www.sparkfun.com/products/13762) | [Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf) | MCP9250-BREAKOUT-BOARD1 |
+| Adafruit LSM9DS1 9-DOF Accel/Mag/Gyro+Temp Breakout Board | 1 | $22.50 | $22.50 | Adafruit / ST | 3387 | [DigiKey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3387/6623863) | [Datasheet](https://www.st.com/resource/en/datasheet/lsm9ds1.pdf) | MCP9250-BREAKOUT-BOARD1 |
 | 1N5819 Schottky Barrier Rectifier Diode, 40V 1A, DO-41 | 1 | $0.42 | $0.42 | Vishay | 1N5819-E3/54 | [DigiKey](https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/4897) | [Datasheet](http://www.vishay.com/docs/88525/1n5817.pdf) | D1 |
 | Red LED, 0805 SMD | 2 | $0.25 | $0.50 | Lite-On | LTST-C171KRKT | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171KRKT/386800) | — | D3, D5 |
 | Blue LED, 0805 SMD | 1 | $0.30 | $0.30 | Lite-On | LTST-C171TBKT | [DigiKey](https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C171TBKT/573585) | — | D2 |
@@ -34,7 +34,7 @@ The following bill of materials lists every component used in the Gyroscope Subs
 | 2-Pin Jumper Header + Shunt Cap | 2 | $0.30 | $0.60 | Sullins | SPC02SYAN | [DigiKey](https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPC02SYAN/76375) | — | JP1, JP3 |
 | PCB Test Point, Loop Style, THT | 20 | $0.20 | $4.00 | Keystone | 5000 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326) | — | TP1–TP33 (as populated) |
 | | | | | | | | | |
-| | | **Total** | **$38.97** | | | | | |
+| | | **Total** | **$46.47** | | | | | |
 
 ## Resource
 

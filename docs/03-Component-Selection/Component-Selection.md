@@ -15,7 +15,7 @@ To ensure stable operation of the ESP32 and connected sensors, we require a volt
 
 | Option        | Advantages                    | Disadvantages        | Cost & Link   |
 | ------------- | ----------------------------- | -------------------- | ------------- |
-| LM2576S-3.3   | Simple design, low cost        | Low efficiency       | $2.64 [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410777617&gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB) |
+| LM2576S-3.3   | Simple design, low cost        | Low efficiency       | $2.64 [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426) |
 | LM2596        | High efficiency, more robust   | Larger size          | $6.70 [DigiKey](https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-ADJ-NOPB/363705) |
 | HT7333        | Ultra-low quiescent current    | Limited current output | $2.65 [DigiKey](https://www.digikey.com/en/products/detail/umw/HT7333-A/17635230) |
 
@@ -26,7 +26,7 @@ To ensure stable operation of the ESP32 and connected sensors, we require a volt
     ![LM2576S-3.3](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4831/MFG_LM2576S-3.3.jpg?hidebanner=true)
 
     * $1.38 each
-    * [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410777617&gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB)
+    * [DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426)
 
     | Pros                         | Cons              |
     | ---------------------------- | ----------------- |
@@ -48,27 +48,26 @@ Microcontroller selection is documented on a separate page: [Microcontroller](Mi
 
 | Option                  | Advantages                                              | Disadvantages                                      | Cost & Link   |
 | ----------------------- | ------------------------------------------------------- | -------------------------------------------------- | ------------- |
-| SparkFun MPU-9250 Breakout (SEN-13762) | 9-axis IMU (3-axis gyro, accel, magnetometer), supports I2C/SPI | Product marked obsolete, 3.3V logic only | $19.95 [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011) |
-| SparkFun 9DoF IMU Breakout – ICM-20948 (SEN-15335) | 9-axis IMU, Qwiic compatible, I2C/SPI, improved performance over MPU-9250 | Not MPU-9250 (different registers), 3.3V logic | $14.95 [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/15335/10279707) |
+| Adafruit LSM9DS1 9-DOF Breakout (3387) | 9-axis IMU (3-axis gyro, accel, magnetometer + temp), I2C/SPI, 3–5V input | Slightly worse zero-rate accuracy than LSM9DS0 | $22.50 [DigiKey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3387/6623863) |
+| SparkFun 9DoF IMU Breakout – ICM-20948 (SEN-15335) | 9-axis IMU, Qwiic compatible, I2C/SPI, improved performance | Different register set, 3.3V logic only | $14.95 [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/15335/10279707) |
 
 
 **Choice**
 
-1. SparkFun MPU-9250 Breakout (SEN-13762)
-   
+1. Adafruit LSM9DS1 9-DOF Breakout (3387)
 
-    ![MPU-9250](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true)
-    
+    ![LSM9DS1](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2718/MFG_3387.jpg?hidebanner=true)
 
-    * $19.95 each
-    * [DigiKey](https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011)
+    * $22.50 each
+    * [DigiKey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3387/6623863)
 
     | Pros                                         | Cons                                                    |
     | -------------------------------------------- | ------------------------------------------------------- |
-    | 9-axis IMU (gyro, accel, magnetometer)        | Product marked obsolete                                 |
-    | Supports I2C/SPI                              | 3.3V logic only                                         |
+    | 9-axis IMU (gyro, accel, magnetometer + temp) | Slightly higher cost than alternatives                  |
+    | Supports I2C/SPI, 3–5V tolerant input        | Slightly worse gyro zero-rate accuracy than LSM9DS0     |
+    | Well-supported Adafruit library (Arduino, CircuitPython) |                                                |
 
-**Rationale:** We selected the SparkFun MPU-9250 Breakout (SEN-13762) for its 9-axis sensing and I2C/SPI compatibility.
+**Rationale:** We selected the Adafruit LSM9DS1 Breakout (3387) for its 9-axis sensing, I2C/SPI compatibility, broad voltage tolerance, and strong library support.
 
 **Additional Recommended Components**
 

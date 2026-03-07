@@ -17,7 +17,7 @@ This datasheet documents the design and implementation of the Gyroscope (Navigat
 
 ### Project Summary
 
-Team 305 is developing a multi-module rover system where each team member is responsible for an individual subsystem. This subsystem focuses on **navigation sensing** — detecting the rover's tilt, acceleration, and heading using an inertial measurement unit (IMU). The module is built around the **ESP32-S3-WROOM-1** microcontroller and the **SparkFun MPU-9250 Breakout** (9-axis gyroscope, accelerometer, and magnetometer). The ESP32 communicates with the MPU-9250 over **I2C** and relays orientation data to other rover subsystems via **UART**.
+Team 305 is developing a multi-module rover system where each team member is responsible for an individual subsystem. This subsystem focuses on **navigation sensing** — detecting the rover's tilt, acceleration, and heading using an inertial measurement unit (IMU). The module is built around the **ESP32-S3-WROOM-1** microcontroller and the **Adafruit LSM9DS1 Breakout** (9-axis gyroscope, accelerometer, magnetometer, and temperature sensor). The ESP32 communicates with the LSM9DS1 over **I2C** and relays orientation data to other rover subsystems via **UART**.
 
 The power architecture uses a **12V DC barrel jack** input stepped down to **3.3V** through an **LM2575-3.3BU** buck regulator, supplying all active components on a single 3.3V rail. The design includes status LEDs, I2C pull-ups, overcurrent protection (1A fuse), and a USB Micro-B connector for programming and debug.
 
@@ -28,7 +28,7 @@ For the full team report, see the [Team 305 Report](https://egr314-s-2026-30.git
 I am responsible for the **IMU (Inertial Measurement Unit) subsystem** on Team 305. My work covers sensor integration, power regulation, and serial communication for the navigation module. The key areas of this datasheet are:
 
   * [Requirements](https://rrangasa.github.io/EGR314raj.github.io/01-Requirements/Requirements/) — Module requirements including power compatibility, sensor interface, and mechanical integration
-  * [Block Diagram](https://rrangasa.github.io/EGR314raj.github.io/02-Block-Diagram/Block-Diagram/) — System-level block diagram showing the ESP32, MPU-9250, power chain, and interconnections
+  * [Block Diagram](https://rrangasa.github.io/EGR314raj.github.io/02-Block-Diagram/Block-Diagram/) — System-level block diagram showing the ESP32, LSM9DS1, power chain, and interconnections
   * [Major Components](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Component-Selection/) — Selection and rationale for the voltage regulator, gyroscope sensor, and supporting components
   * [Microcontroller](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Microcontroller/) — ESP32-S3-WROOM-1 selection, pin allocation, and peripheral compatibility analysis
   * [Power Budget](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Power-Budget/) — Full power budget covering all 3.3V consumers, regulator efficiency, and worst-case/low-power analysis
