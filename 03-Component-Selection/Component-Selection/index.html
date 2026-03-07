@@ -26,7 +26,7 @@
 
     
       
-        <title>Major Components - EGR 314 Ragul Raj's Data Sheet</title>
+        <title>Component Selection - EGR 314 Ragul Raj's Data Sheet</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#major-components" class="md-skip">
+        <a href="#title-major-components" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Major Components
+              Component Selection
             
           </span>
         </div>
@@ -567,7 +567,7 @@
           
   
   <span class="md-ellipsis">
-    Major Components
+    Component Selection
   </span>
   
 
@@ -578,7 +578,7 @@
         
   
   <span class="md-ellipsis">
-    Major Components
+    Component Selection
   </span>
   
 
@@ -596,6 +596,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#title-major-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      title: Major Components
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#major-components" class="md-nav__link">
@@ -852,6 +861,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#title-major-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      title: Major Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#major-components" class="md-nav__link">
     <span class="md-ellipsis">
       Major Components
@@ -898,8 +916,10 @@
   
 
 
-  <h1>Major Components</h1>
+  <h1>Component Selection</h1>
 
+<hr>
+<h2 id="title-major-components">title: Major Components</h2>
 <h2 id="major-components">Major Components</h2>
 <p>The following sections are the selected major components necessary for the sensor (gyroscope) subsystem of Team 305.</p>
 <h3 id="power-management">Power Management</h3>
@@ -916,10 +936,10 @@
 </thead>
 <tbody>
 <tr>
-<td>AP63203WU-7</td>
-<td>Simple design, low cost</td>
-<td>Low efficiency</td>
-<td>$1.38 <a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=23410777617&amp;gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB">DigiKey</a></td>
+<td>LM2575-3.3</td>
+<td>Simple design, switching regulator</td>
+<td>Larger footprint</td>
+<td>~$3 <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2575S-3-3-NOPB/277088">DigiKey</a></td>
 </tr>
 <tr>
 <td>LM2596</td>
@@ -937,13 +957,11 @@
 </table>
 <p><strong>Choice</strong></p>
 <ol>
-<li>
-<p>AP63203WU-7</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/313/MFG_AP6320x.jpg?hidebanner=true" data-desc-position="bottom"><img alt="AP63203WU-7" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/313/MFG_AP6320x.jpg?hidebanner=true"></a></p>
-<ul>
-<li>$1.38 each</li>
-<li><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=23410777617&amp;gbraid=0AAAAADrbLlgDuv9Pp8S2gX0gBU3Lyr4nX&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgktFPD7KBdB4P0Z6ZIQ2jIoIPSVPk_nCPxabapQPsaoFmTNW2JRhuMaAgbgEALw_wcB">DigiKey</a></li>
-</ul>
+<li>LM2575-3.3
+  LM2575-3.3</li>
+<li>~$3 each</li>
+<li><a href="https://www.digikey.com/en/products/detail/umw/LM2576S-3.3/17635578?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=21136823955&amp;gbraid=0AAAAADrbLliz_2cyIAihzHmo7lcbdnPPq&amp;gclid=Cj0KCQiAk6rNBhCxARIsAN5mQLsV4UjF2JPeSimVXoLik2w7F8c-POiIifBkAV96b00waelNobj9DWsaApOpEALw_wcB">DigiKey</a></li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -953,22 +971,20 @@
 </thead>
 <tbody>
 <tr>
-<td>Simple design</td>
-<td>Low efficiency</td>
+<td>Switching regulator (efficient)</td>
+<td>Larger footprint</td>
 </tr>
 <tr>
-<td>Low cost</td>
+<td>Simple design</td>
 <td></td>
 </tr>
 <tr>
-<td>SMD compatible</td>
+<td>3.3V fixed output</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
-<p><strong>Rationale:</strong> The AP63203WU-7 was chosen for simplicity, affordability, and SMD compatibility.</p>
+<p><strong>Rationale:</strong> The LM2575-3.3 was chosen for its switching regulator efficiency, simple design, and 3.3V fixed output.</p>
 <p><strong>Power Input</strong></p>
 <p>A <strong>DC Barrel Jack Adapter</strong> was selected to provide consistent external power for the ESP32 and sensor.</p>
 <p>The power budget, including component currents, rail assignment, regulator selection, and external source verification, is documented on a separate page: <a href="../Power-Budget/">Power Budget</a>.</p>
@@ -1000,13 +1016,11 @@
 </table>
 <p><strong>Choice</strong></p>
 <ol>
-<li>
-<p>SparkFun MPU-9250 Breakout (SEN-13762)</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true" data-desc-position="bottom"><img alt="MPU-9250" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/920/MFG_SEN-13762.jpg?hidebanner=true"></a></p>
-<ul>
+<li>SparkFun MPU-9250 Breakout (SEN-13762)
+  MPU-9250</li>
 <li>$19.95 each</li>
 <li><a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/13762/6166011">DigiKey</a></li>
-</ul>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1025,8 +1039,6 @@
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p><strong>Rationale:</strong> We selected the SparkFun MPU-9250 Breakout (SEN-13762) for its 9-axis sensing and I2C/SPI compatibility.</p>
 <p><strong>Additional Recommended Components</strong></p>
 <ol>
@@ -1040,9 +1052,6 @@
 
 
 
-
-  
-  
 
 
 
