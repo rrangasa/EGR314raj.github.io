@@ -9,13 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03-Component-Selection/Microcontroller/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/08-API/API/">
       
       
-        <link rel="prev" href="../Component-Selection/">
+        <link rel="prev" href="../../05-Schematic/schematic/">
       
       
-        <link rel="next" href="../Power-Budget/">
+        <link rel="next" href="../../Appendix/">
       
       
       <link rel="icon" href="../../static/logo314.png">
@@ -26,7 +26,7 @@
 
     
       
-        <title>Microcontroller - EGR 314 Ragul Raj's Data Sheet</title>
+        <title>API / Message Specification - EGR 314 Ragul Raj's Data Sheet</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-specific-requirements" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Microcontroller
+              API / Message Specification
             
           </span>
         </div>
@@ -255,13 +255,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Component-Selection/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../03-Component-Selection/Component-Selection/" class="md-tabs__link">
           
   
     
@@ -317,11 +315,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../08-API/API/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -520,243 +520,47 @@
       
   
   
-    
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../../03-Component-Selection/Component-Selection/" class="md-nav__link">
       
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     03 Component Selection
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            03 Component Selection
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Component-Selection/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Major Components
-  </span>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Microcontroller
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Microcontroller
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#project-specific-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project-Specific Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#microcontroller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Microcontroller
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Microcontroller">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#esp32-s3-wroom-1-resource-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESP32-S3-WROOM-1 Resource Analysis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#team-role" class="md-nav__link">
-    <span class="md-ellipsis">
-      Team Role
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#peripheral-compatibility-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      Peripheral Compatibility Research
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esp32-pinout-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESP32 Pinout Diagram
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pin-allocation-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pin Allocation Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#choice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choice
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-approval-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Post-Approval Checklist
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Power-Budget/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Power Budget
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -858,6 +662,8 @@
       
   
   
+    
+  
   
   
     
@@ -868,33 +674,212 @@
     
     
       
+        
+        
+      
       
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
-  
-  
-    <a href="../../08-API/API/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     08 API
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            08 API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
-        <span class="md-nav__icon md-icon"></span>
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-    </a>
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API / Message Specification
+  </span>
   
 
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API / Message Specification
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packet-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packet Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Specifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msg_gyro-gyroscope-data-0x01" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_GYRO — Gyroscope Data (0x01)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_accel-accelerometer-data-0x02" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACCEL — Accelerometer Data (0x02)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_data_req-data-request-0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_DATA_REQ — Data Request (0x10)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_gyro-gyro-acknowledgment-0x81" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_GYRO — Gyro Acknowledgment (0x81)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_accel-accel-acknowledgment-0x82" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_ACCEL — Accel Acknowledgment (0x82)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_req-data-request-acknowledgment-0x90" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_REQ — Data Request Acknowledgment (0x90)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-receiver-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Receiver Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-sender-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Sender Behavior
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -981,28 +966,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#project-specific-requirements" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Project-Specific Requirements
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#microcontroller" class="md-nav__link">
+  <a href="#packet-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Microcontroller
+      Packet Format
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Microcontroller">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Specifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Specifications">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#esp32-s3-wroom-1-resource-analysis" class="md-nav__link">
+  <a href="#msg_gyro-gyroscope-data-0x01" class="md-nav__link">
     <span class="md-ellipsis">
-      ESP32-S3-WROOM-1 Resource Analysis
+      MSG_GYRO — Gyroscope Data (0x01)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_accel-accelerometer-data-0x02" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACCEL — Accelerometer Data (0x02)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_data_req-data-request-0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_DATA_REQ — Data Request (0x10)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_gyro-gyro-acknowledgment-0x81" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_GYRO — Gyro Acknowledgment (0x81)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_accel-accel-acknowledgment-0x82" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_ACCEL — Accel Acknowledgment (0x82)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msg_ack_req-data-request-acknowledgment-0x90" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSG_ACK_REQ — Data Request Acknowledgment (0x90)
     </span>
   </a>
   
@@ -1014,54 +1062,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#team-role" class="md-nav__link">
+  <a href="#message-receiver-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Team Role
+      Message Receiver Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#peripheral-compatibility-research" class="md-nav__link">
+  <a href="#message-sender-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Peripheral Compatibility Research
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#esp32-pinout-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESP32 Pinout Diagram
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pin-allocation-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pin Allocation Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#choice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choice
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-approval-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Post-Approval Checklist
+      Message Sender Behavior
     </span>
   </a>
   
@@ -1082,7 +1094,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/03-Component-Selection/Microcontroller.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/08-API/API.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
     </a>
@@ -1090,243 +1102,463 @@
   
 
 
-  <h1>Microcontroller</h1>
+  <h1>API / Message Specification</h1>
 
-<h2 id="project-specific-requirements">Project-Specific Requirements</h2>
-<p>Before selecting a microcontroller, the following project-specific requirements were determined based on the navigation sensor subsystem block diagram:</p>
+<h2 id="overview">Overview</h2>
+<p>This page defines the UART message protocol for the IMU (Inertial Measurement Unit) subsystem on Team 305. The subsystem reads orientation data from the <strong>LSM9DS1</strong> 9-axis sensor over I2C and relays it to other team subsystems over a shared UART bus using the EGR 314 class messaging protocol.</p>
 <table>
 <thead>
 <tr>
-<th>Requirement</th>
-<th>Count</th>
+<th>Parameter</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>SPI subsystems</td>
+<td>MCU</td>
+<td>ESP32-S3-WROOM-1</td>
+</tr>
+<tr>
+<td>Sensor</td>
+<td>LSM9DS1 (9-axis IMU)</td>
+</tr>
+<tr>
+<td>UART TX Pin</td>
+<td>GPIO43</td>
+</tr>
+<tr>
+<td>UART RX Pin</td>
+<td>GPIO44</td>
+</tr>
+<tr>
+<td>Baud Rate</td>
+<td>9600 (placeholder — coordinate with team)</td>
+</tr>
+<tr>
+<td>Subsystem Address</td>
+<td><code>0x09</code> (placeholder)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="packet-format">Packet Format</h2>
+<p>All UART messages follow the EGR 314 class messaging protocol. Each packet is 64 bytes total. The message payload occupies <strong>bytes 4–61</strong> (58 bytes maximum).</p>
+<table>
+<thead>
+<tr>
+<th>Byte(s)</th>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td>0</td>
+<td>Preamble</td>
+<td>Fixed value <code>0x41</code> (<code>'A'</code>) — marks start of packet</td>
 </tr>
 <tr>
-<td>UART subsystems</td>
-<td>1 (teammate communication)</td>
-</tr>
-<tr>
-<td>I2C subsystems</td>
-<td>1 (LSM9DS1 gyroscope)</td>
-</tr>
-<tr>
-<td>Power pins</td>
-<td>2 (3.3V, GND)</td>
-</tr>
-<tr>
-<td>Programming pins</td>
-<td>EN, BOOT, TX, RX (USB serial)</td>
-</tr>
-<tr>
-<td>GPIO</td>
-<td>2+ (LED, pushbutton for testing)</td>
-</tr>
-<tr>
-<td>Communication</td>
-<td>I2C (SDA, SCL), UART (RX, TX)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Total pins needed:</strong> ~10–12 (power, ground, programming, I2C, LED, button).</p>
-<h2 id="microcontroller">Microcontroller</h2>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Advantages</th>
-<th>Disadvantages</th>
-<th>Cost &amp; Link</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ESP32-S3-WROOM-1-N4</td>
-<td>Built-in Wi-Fi/Bluetooth, supports I2C/SPI/UART, low power modes, 4MB Flash</td>
-<td>3.3V logic may require level shifters for certain peripherals</td>
-<td>$2.95 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></td>
-</tr>
-<tr>
-<td>ESP8266</td>
-<td>Affordable, simple to use</td>
-<td>Limited GPIO pins, lacks dual-core processor</td>
-<td>$1.60 <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP8266EX/8028401">DigiKey</a></td>
-</tr>
-<tr>
-<td>PIC18F47K42-I/PT</td>
-<td>8-bit PIC® XLP™ MCU, 128 KB Flash, up to 64 MHz, 36 I/O, ADC/SPI/I²C/UART peripherals</td>
-<td>Requires external programmer/debugger, less powerful than higher-end MCUs</td>
-<td>$3.50 <a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47K42-I-PT/7561733">DigiKey</a></td>
-</tr>
-</tbody>
-</table>
-<h3 id="esp32-s3-wroom-1-resource-analysis">ESP32-S3-WROOM-1 Resource Analysis</h3>
-<p>Research was conducted using the <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> to compare project needs against available resources:</p>
-<table>
-<thead>
-<tr>
-<th>Resource</th>
-<th>Project Need</th>
-<th>ESP32-S3 Available</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I2C</td>
 <td>1</td>
-<td>2 controllers</td>
-<td>Exceeds</td>
+<td>Sender ID</td>
+<td>1-byte address of the transmitting subsystem</td>
 </tr>
 <tr>
-<td>UART</td>
-<td>1</td>
-<td>3 controllers</td>
-<td>Exceeds</td>
+<td>2</td>
+<td>Receiver ID</td>
+<td>1-byte address of the target subsystem; <code>0xFF</code> = broadcast</td>
 </tr>
 <tr>
-<td>GPIO</td>
-<td>2+</td>
-<td>~36 (minus flash/PSRAM)</td>
-<td>Exceeds</td>
+<td>3</td>
+<td>Payload Length</td>
+<td>Number of bytes used in bytes 4–61 (valid range: 1–58)</td>
 </tr>
 <tr>
-<td>Power</td>
-<td>3.3V</td>
-<td>3.3V</td>
-<td>Meets</td>
+<td>4–61</td>
+<td><strong>Payload</strong></td>
+<td>Message type byte followed by data bytes (see below)</td>
 </tr>
 <tr>
-<td>SPI</td>
-<td>0</td>
-<td>4 controllers</td>
-<td>Exceeds</td>
+<td>62</td>
+<td>Checksum</td>
+<td>XOR of bytes 1–61</td>
 </tr>
 <tr>
-<td>ADC</td>
-<td>0</td>
-<td>2 SAR ADCs</td>
-<td>Exceeds</td>
-</tr>
-<tr>
-<td>PWM</td>
-<td>0</td>
-<td>LEDC channels</td>
-<td>Exceeds</td>
+<td>63</td>
+<td>Suffix</td>
+<td>Fixed value <code>0x42</code> (<code>'B'</code>) — marks end of packet</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Resources that meet or exceed needs:</strong> The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the LSM9DS1, LED, pushbutton, and teammate communication. Power requirements (3.3V) align with the LM2575-3.3BU regulator. No critical requirements are unmet.</p>
-<p><strong>Resources that exceed needs:</strong> SPI, ADC, and PWM are not required for this subsystem but are available for future expansion. The dual-core processor and Wi-Fi/Bluetooth capabilities also exceed current needs.</p>
-<p><strong>Resources that do not meet needs:</strong> None. All project requirements are satisfied.</p>
-<h2 id="team-role">Team Role</h2>
-<p>I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: <strong>Sensing</strong> — integrating and calibrating the LSM9DS1 gyroscope for navigation data; <strong>Actuation</strong> — none; <strong>Display</strong> — none; <strong>Power</strong> — ensuring the 3.3V rail from the LM2575-3.3BU regulator is suitable for the ESP32 and LSM9DS1; <strong>Communication</strong> — UART for inter-module communication with teammates and I2C for the gyroscope sensor.</p>
-<h2 id="peripheral-compatibility-research">Peripheral Compatibility Research</h2>
-<p>Compatibility between the ESP32-S3 and LSM9DS1 was verified through online research. The assignment notes that the BNO085 IMU has compatibility issues with ESP32 systems running CircuitPython; the LSM9DS1 is a different device with established support across multiple platforms.</p>
-<p><strong>Libraries and examples:</strong>
-- <a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit_LSM9DS1 (Arduino)</a> — Arduino library for the LSM9DS1; supports I2C and SPI, provides calibrated accelerometer, gyroscope, and magnetometer data.
-- <a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">Adafruit CircuitPython LSM9DS1</a> — CircuitPython driver for the LSM9DS1 with full I2C/SPI support.
-- <a href="https://learn.adafruit.com/adafruit-lsm9ds1-accelerometer-plus-gyro-plus-magnetometer-9-dof-breakout/overview">Adafruit LSM9DS1 Tutorial</a> — Wiring diagrams, pinouts, assembly instructions, and example code.</p>
-<p><strong>Interface complexity:</strong> The LSM9DS1 uses I2C (SDA, SCL) with two I2C addresses (one for accel/gyro, one for magnetometer). It requires initialization of both the accelerometer/gyroscope subsystem and the magnetometer subsystem before reading data. This is well-documented through Adafruit's library and tutorial; no low-level library authoring is expected. Both Arduino and CircuitPython have proven support.</p>
-<h2 id="esp32-pinout-diagram">ESP32 Pinout Diagram</h2>
-<p>The pinout diagram for the ESP32-S3-WROOM-1 surface-mount module is from the <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> (Pin Layout / Pin Description section).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../esp32-s3-wroom-1-pinout.png" data-desc-position="bottom"><img alt="ESP32-S3-WROOM-1 Pinout" src="../esp32-s3-wroom-1-pinout.png"></a></p>
-<p><em>Note: Screenshot or extract the Pin Layout / Pin Description figure from the datasheet PDF and save as <code>esp32-s3-wroom-1-pinout.png</code> in this directory.</em></p>
-<h2 id="pin-allocation-table">Pin Allocation Table</h2>
-<p>Each peripheral is allocated to specific pins on the ESP32-S3. GPIO26–32 are reserved for internal SPI flash/PSRAM and should be avoided.</p>
+<blockquote>
+<p><strong>Note:</strong> Bytes 4–61 are the full payload region. Byte 4 is always the message type ID. Data bytes begin at byte 5.</p>
+</blockquote>
+<hr>
+<h2 id="message-type-registry">Message Type Registry</h2>
 <table>
 <thead>
 <tr>
-<th>Peripheral</th>
-<th>Pin(s)</th>
-<th>Notes</th>
+<th>Type ID</th>
+<th>Name</th>
+<th>Direction</th>
+<th>Payload Length</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Power</strong></td>
-<td>3V3, GND</td>
-<td>Per module</td>
+<td><code>0x01</code></td>
+<td><code>MSG_GYRO</code></td>
+<td><strong>SEND</strong></td>
+<td>7 bytes</td>
+<td>Angular velocity X, Y, Z</td>
 </tr>
 <tr>
-<td><strong>UART</strong></td>
-<td>TX (GPIO43), RX (GPIO44)</td>
-<td>USB serial / teammate communication</td>
+<td><code>0x02</code></td>
+<td><code>MSG_ACCEL</code></td>
+<td><strong>SEND</strong></td>
+<td>7 bytes</td>
+<td>Linear acceleration X, Y, Z</td>
 </tr>
 <tr>
-<td><strong>I2C</strong></td>
-<td>SDA (GPIO8), SCL (GPIO9)</td>
-<td>LSM9DS1 (avoids GPIO26–32)</td>
+<td><code>0x10</code></td>
+<td><code>MSG_DATA_REQ</code></td>
+<td><strong>RECEIVE</strong></td>
+<td>2 bytes</td>
+<td>Data request from a teammate</td>
 </tr>
 <tr>
-<td><strong>GPIO</strong></td>
-<td>GPIO21 (LED), GPIO0 (button)</td>
-<td>LED and pushbutton for testing</td>
+<td><code>0x81</code></td>
+<td><code>MSG_ACK_GYRO</code></td>
+<td><strong>SEND</strong></td>
+<td>2 bytes</td>
+<td>Acknowledgment for gyro message</td>
 </tr>
 <tr>
-<td><strong>Programming</strong></td>
-<td>EN, BOOT, IO0</td>
-<td>Per dev board</td>
+<td><code>0x82</code></td>
+<td><code>MSG_ACK_ACCEL</code></td>
+<td><strong>SEND</strong></td>
+<td>2 bytes</td>
+<td>Acknowledgment for accel message</td>
+</tr>
+<tr>
+<td><code>0x90</code></td>
+<td><code>MSG_ACK_REQ</code></td>
+<td><strong>SEND</strong></td>
+<td>2 bytes</td>
+<td>Acknowledgment for data request</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Pin allocation analysis:</strong> Sufficient pins are available. I2C uses GPIO8/9 to avoid conflicted flash/PSRAM pins (GPIO26–32). GPIO0 is a strapping pin (boot mode); if used as a button, ensure a pull-up and that it does not impact boot behavior. Exact pin numbers should be validated against the datasheet and your dev board (e.g., ESP32-S3-DevKitC-1).</p>
-<h2 id="choice">Choice</h2>
+<hr>
+<h2 id="message-specifications">Message Specifications</h2>
+<h3 id="msg_gyro-gyroscope-data-0x01">MSG_GYRO — Gyroscope Data (<code>0x01</code>)</h3>
+<p>Sent periodically by this subsystem (rate-limited by ESP32 hardware timer, ~10 Hz). Contains raw angular velocity from the LSM9DS1 gyroscope at ±245 dps full-scale setting.</p>
+<p><strong>Payload (bytes 4–10):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset (within payload)</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x01</code></td>
+<td><code>0x01</code></td>
+<td><code>0x01</code></td>
+</tr>
+<tr>
+<td>1–2</td>
+<td>5–6</td>
+<td><code>gyr_x</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0x00C8</code> (+200)</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>7–8</td>
+<td><code>gyr_y</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0xFF38</code> (−200)</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>9–10</td>
+<td><code>gyr_z</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0x0000</code> (0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x07</code></p>
+<p><strong>Units:</strong> Raw LSM9DS1 gyro ADC counts. To convert to physical units: multiply by <strong>8.75 mdps/LSB</strong> (±245 dps scale).</p>
+<p><strong>Valid example full packet:</strong></p>
+<div class="highlight"><pre><span></span><code>0x41 0x09 0xFF 0x07 0x01 0x00 0xC8 0xFF 0x38 0x00 0x00 [zeros...] &lt;checksum&gt; 0x42
+</code></pre></div>
+<hr>
+<h3 id="msg_accel-accelerometer-data-0x02">MSG_ACCEL — Accelerometer Data (<code>0x02</code>)</h3>
+<p>Sent periodically alongside gyro data (~10 Hz). Contains raw linear acceleration from the LSM9DS1 accelerometer at ±2g full-scale setting.</p>
+<p><strong>Payload (bytes 4–10):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset (within payload)</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x02</code></td>
+<td><code>0x02</code></td>
+<td><code>0x02</code></td>
+</tr>
+<tr>
+<td>1–2</td>
+<td>5–6</td>
+<td><code>acc_x</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0x0100</code> (+256)</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>7–8</td>
+<td><code>acc_y</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0x0080</code> (+128)</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>9–10</td>
+<td><code>acc_z</code></td>
+<td><code>int16_t</code></td>
+<td><code>-32768</code></td>
+<td><code>32767</code></td>
+<td><code>0x3FFF</code> (+16383)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x07</code></p>
+<p><strong>Units:</strong> Raw LSM9DS1 accelerometer ADC counts. To convert to physical units: multiply by <strong>0.061 mg/LSB</strong> (±2g scale).</p>
+<p><strong>Valid example full packet:</strong></p>
+<div class="highlight"><pre><span></span><code>0x41 0x09 0xFF 0x07 0x02 0x01 0x00 0x00 0x80 0x3F 0xFF [zeros...] &lt;checksum&gt; 0x42
+</code></pre></div>
+<hr>
+<h3 id="msg_data_req-data-request-0x10">MSG_DATA_REQ — Data Request (<code>0x10</code>)</h3>
+<p>Received from a teammate subsystem requesting IMU data. The subsystem responds with the requested message type(s) immediately upon receipt.</p>
+<p><strong>Payload (bytes 4–5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset (within payload)</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x10</code></td>
+<td><code>0x10</code></td>
+<td><code>0x10</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td><code>req_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x01</code></td>
+<td><code>0xFF</code></td>
+<td><code>0xFF</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
+<p><strong><code>req_type</code> values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>Request gyroscope data only</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>Request accelerometer data only</td>
+</tr>
+<tr>
+<td><code>0xFF</code></td>
+<td>Request all data (gyro + accel)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="msg_ack_gyro-gyro-acknowledgment-0x81">MSG_ACK_GYRO — Gyro Acknowledgment (<code>0x81</code>)</h3>
+<p>Sent after successfully receiving and processing any <code>MSG_GYRO</code> packet addressed to this subsystem. Also sent after transmitting a <code>MSG_GYRO</code> response triggered by a <code>MSG_DATA_REQ</code>.</p>
+<p><strong>Payload (bytes 4–5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x81</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td><code>status</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x00</code> = success, <code>0x01</code> = error</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
+<hr>
+<h3 id="msg_ack_accel-accel-acknowledgment-0x82">MSG_ACK_ACCEL — Accel Acknowledgment (<code>0x82</code>)</h3>
+<p>Same structure as <code>MSG_ACK_GYRO</code>; sent in response to <code>MSG_ACCEL</code>.</p>
+<p><strong>Payload (bytes 4–5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x82</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td><code>status</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x00</code> = success, <code>0x01</code> = error</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
+<hr>
+<h3 id="msg_ack_req-data-request-acknowledgment-0x90">MSG_ACK_REQ — Data Request Acknowledgment (<code>0x90</code>)</h3>
+<p>Sent after receiving a valid <code>MSG_DATA_REQ</code>. Confirms the request was received and that the requested data will be transmitted.</p>
+<p><strong>Payload (bytes 4–5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Packet Byte</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td><code>msg_type</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x90</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td><code>status</code></td>
+<td><code>uint8_t</code></td>
+<td><code>0x00</code> = success, <code>0x01</code> = error</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
+<hr>
+<h2 id="message-receiver-behavior">Message Receiver Behavior</h2>
+<p>The ESP32 listens continuously on UART (RX GPIO44). On each received packet:</p>
 <ol>
-<li>
-<p>ESP32-S3-WROOM-1-N4</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true" data-desc-position="bottom"><img alt="ESP32-S3-WROOM-1-N4" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4257/MFG_Attachment-2-ESP32-S3-WROOM-1.jpg?hidebanner=true"></a></p>
-<ul>
-<li>$2.95 each</li>
-<li><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Superior Wi-Fi capabilities</td>
-<td>3.3V logic may require level shifters for some peripherals</td>
-</tr>
-<tr>
-<td>Dual-core processor for multitasking</td>
-<td></td>
-</tr>
-<tr>
-<td>Compatibility with I2C and SPI sensor interfaces</td>
-<td></td>
-</tr>
-<tr>
-<td>Low power modes, 4MB Flash</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
+<li><strong>Validate packet structure</strong> — check preamble (<code>0x41</code>), suffix (<code>0x42</code>), and checksum (XOR bytes 1–61).</li>
+<li><strong>Check payload length</strong> — discard if byte 3 &gt; 58 (exceeds bytes 4–61 capacity).</li>
+<li><strong>Check destination</strong> — read byte 2 (Receiver ID):</li>
+<li>If <code>receiver_id == MY_ID</code> or <code>receiver_id == 0xFF</code>: process the message.</li>
+<li>Otherwise: <strong>forward the packet</strong> unchanged over UART TX (relay behavior).</li>
+<li><strong>Parse message type</strong> (byte 4) and handle:</li>
+<li><code>0x10</code> (<code>MSG_DATA_REQ</code>): send <code>MSG_ACK_REQ</code> then transmit the requested data message(s).</li>
+<li>Unknown type: discard silently.</li>
+<li><strong>Relay takes priority</strong> — forwarding a received packet occurs before sending any new outgoing data.</li>
 </ol>
-<p><strong>Final Rationale:</strong> The ESP32-S3-WROOM-1-N4 is the optimal choice for the IMU subsystem based on the following data-driven rationale:</p>
+<p><strong>Malformed packet conditions (discard immediately):</strong></p>
 <ul>
-<li><strong>Meets requirements:</strong> Provides 1 I2C interface (LSM9DS1), 1 UART (teammate communication), GPIO for LED and pushbutton, and 3.3V operation compatible with the LM2575-3.3BU regulator and LSM9DS1.</li>
-<li><strong>Exceeds requirements:</strong> Offers 2 I2C controllers, 3 UART interfaces, and abundant GPIO beyond current needs, with dual-core processing and Wi-Fi/Bluetooth for future expansion.</li>
-<li><strong>Compatibility:</strong> LSM9DS1 has proven Arduino (<a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit_LSM9DS1</a>) and CircuitPython (<a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">Adafruit CircuitPython LSM9DS1</a>) support; no known major conflicts analogous to BNO085 + CircuitPython.</li>
-<li><strong>Team coordination:</strong> Per assignment instructions, at least one team member uses an ESP32; this selection fulfills that role.</li>
-<li><strong>Block diagram alignment:</strong> Serves as the central processor with I2C sensor interface, LED output, and UART for interconnection, matching the navigation sensor subsystem design.</li>
+<li>Preamble ≠ <code>0x41</code></li>
+<li>Suffix ≠ <code>0x42</code></li>
+<li>Checksum mismatch</li>
+<li>Payload length byte &gt; 58</li>
 </ul>
-<h2 id="post-approval-checklist">Post-Approval Checklist</h2>
-<p>After instructor approval of the microcontroller choice:</p>
-<ul>
-<li><strong>Microchip samples:</strong> N/A — ESP32 selected; PIC teammates may order free samples from Microchip (avoid BGA, QFN, flip chips for Peralta Labs).</li>
-<li><strong>MPLabX / MCC / Melody:</strong> N/A — required for PIC only.</li>
-<li><strong>ESP32:</strong> Finalize pinout and pin allocation; order ESP32-S3-WROOM-1 modules if needed for upcoming assignments.</li>
-</ul>
+<hr>
+<h2 id="message-sender-behavior">Message Sender Behavior</h2>
+<p>The ESP32 transmits IMU data at a fixed rate controlled by an ESP32 hardware timer interrupt (~10 Hz):</p>
+<ol>
+<li><strong>Timer fires</strong> → read latest LSM9DS1 data over I2C.</li>
+<li><strong>Clamp values</strong> — ensure <code>gyr_x/y/z</code> and <code>acc_x/y/z</code> stay within <code>int16_t</code> range (−32768 to 32767). The LSM9DS1 outputs 16-bit values by design, so no overflow is expected, but clamping is enforced defensively.</li>
+<li><strong>Build packet</strong> — fill all 64 bytes: preamble, sender ID, receiver ID, length, payload, checksum, suffix.</li>
+<li><strong>Check UART TX queue</strong> — if a relay packet is pending, send it first.</li>
+<li><strong>Transmit</strong> <code>MSG_GYRO</code> followed by <code>MSG_ACCEL</code> over UART TX (GPIO43).</li>
+<li><strong>Rate limiting</strong> — the hardware timer prevents sending faster than the configured rate; the main loop does not spin-send.</li>
+</ol>
 
 
 
@@ -1365,7 +1597,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Component-Selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Major Components">
+          <a href="../../05-Schematic/schematic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module Schematic">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -1375,20 +1607,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Major Components
+                Module Schematic
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Power-Budget/" class="md-footer__link md-footer__link--next" aria-label="Next: Power Budget">
+          <a href="../../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix - Main Page">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Power Budget
+                Appendix - Main Page
               </div>
             </div>
             <div class="md-footer__button md-icon">
