@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:embedded-systems-design.bitbucket.io)"
+      "WebFetch(domain:embedded-systems-design.bitbucket.io)",
+      "WebFetch(domain:chvisto.github.io)"
     ]
   }
 }
