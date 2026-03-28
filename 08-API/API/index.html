@@ -765,6 +765,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#team-board-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Board IDs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#packet-format" class="md-nav__link">
     <span class="md-ellipsis">
       Packet Format
@@ -793,18 +802,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#msg_gyro-gyroscope-data-0x01" class="md-nav__link">
+  <a href="#msg_gyro-gyroscope-data-0x04" class="md-nav__link">
     <span class="md-ellipsis">
-      MSG_GYRO — Gyroscope Data (0x01)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_accel-accelerometer-data-0x02" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACCEL — Accelerometer Data (0x02)
+      MSG_GYRO — Gyroscope Data (0x04)
     </span>
   </a>
   
@@ -820,27 +820,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#msg_ack_gyro-gyro-acknowledgment-0x81" class="md-nav__link">
+  <a href="#msg_ack-acknowledgment-0xaa" class="md-nav__link">
     <span class="md-ellipsis">
-      MSG_ACK_GYRO — Gyro Acknowledgment (0x81)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_ack_accel-accel-acknowledgment-0x82" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACK_ACCEL — Accel Acknowledgment (0x82)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_ack_req-data-request-acknowledgment-0x90" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACK_REQ — Data Request Acknowledgment (0x90)
+      MSG_ACK — Acknowledgment (0xAA)
     </span>
   </a>
   
@@ -975,6 +957,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#team-board-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Board IDs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#packet-format" class="md-nav__link">
     <span class="md-ellipsis">
       Packet Format
@@ -1003,18 +994,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#msg_gyro-gyroscope-data-0x01" class="md-nav__link">
+  <a href="#msg_gyro-gyroscope-data-0x04" class="md-nav__link">
     <span class="md-ellipsis">
-      MSG_GYRO — Gyroscope Data (0x01)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_accel-accelerometer-data-0x02" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACCEL — Accelerometer Data (0x02)
+      MSG_GYRO — Gyroscope Data (0x04)
     </span>
   </a>
   
@@ -1030,27 +1012,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#msg_ack_gyro-gyro-acknowledgment-0x81" class="md-nav__link">
+  <a href="#msg_ack-acknowledgment-0xaa" class="md-nav__link">
     <span class="md-ellipsis">
-      MSG_ACK_GYRO — Gyro Acknowledgment (0x81)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_ack_accel-accel-acknowledgment-0x82" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACK_ACCEL — Accel Acknowledgment (0x82)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msg_ack_req-data-request-acknowledgment-0x90" class="md-nav__link">
-    <span class="md-ellipsis">
-      MSG_ACK_REQ — Data Request Acknowledgment (0x90)
+      MSG_ACK — Acknowledgment (0xAA)
     </span>
   </a>
   
@@ -1132,17 +1096,65 @@
 </tr>
 <tr>
 <td>Baud Rate</td>
-<td>9600 (placeholder — coordinate with team)</td>
+<td>9600, 8N1</td>
 </tr>
 <tr>
 <td>Subsystem Address</td>
-<td><code>0x09</code> (placeholder)</td>
+<td><code>0x52</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="team-board-ids">Team Board IDs</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Subsystem</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Christo</td>
+<td>HMI</td>
+<td><code>0x43</code></td>
+</tr>
+<tr>
+<td>Liam</td>
+<td>Motor</td>
+<td><code>0x4C</code></td>
+</tr>
+<tr>
+<td>Isaiah</td>
+<td>Environmental</td>
+<td><code>0x49</code></td>
+</tr>
+<tr>
+<td>Arianna</td>
+<td>Camera</td>
+<td><code>0x41</code></td>
+</tr>
+<tr>
+<td>Myles</td>
+<td>Distance</td>
+<td><code>0x4D</code></td>
+</tr>
+<tr>
+<td><strong>Ragul</strong></td>
+<td><strong>Gyroscope</strong></td>
+<td><strong><code>0x52</code></strong></td>
+</tr>
+<tr>
+<td>—</td>
+<td>Broadcast</td>
+<td><code>0x58</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="packet-format">Packet Format</h2>
-<p>All UART messages follow the EGR 314 class messaging protocol. Each packet is 64 bytes total. The message payload occupies <strong>bytes 4–61</strong> (58 bytes maximum).</p>
+<p>All UART messages follow the EGR 314 class messaging protocol. Each packet is <strong>64 bytes</strong> fixed.</p>
 <table>
 <thead>
 <tr>
@@ -1154,43 +1166,43 @@
 <tbody>
 <tr>
 <td>0</td>
-<td>Preamble</td>
-<td>Fixed value <code>0x41</code> (<code>'A'</code>) — marks start of packet</td>
+<td>Prefix byte 1</td>
+<td>Fixed <code>0x41</code></td>
 </tr>
 <tr>
 <td>1</td>
+<td>Prefix byte 2</td>
+<td>Fixed <code>0x5A</code></td>
+</tr>
+<tr>
+<td>2</td>
 <td>Sender ID</td>
 <td>1-byte address of the transmitting subsystem</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Receiver ID</td>
-<td>1-byte address of the target subsystem; <code>0xFF</code> = broadcast</td>
-</tr>
-<tr>
 <td>3</td>
-<td>Payload Length</td>
-<td>Number of bytes used in bytes 4–61 (valid range: 1–58)</td>
+<td>Receiver ID</td>
+<td>1-byte address of the target; <code>0x58</code> = broadcast</td>
 </tr>
 <tr>
 <td>4–61</td>
 <td><strong>Payload</strong></td>
-<td>Message type byte followed by data bytes (see below)</td>
+<td>Message type byte (byte 4) followed by data bytes</td>
 </tr>
 <tr>
 <td>62</td>
-<td>Checksum</td>
-<td>XOR of bytes 1–61</td>
+<td>Suffix byte 1</td>
+<td>Fixed <code>0x59</code></td>
 </tr>
 <tr>
 <td>63</td>
-<td>Suffix</td>
-<td>Fixed value <code>0x42</code> (<code>'B'</code>) — marks end of packet</td>
+<td>Suffix byte 2</td>
+<td>Fixed <code>0x42</code></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Note:</strong> Bytes 4–61 are the full payload region. Byte 4 is always the message type ID. Data bytes begin at byte 5.</p>
+<p>Byte 4 is always the message type ID. Data bytes begin at byte 5.</p>
 </blockquote>
 <hr>
 <h2 id="message-type-registry">Message Type Registry</h2>
@@ -1206,18 +1218,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>0x01</code></td>
+<td><code>0x04</code></td>
 <td><code>MSG_GYRO</code></td>
 <td><strong>SEND</strong></td>
 <td>7 bytes</td>
-<td>Angular velocity X, Y, Z</td>
-</tr>
-<tr>
-<td><code>0x02</code></td>
-<td><code>MSG_ACCEL</code></td>
-<td><strong>SEND</strong></td>
-<td>7 bytes</td>
-<td>Linear acceleration X, Y, Z</td>
+<td>Angular velocity X, Y, Z (scaled −100 to 100)</td>
 </tr>
 <tr>
 <td><code>0x10</code></td>
@@ -1227,32 +1232,19 @@
 <td>Data request from a teammate</td>
 </tr>
 <tr>
-<td><code>0x81</code></td>
-<td><code>MSG_ACK_GYRO</code></td>
+<td><code>0xAA</code></td>
+<td><code>MSG_ACK</code></td>
 <td><strong>SEND</strong></td>
 <td>2 bytes</td>
-<td>Acknowledgment for gyro message</td>
-</tr>
-<tr>
-<td><code>0x82</code></td>
-<td><code>MSG_ACK_ACCEL</code></td>
-<td><strong>SEND</strong></td>
-<td>2 bytes</td>
-<td>Acknowledgment for accel message</td>
-</tr>
-<tr>
-<td><code>0x90</code></td>
-<td><code>MSG_ACK_REQ</code></td>
-<td><strong>SEND</strong></td>
-<td>2 bytes</td>
-<td>Acknowledgment for data request</td>
+<td>Acknowledgment — echoes received message type</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="message-specifications">Message Specifications</h2>
-<h3 id="msg_gyro-gyroscope-data-0x01">MSG_GYRO — Gyroscope Data (<code>0x01</code>)</h3>
-<p>Sent periodically by this subsystem (rate-limited by ESP32 hardware timer, ~10 Hz). Contains raw angular velocity from the LSM9DS1 gyroscope at ±245 dps full-scale setting.</p>
+<h3 id="msg_gyro-gyroscope-data-0x04">MSG_GYRO — Gyroscope Data (<code>0x04</code>)</h3>
+<p>Sent periodically by this subsystem (~10 Hz, rate-limited by ESP32 hardware timer). Contains scaled angular velocity from the LSM9DS1 gyroscope. Raw LSM9DS1 int16_t counts are scaled to the range <strong>−100 to 100</strong> before transmission.</p>
+<p><strong>Sender ID:</strong> <code>0x52</code> | <strong>Receiver ID:</strong> <code>0x58</code> (broadcast) or specific teammate</p>
 <p><strong>Payload (bytes 4–10):</strong></p>
 <table>
 <thead>
@@ -1272,107 +1264,49 @@
 <td>4</td>
 <td><code>msg_type</code></td>
 <td><code>uint8_t</code></td>
-<td><code>0x01</code></td>
-<td><code>0x01</code></td>
-<td><code>0x01</code></td>
+<td><code>0x04</code></td>
+<td><code>0x04</code></td>
+<td><code>0x04</code></td>
 </tr>
 <tr>
 <td>1–2</td>
 <td>5–6</td>
 <td><code>gyr_x</code></td>
 <td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
-<td><code>0x00C8</code> (+200)</td>
+<td><code>-100</code></td>
+<td><code>100</code></td>
+<td><code>0x0032</code> (+50)</td>
 </tr>
 <tr>
 <td>3–4</td>
 <td>7–8</td>
 <td><code>gyr_y</code></td>
 <td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
-<td><code>0xFF38</code> (−200)</td>
+<td><code>-100</code></td>
+<td><code>100</code></td>
+<td><code>0xFFCE</code> (−50)</td>
 </tr>
 <tr>
 <td>5–6</td>
 <td>9–10</td>
 <td><code>gyr_z</code></td>
 <td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
+<td><code>-100</code></td>
+<td><code>100</code></td>
 <td><code>0x0000</code> (0)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x07</code></p>
-<p><strong>Units:</strong> Raw LSM9DS1 gyro ADC counts. To convert to physical units: multiply by <strong>8.75 mdps/LSB</strong> (±245 dps scale).</p>
-<p><strong>Valid example full packet:</strong></p>
-<div class="highlight"><pre><span></span><code>0x41 0x09 0xFF 0x07 0x01 0x00 0xC8 0xFF 0x38 0x00 0x00 [zeros...] &lt;checksum&gt; 0x42
+<p><strong>Payload length:</strong> 7 bytes (bytes 4–10 used)</p>
+<p><strong>Scaling:</strong> Raw LSM9DS1 gyro counts (±245 dps full-scale, 8.75 mdps/LSB) are mapped to −100…100 before encoding:</p>
+<div class="highlight"><pre><span></span><code>scaled = clamp(raw_count * 100 / 32767, -100, 100)
 </code></pre></div>
-<hr>
-<h3 id="msg_accel-accelerometer-data-0x02">MSG_ACCEL — Accelerometer Data (<code>0x02</code>)</h3>
-<p>Sent periodically alongside gyro data (~10 Hz). Contains raw linear acceleration from the LSM9DS1 accelerometer at ±2g full-scale setting.</p>
-<p><strong>Payload (bytes 4–10):</strong></p>
-<table>
-<thead>
-<tr>
-<th>Byte Offset (within payload)</th>
-<th>Packet Byte</th>
-<th>Variable</th>
-<th>Type</th>
-<th>Min</th>
-<th>Max</th>
-<th>Example Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>4</td>
-<td><code>msg_type</code></td>
-<td><code>uint8_t</code></td>
-<td><code>0x02</code></td>
-<td><code>0x02</code></td>
-<td><code>0x02</code></td>
-</tr>
-<tr>
-<td>1–2</td>
-<td>5–6</td>
-<td><code>acc_x</code></td>
-<td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
-<td><code>0x0100</code> (+256)</td>
-</tr>
-<tr>
-<td>3–4</td>
-<td>7–8</td>
-<td><code>acc_y</code></td>
-<td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
-<td><code>0x0080</code> (+128)</td>
-</tr>
-<tr>
-<td>5–6</td>
-<td>9–10</td>
-<td><code>acc_z</code></td>
-<td><code>int16_t</code></td>
-<td><code>-32768</code></td>
-<td><code>32767</code></td>
-<td><code>0x3FFF</code> (+16383)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x07</code></p>
-<p><strong>Units:</strong> Raw LSM9DS1 accelerometer ADC counts. To convert to physical units: multiply by <strong>0.061 mg/LSB</strong> (±2g scale).</p>
 <p><strong>Valid example full packet:</strong></p>
-<div class="highlight"><pre><span></span><code>0x41 0x09 0xFF 0x07 0x02 0x01 0x00 0x00 0x80 0x3F 0xFF [zeros...] &lt;checksum&gt; 0x42
+<div class="highlight"><pre><span></span><code>0x41 0x5A 0x52 0x58 0x04 0x00 0x32 0xFF 0xCE 0x00 0x00 [zeros x51] 0x59 0x42
 </code></pre></div>
 <hr>
 <h3 id="msg_data_req-data-request-0x10">MSG_DATA_REQ — Data Request (<code>0x10</code>)</h3>
-<p>Received from a teammate subsystem requesting IMU data. The subsystem responds with the requested message type(s) immediately upon receipt.</p>
+<p>Received from a teammate subsystem requesting IMU data. Upon receipt, this subsystem sends <code>MSG_ACK</code> then transmits the requested data.</p>
 <p><strong>Payload (bytes 4–5):</strong></p>
 <table>
 <thead>
@@ -1407,7 +1341,6 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
 <p><strong><code>req_type</code> values:</strong></p>
 <table>
 <thead>
@@ -1418,27 +1351,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>0x01</code></td>
+<td><code>0x04</code></td>
 <td>Request gyroscope data only</td>
 </tr>
 <tr>
-<td><code>0x02</code></td>
-<td>Request accelerometer data only</td>
-</tr>
-<tr>
 <td><code>0xFF</code></td>
-<td>Request all data (gyro + accel)</td>
+<td>Request all data</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="msg_ack_gyro-gyro-acknowledgment-0x81">MSG_ACK_GYRO — Gyro Acknowledgment (<code>0x81</code>)</h3>
-<p>Sent after successfully receiving and processing any <code>MSG_GYRO</code> packet addressed to this subsystem. Also sent after transmitting a <code>MSG_GYRO</code> response triggered by a <code>MSG_DATA_REQ</code>.</p>
+<h3 id="msg_ack-acknowledgment-0xaa">MSG_ACK — Acknowledgment (<code>0xAA</code>)</h3>
+<p>Sent after receiving any valid packet addressed to this subsystem. Echoes the received message type in the second payload byte.</p>
+<p><strong>Sender ID:</strong> <code>0x52</code> | <strong>Receiver ID:</strong> ID of the subsystem that sent the original message</p>
 <p><strong>Payload (bytes 4–5):</strong></p>
 <table>
 <thead>
 <tr>
-<th>Byte Offset</th>
+<th>Byte Offset (within payload)</th>
 <th>Packet Byte</th>
 <th>Variable</th>
 <th>Type</th>
@@ -1451,113 +1381,50 @@
 <td>4</td>
 <td><code>msg_type</code></td>
 <td><code>uint8_t</code></td>
-<td><code>0x81</code></td>
+<td><code>0xAA</code></td>
 </tr>
 <tr>
 <td>1</td>
 <td>5</td>
-<td><code>status</code></td>
+<td><code>ack_type</code></td>
 <td><code>uint8_t</code></td>
-<td><code>0x00</code> = success, <code>0x01</code> = error</td>
+<td>Message type being acknowledged (e.g. <code>0x10</code>)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
-<hr>
-<h3 id="msg_ack_accel-accel-acknowledgment-0x82">MSG_ACK_ACCEL — Accel Acknowledgment (<code>0x82</code>)</h3>
-<p>Same structure as <code>MSG_ACK_GYRO</code>; sent in response to <code>MSG_ACCEL</code>.</p>
-<p><strong>Payload (bytes 4–5):</strong></p>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Packet Byte</th>
-<th>Variable</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>4</td>
-<td><code>msg_type</code></td>
-<td><code>uint8_t</code></td>
-<td><code>0x82</code></td>
-</tr>
-<tr>
-<td>1</td>
-<td>5</td>
-<td><code>status</code></td>
-<td><code>uint8_t</code></td>
-<td><code>0x00</code> = success, <code>0x01</code> = error</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
-<hr>
-<h3 id="msg_ack_req-data-request-acknowledgment-0x90">MSG_ACK_REQ — Data Request Acknowledgment (<code>0x90</code>)</h3>
-<p>Sent after receiving a valid <code>MSG_DATA_REQ</code>. Confirms the request was received and that the requested data will be transmitted.</p>
-<p><strong>Payload (bytes 4–5):</strong></p>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Packet Byte</th>
-<th>Variable</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>4</td>
-<td><code>msg_type</code></td>
-<td><code>uint8_t</code></td>
-<td><code>0x90</code></td>
-</tr>
-<tr>
-<td>1</td>
-<td>5</td>
-<td><code>status</code></td>
-<td><code>uint8_t</code></td>
-<td><code>0x00</code> = success, <code>0x01</code> = error</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Payload length field (byte 3):</strong> <code>0x02</code></p>
+<p><strong>Valid example (ACK for a data request from HMI <code>0x43</code>):</strong></p>
+<div class="highlight"><pre><span></span><code>0x41 0x5A 0x52 0x43 0xAA 0x10 [zeros x56] 0x59 0x42
+</code></pre></div>
 <hr>
 <h2 id="message-receiver-behavior">Message Receiver Behavior</h2>
 <p>The ESP32 listens continuously on UART (RX GPIO44). On each received packet:</p>
 <ol>
-<li><strong>Validate packet structure</strong> — check preamble (<code>0x41</code>), suffix (<code>0x42</code>), and checksum (XOR bytes 1–61).</li>
-<li><strong>Check payload length</strong> — discard if byte 3 &gt; 58 (exceeds bytes 4–61 capacity).</li>
-<li><strong>Check destination</strong> — read byte 2 (Receiver ID):</li>
-<li>If <code>receiver_id == MY_ID</code> or <code>receiver_id == 0xFF</code>: process the message.</li>
-<li>Otherwise: <strong>forward the packet</strong> unchanged over UART TX (relay behavior).</li>
-<li><strong>Parse message type</strong> (byte 4) and handle:</li>
-<li><code>0x10</code> (<code>MSG_DATA_REQ</code>): send <code>MSG_ACK_REQ</code> then transmit the requested data message(s).</li>
+<li><strong>Validate prefix</strong> — check bytes 0–1 are <code>0x41 0x5A</code>; discard if not.</li>
+<li><strong>Validate suffix</strong> — check bytes 62–63 are <code>0x59 0x42</code>; discard if not.</li>
+<li><strong>Check destination</strong> — read byte 3 (Receiver ID):</li>
+<li>If <code>receiver_id == 0x52</code> or <code>receiver_id == 0x58</code> (broadcast): process the message.</li>
+<li>Otherwise: <strong>forward the packet</strong> unchanged over UART TX (relay behavior). Relay takes priority over sending new data.</li>
+<li><strong>Parse message type</strong> (byte 4):</li>
+<li><code>0x10</code> (<code>MSG_DATA_REQ</code>): send <code>MSG_ACK</code>, then transmit <code>MSG_GYRO</code>.</li>
 <li>Unknown type: discard silently.</li>
-<li><strong>Relay takes priority</strong> — forwarding a received packet occurs before sending any new outgoing data.</li>
+<li><strong>Byte stuffing</strong> — subtract 1 from reserved bytes within payloads if byte stuffing is applied by the sender.</li>
 </ol>
-<p><strong>Malformed packet conditions (discard immediately):</strong></p>
+<p><strong>Discard conditions:</strong></p>
 <ul>
-<li>Preamble ≠ <code>0x41</code></li>
-<li>Suffix ≠ <code>0x42</code></li>
-<li>Checksum mismatch</li>
-<li>Payload length byte &gt; 58</li>
+<li>Bytes 0–1 ≠ <code>0x41 0x5A</code></li>
+<li>Bytes 62–63 ≠ <code>0x59 0x42</code></li>
+<li>Unknown or unsupported message type addressed to this subsystem</li>
 </ul>
 <hr>
 <h2 id="message-sender-behavior">Message Sender Behavior</h2>
-<p>The ESP32 transmits IMU data at a fixed rate controlled by an ESP32 hardware timer interrupt (~10 Hz):</p>
+<p>The ESP32 transmits gyroscope data at a fixed rate via ESP32 hardware timer interrupt (~10 Hz):</p>
 <ol>
-<li><strong>Timer fires</strong> → read latest LSM9DS1 data over I2C.</li>
-<li><strong>Clamp values</strong> — ensure <code>gyr_x/y/z</code> and <code>acc_x/y/z</code> stay within <code>int16_t</code> range (−32768 to 32767). The LSM9DS1 outputs 16-bit values by design, so no overflow is expected, but clamping is enforced defensively.</li>
-<li><strong>Build packet</strong> — fill all 64 bytes: preamble, sender ID, receiver ID, length, payload, checksum, suffix.</li>
-<li><strong>Check UART TX queue</strong> — if a relay packet is pending, send it first.</li>
-<li><strong>Transmit</strong> <code>MSG_GYRO</code> followed by <code>MSG_ACCEL</code> over UART TX (GPIO43).</li>
-<li><strong>Rate limiting</strong> — the hardware timer prevents sending faster than the configured rate; the main loop does not spin-send.</li>
+<li><strong>Timer fires</strong> → read latest LSM9DS1 gyro data over I2C.</li>
+<li><strong>Scale values</strong> — map raw int16_t counts to −100…100 using the formula above.</li>
+<li><strong>Clamp</strong> — enforce <code>max(-100, min(100, scaled))</code> to guarantee values stay within spec.</li>
+<li><strong>Check relay queue</strong> — if a forwarded packet is pending, transmit it first.</li>
+<li><strong>Build and send</strong> <code>MSG_GYRO</code> packet (64 bytes): prefix + sender <code>0x52</code> + receiver <code>0x58</code> + payload + suffix.</li>
+<li><strong>Rate limiting</strong> — hardware timer prevents sending faster than ~10 Hz; no spin-sending in the main loop.</li>
 </ol>
 
 
