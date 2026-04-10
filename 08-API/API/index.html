@@ -26,7 +26,7 @@
 
     
       
-        <title>API / Message Specification - EGR 314 Ragul Raj's Data Sheet</title>
+        <title>API and Code / Message Specification - EGR 314 Ragul Raj's Data Sheet</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API / Message Specification
+              API and Code / Message Specification
             
           </span>
         </div>
@@ -725,7 +725,7 @@
           
   
   <span class="md-ellipsis">
-    API / Message Specification
+    API and Code / Message Specification
   </span>
   
 
@@ -736,7 +736,7 @@
         
   
   <span class="md-ellipsis">
-    API / Message Specification
+    API and Code / Message Specification
   </span>
   
 
@@ -846,6 +846,15 @@
   <a href="#message-sender-behavior" class="md-nav__link">
     <span class="md-ellipsis">
       Message Sender Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source code
     </span>
   </a>
   
@@ -1043,6 +1052,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source code
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1066,7 +1084,7 @@
   
 
 
-  <h1>API / Message Specification</h1>
+  <h1>API and Code / Message Specification</h1>
 
 <h2 id="overview">Overview</h2>
 <p>This page defines the UART message protocol for the IMU (Inertial Measurement Unit) subsystem on Team 305. The subsystem reads orientation data from the <strong>LSM9DS1</strong> 9-axis sensor over I2C and relays it to other team subsystems over a shared UART bus using the EGR 314 class messaging protocol.</p>
@@ -1426,6 +1444,9 @@
 <li><strong>Build and send</strong> <code>MSG_GYRO</code> packet (64 bytes): prefix + sender <code>0x52</code> + receiver <code>0x58</code> + payload + suffix.</li>
 <li><strong>Rate limiting</strong> — hardware timer prevents sending faster than ~10 Hz; no spin-sending in the main loop.</li>
 </ol>
+<hr>
+<h2 id="source-code">Source code</h2>
+<p><a href="../EGR314_Final.zip">Download firmware and project archive (EGR314_Final.zip)</a></p>
 
 
 
