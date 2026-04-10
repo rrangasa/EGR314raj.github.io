@@ -1,5 +1,5 @@
 ---
-title: API / Message Specification
+title: API and Code / Message Specification
 ---
 
 ## Overview
@@ -165,3 +165,9 @@ The ESP32 transmits gyroscope data at a fixed rate via ESP32 hardware timer inte
 4. **Check relay queue** — if a forwarded packet is pending, transmit it first.
 5. **Build and send** `MSG_GYRO` packet (64 bytes): prefix + sender `0x52` + receiver `0x58` + payload + suffix.
 6. **Rate limiting** — hardware timer prevents sending faster than ~10 Hz; no spin-sending in the main loop.
+
+---
+
+## Source code
+
+[Download firmware and project archive (EGR314_Final.zip)](../EGR314_Final.zip)
