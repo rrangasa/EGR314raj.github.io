@@ -576,6 +576,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision-making process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-block-diagram-meets-product-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the block diagram meets product requirements
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -869,6 +887,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision-making process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-block-diagram-meets-product-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the block diagram meets product requirements
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -897,6 +933,67 @@
 <h2 id="block-diagram">Block Diagram</h2>
 <p>This block diagram shows the navigation sensor subsystem for Team 305, featuring an ESP32 as the central processor, an Adafruit LSM9DS1 9-DOF IMU interfaced via I2C, upstream and downstream headers for interconnection, a red LED output, and a 12V-to-3.3V power supply chain.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual-block-diagram.png" data-desc-position="bottom"><img alt="Block Diagram — Ragul Raj RG, Team 305" src="../individual-block-diagram.png"></a></p>
+<h2 id="decision-making-process">Decision-making process</h2>
+<p>The architecture was developed by working <strong>from the rover interface inward</strong>: the main controller needs orientation data over a simple digital link, the sensor must be rigidly co-located with the MCU on one PCB, and the stack must run from the team’s <strong>12 V</strong> distribution while keeping logic at <strong>3.3 V</strong>. That led to four decisions that shaped the diagram.</p>
+<ol>
+<li><strong>Sensing</strong> — A <strong>serial digital IMU</strong> was required; a 9-DOF LSM9DS1 was chosen because it exceeds the minimum “3-axis accelerometer” requirement while adding gyro and magnetometer data for more robust attitude estimation, still using <strong>I²C</strong> as allowed by the requirements.</li>
+<li><strong>Processing</strong> — An <strong>ESP32</strong> satisfies the “ESP32 or 8-bit PIC at 3.3 V” constraint, provides hardware <strong>I²C</strong> to the IMU, and offers <strong>UART</strong> for a straightforward connection to the upstream rover controller.</li>
+<li><strong>Power</strong> — A <strong>surface-mounted switching regulator</strong> from the 12 V input produces a regulated <strong>3.3 V</strong> domain so every IC (MCU, IMU, support) stays within the single <strong>3.3 V</strong> power requirement.</li>
+<li><strong>Integration</strong> — <strong>Upstream/downstream headers</strong> model mechanical and electrical integration with the rest of the rover; a <strong>status LED</strong> gives local confirmation without adding motor control, which this module explicitly does not include.</li>
+</ol>
+<p>Together, these choices keep the subsystem focused on <strong>sense → process → report</strong> while staying within the course and team mechanical and electrical interfaces.</p>
+<h2 id="how-the-block-diagram-meets-product-requirements">How the block diagram meets product requirements</h2>
+<p>The <a href="../../01-Requirements/Requirements/">module requirements</a> are reflected in the blocks and interfaces below.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement (summary)</th>
+<th>How the block diagram addresses it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface-mounted 3.3 V switching regulator</td>
+<td>Power chain block: 12 V in → regulated <strong>3.3 V</strong> output for the module.</td>
+</tr>
+<tr>
+<td>Surface-mounted microcontroller at 3.3 V</td>
+<td><strong>ESP32</strong> as the central processor in the 3.3 V domain.</td>
+</tr>
+<tr>
+<td>Serial orientation sensor (I²C or SPI)</td>
+<td><strong>LSM9DS1</strong> as the digital sensor; interface shown as <strong>I²C</strong>.</td>
+</tr>
+<tr>
+<td>Orientation data (X, Y, Z acceleration)</td>
+<td>IMU provides acceleration (and gyro/mag) for tilt/orientation.</td>
+</tr>
+<tr>
+<td>MCU–sensor serial communication</td>
+<td><strong>I²C</strong> link between ESP32 and LSM9DS1.</td>
+</tr>
+<tr>
+<td>Single 3.3 V power domain</td>
+<td>All active logic fed from the same regulated <strong>3.3 V</strong> rail (no mixed-voltage logic).</td>
+</tr>
+<tr>
+<td>Sensor rigidly mounted / aligned to rover axes</td>
+<td>IMU placed on the <strong>module PCB</strong> with fixed orientation relative to the board outline.</td>
+</tr>
+<tr>
+<td>No motor or motor driver</td>
+<td>Diagram contains <strong>no</strong> motor or driver blocks.</td>
+</tr>
+<tr>
+<td>Data interface to main rover (UART or I²C)</td>
+<td><strong>UART</strong> (and header connectivity) shown for data to the main controller.</td>
+</tr>
+<tr>
+<td>Fully SMD PCB</td>
+<td>Architecture uses <strong>SMD</strong> MCU, IMU, regulator, and passives as intended for the final PCB.</td>
+</tr>
+</tbody>
+</table>
 
 
 
