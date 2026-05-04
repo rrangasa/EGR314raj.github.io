@@ -4,7 +4,7 @@ title: Module Bill of Materials
 
 ## Overview
 
-The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12V barrel jack input, an LM2575-3.3BU buck regulator for a single 3.3V rail, an ESP32-S3-WROOM-1 microcontroller, and an Adafruit LSM9DS1 breakout for 9-axis inertial sensing.
+The following bill of materials lists every component used in the Gyroscope Subsystem PCB. Costs shown are prototype (single-unit) pricing. The design uses a 12 V barrel jack input, an **LM2575D2T-3.3R4G** buck regulator for a single 3.3 V rail, an ESP32-S3-WROOM-1 microcontroller, and an Adafruit LSM9DS1 breakout for 9-axis inertial sensing.
 
 ## Bill of Materials
 

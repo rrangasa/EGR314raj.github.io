@@ -33,5 +33,5 @@ I am responsible for the **IMU (Inertial Measurement Unit) subsystem** on Team 3
   * [Microcontroller](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Microcontroller/) — ESP32-S3-WROOM-1 selection, pin allocation, and peripheral compatibility analysis
   * [Power Budget](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Power-Budget/) — Full power budget covering all 3.3V consumers, regulator efficiency, and worst-case/low-power analysis
   * [BOM](https://rrangasa.github.io/EGR314raj.github.io/04-BOM/BOM/) — Bill of materials for all components used in the subsystem
-  * [Schematic](https://rrangasa.github.io/EGR314raj.github.io/05-Schematic/schematic/) — KiCad schematic with PDF and project file downloads
+  * [Schematic and PCB](https://rrangasa.github.io/EGR314raj.github.io/05-Schematic/schematic/) — KiCad schematic and PCB layout with PDFs and project downloads
   * [API and Code / Message Spec](https://rrangasa.github.io/EGR314raj.github.io/08-API/API/) — UART message protocol, receiver/sender behavior, and downloadable firmware archive
