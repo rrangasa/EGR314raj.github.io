@@ -2,6 +2,28 @@ site_name: EGR 314 Ragul Raj's Data Sheet
 site_url: https://embedded-systems-design.github.io/EGR314DataSheetTemplate
 repo_url: https://github.com/embedded-systems-design/EGR314DataSheetTemplate
 edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Requirements: 01-Requirements/Requirements.md
+  - Block Diagram: 02-Block-Diagram/Block-Diagram.md
+  - Major Components: 03-Component-Selection/Component-Selection.md
+  - Microcontroller: 03-Component-Selection/Microcontroller.md
+  - Power Budget: 03-Component-Selection/Power-Budget.md
+  - BOM: 04-BOM/BOM.md
+  - Schematic and PCB: 05-Schematic/schematic.md
+  - Hardware V2.0: 06-Hardware-V2/Hardware-V2.md
+  - API: 08-API/API.md
+  - Appendix:
+    - Overview: Appendix/index.md
+    - Component Selection Process: Appendix/01-Componet-Selection/Component-Selection-Process.md
+    - Microcontroller selection (ESP32): Appendix/02-Microcontroller-Selection/esp-32-table.md
+    - Microcontroller selection (PIC): Appendix/02-Microcontroller-Selection/pic-table.md
+    - Power Budget (appendix): Appendix/03-Power-Budget/Power-Budget.md
+    - Example — basic markdown: Appendix/04-Examples-to-Remove/basic-markdown-examples.md
+    - Example — charts: Appendix/04-Examples-to-Remove/charts.md
+    - Example — another subfile: Appendix/04-Examples-to-Remove/another-subfile.md
+
 theme:
   name: material
   custom_dir: custom_theme/

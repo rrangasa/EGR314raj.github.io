@@ -34,4 +34,5 @@ I am responsible for the **IMU (Inertial Measurement Unit) subsystem** on Team 3
   * [Power Budget](https://rrangasa.github.io/EGR314raj.github.io/03-Component-Selection/Power-Budget/) — Full power budget covering all 3.3V consumers, regulator efficiency, and worst-case/low-power analysis
   * [BOM](https://rrangasa.github.io/EGR314raj.github.io/04-BOM/BOM/) — Bill of materials for all components used in the subsystem
   * [Schematic and PCB](https://rrangasa.github.io/EGR314raj.github.io/05-Schematic/schematic/) — KiCad schematic and PCB layout with PDFs and project downloads
+  * [Hardware V2.0](https://rrangasa.github.io/EGR314raj.github.io/06-Hardware-V2/Hardware-V2/) — Planned improvements for a second hardware revision, grounded in the current schematic and PCB
   * [API and Code / Message Spec](https://rrangasa.github.io/EGR314raj.github.io/08-API/API/) — UART message protocol, receiver/sender behavior, and downloadable firmware archive
