@@ -699,11 +699,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pin-allocation-table" class="md-nav__link">
+  <a href="#pin-usage-from-schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      Pin Allocation Table
+      Pin usage (from schematic)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pin usage (from schematic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-allocation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin allocation table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peripheral-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1041,11 +1065,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pin-allocation-table" class="md-nav__link">
+  <a href="#pin-usage-from-schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      Pin Allocation Table
+      Pin usage (from schematic)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pin usage (from schematic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-allocation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin allocation table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peripheral-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1124,7 +1172,7 @@
 </tr>
 <tr>
 <td>GPIO</td>
-<td>2+ (LED, pushbutton for testing)</td>
+<td>4+ (status LEDs, GPIO8 bring-up, header GPIOs, INT)</td>
 </tr>
 <tr>
 <td>Communication</td>
@@ -1132,7 +1180,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Total pins needed:</strong> ~10–12 (power, ground, programming, I2C, LED, button).</p>
+<p><strong>Total pins needed:</strong> ~14–18 (power, ground, boot/enable, I2C + INT, UART, USB, LEDs, GPIO8, header GPIOs).</p>
 <h2 id="microcontroller">Microcontroller</h2>
 <table>
 <thead>
@@ -1220,29 +1268,140 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Resources that meet or exceed needs:</strong> The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the LSM9DS1, LED, pushbutton, and teammate communication. Power requirements (3.3V) align with the LM2575-3.3BU regulator. No critical requirements are unmet.</p>
+<p><strong>Resources that meet or exceed needs:</strong> The ESP32-S3-WROOM-1 provides ample I2C (2 controllers vs 1 needed), UART (3 vs 1), and GPIO for the LSM9DS1, interrupt, status LEDs, GPIO8 bring-up, header GPIOs, and teammate UART. Power requirements (3.3V) align with the LM2575-3.3BU regulator. No critical requirements are unmet.</p>
 <p><strong>Resources that exceed needs:</strong> SPI, ADC, and PWM are not required for this subsystem but are available for future expansion. The dual-core processor and Wi-Fi/Bluetooth capabilities also exceed current needs.</p>
 <p><strong>Resources that do not meet needs:</strong> None. All project requirements are satisfied.</p>
 <h2 id="team-role">Team Role</h2>
-<p>I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: <strong>Sensing</strong> — integrating and calibrating the LSM9DS1 gyroscope for navigation data; <strong>Actuation</strong> — none; <strong>Display</strong> — none; <strong>Power</strong> — ensuring the 3.3V rail from the LM2575-3.3BU regulator is suitable for the ESP32 and LSM9DS1; <strong>Communication</strong> — UART for inter-module communication with teammates and I2C for the gyroscope sensor.</p>
+<p>I am responsible for the IMU (Inertial Measurement Unit) subsystem on Team 305. My responsibilities include: <strong>Sensing</strong> — integrating and calibrating the LSM9DS1 gyroscope for navigation data; <strong>Actuation</strong> — none; <strong>Display</strong> — status LEDs (TX, RX, debug) for bring-up and visibility; <strong>Power</strong> — ensuring the 3.3V rail from the LM2575-3.3BU regulator is suitable for the ESP32 and LSM9DS1; <strong>Communication</strong> — UART for inter-module communication with teammates, native USB for serial/debug, and I2C plus interrupt from the gyroscope sensor.</p>
 <h2 id="peripheral-compatibility-research">Peripheral Compatibility Research</h2>
 <p>Compatibility between the ESP32-S3 and LSM9DS1 was verified through online research. The assignment notes that the BNO085 IMU has compatibility issues with ESP32 systems running CircuitPython; the LSM9DS1 is a different device with established support across multiple platforms.</p>
-<p><strong>Libraries and examples:</strong>
-- <a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit_LSM9DS1 (Arduino)</a> — Arduino library for the LSM9DS1; supports I2C and SPI, provides calibrated accelerometer, gyroscope, and magnetometer data.
-- <a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">Adafruit CircuitPython LSM9DS1</a> — CircuitPython driver for the LSM9DS1 with full I2C/SPI support.
-- <a href="https://learn.adafruit.com/adafruit-lsm9ds1-accelerometer-plus-gyro-plus-magnetometer-9-dof-breakout/overview">Adafruit LSM9DS1 Tutorial</a> — Wiring diagrams, pinouts, assembly instructions, and example code.</p>
+<p><strong>Libraries and examples:</strong></p>
+<ul>
+<li><a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit_LSM9DS1 (Arduino)</a> — Arduino library for the LSM9DS1; supports I2C and SPI, provides calibrated accelerometer, gyroscope, and magnetometer data.</li>
+<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">Adafruit CircuitPython LSM9DS1</a> — CircuitPython driver for the LSM9DS1 with full I2C/SPI support.</li>
+<li><a href="https://learn.adafruit.com/adafruit-lsm9ds1-accelerometer-plus-gyro-plus-magnetometer-9-dof-breakout/overview">Adafruit LSM9DS1 Tutorial</a> — Wiring diagrams, pinouts, assembly instructions, and example code.</li>
+</ul>
 <p><strong>Interface complexity:</strong> The LSM9DS1 uses I2C (SDA, SCL) with two I2C addresses (one for accel/gyro, one for magnetometer). It requires initialization of both the accelerometer/gyroscope subsystem and the magnetometer subsystem before reading data. This is well-documented through Adafruit's library and tutorial; no low-level library authoring is expected. Both Arduino and CircuitPython have proven support.</p>
 <h2 id="esp32-pinout-diagram">ESP32 Pinout Diagram</h2>
 <p>The pinout diagram for the ESP32-S3-WROOM-1 surface-mount module is from the <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a> (Pin Layout / Pin Description section).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../esp32-s3-wroom-1-pinout.png" data-desc-position="bottom"><img alt="ESP32-S3-WROOM-1 Pinout" src="../esp32-s3-wroom-1-pinout.png"></a></p>
 <p><em>Note: Screenshot or extract the Pin Layout / Pin Description figure from the datasheet PDF and save as <code>esp32-s3-wroom-1-pinout.png</code> in this directory.</em></p>
-<h2 id="pin-allocation-table">Pin Allocation Table</h2>
-<p>Each peripheral is allocated to specific pins on the ESP32-S3. GPIO26–32 are reserved for internal SPI flash/PSRAM and should be avoided.</p>
+<h2 id="pin-usage-from-schematic">Pin usage (from schematic)</h2>
+<p>The assignments below match the <strong>Team 305 — Gyro_Subsystem</strong> KiCad schematic (<code>Gyro_Subsystem.kicad_sch</code>, dated 2026-02-21). GPIO26–32 remain reserved for internal SPI flash on the WROOM module and are not used for peripherals. The rendered schematic and PDFs are on the <a href="../../05-Schematic/schematic/">Schematic and PCB</a> page.</p>
+<p>The <strong>pin allocation table</strong> lists only <strong>major</strong> electrical connections (module, sensor, connectors, indicator LEDs). It does <strong>not</strong> list passives, tactile switches, test points, or similar support items even when they appear on the full schematic.</p>
+<h3 id="pin-allocation-table">Pin allocation table</h3>
 <table>
 <thead>
 <tr>
-<th>Peripheral</th>
-<th>Pin(s)</th>
+<th>ESP32-S3 pin</th>
+<th>Schematic function / net</th>
+<th>Primary connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EN</strong></td>
+<td>Enable / reset</td>
+<td>Chip enable (reset control network)</td>
+</tr>
+<tr>
+<td><strong>GPIO0</strong></td>
+<td>Boot strapping</td>
+<td>Boot mode selection input</td>
+</tr>
+<tr>
+<td><strong>GPIO1</strong></td>
+<td>GPIO1</td>
+<td>Connector <strong>J2</strong> (in)</td>
+</tr>
+<tr>
+<td><strong>GPIO2</strong></td>
+<td>GPIO2</td>
+<td>Connector <strong>J2</strong> (in)</td>
+</tr>
+<tr>
+<td><strong>GPIO3</strong></td>
+<td>GPIO3</td>
+<td>Connector <strong>J4</strong> (out)</td>
+</tr>
+<tr>
+<td><strong>GPIO4</strong></td>
+<td>GPIO4</td>
+<td>Connector <strong>J4</strong> (out)</td>
+</tr>
+<tr>
+<td><strong>GPIO8</strong></td>
+<td>Debug / bring-up net</td>
+<td>Digital input (subsystem bring-up)</td>
+</tr>
+<tr>
+<td><strong>GPIO9</strong></td>
+<td><strong>SCL</strong></td>
+<td><strong>I2C clock</strong> — LSM9DS1 (<strong>U2</strong>), header <strong>J5</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO10</strong></td>
+<td><strong>SDA</strong></td>
+<td><strong>I2C data</strong> — LSM9DS1 (<strong>U2</strong>), <strong>J5</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO11</strong></td>
+<td><strong>INT</strong></td>
+<td>Interrupt from LSM9DS1 (<strong>U2</strong>)</td>
+</tr>
+<tr>
+<td><strong>GPIO15</strong></td>
+<td>Debug LED</td>
+<td>White LED <strong>D4</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO16</strong></td>
+<td>TX LED</td>
+<td>Blue LED <strong>D2</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO17</strong></td>
+<td>RX LED</td>
+<td>Red LED <strong>D3</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO19</strong></td>
+<td>USB D−</td>
+<td><strong>J1</strong> USB Micro-B (native USB)</td>
+</tr>
+<tr>
+<td><strong>GPIO20</strong></td>
+<td>USB D+</td>
+<td><strong>J1</strong> USB Micro-B</td>
+</tr>
+<tr>
+<td><strong>GPIO43</strong></td>
+<td><strong>RX</strong></td>
+<td>UART receive — <strong>J2</strong></td>
+</tr>
+<tr>
+<td><strong>GPIO44</strong></td>
+<td><strong>TX</strong></td>
+<td>UART transmit — <strong>J4</strong></td>
+</tr>
+<tr>
+<td><strong>3V3</strong></td>
+<td>+3.3 V</td>
+<td>Regulated rail, sensor, connectors</td>
+</tr>
+<tr>
+<td><strong>GND</strong></td>
+<td>Ground</td>
+<td>Common return</td>
+</tr>
+</tbody>
+</table>
+<h3 id="peripheral-summary">Peripheral summary</h3>
+<table>
+<thead>
+<tr>
+<th>Interface or block</th>
+<th>Pins</th>
 <th>Notes</th>
 </tr>
 </thead>
@@ -1250,31 +1409,51 @@
 <tr>
 <td><strong>Power</strong></td>
 <td>3V3, GND</td>
-<td>Per module</td>
+<td>Module supply from onboard 3.3 V regulator</td>
+</tr>
+<tr>
+<td><strong>I2C (LSM9DS1)</strong></td>
+<td>GPIO9 (SCL), GPIO10 (SDA)</td>
+<td>To <strong>U2</strong>; same bus on <strong>J5</strong></td>
+</tr>
+<tr>
+<td><strong>IMU interrupt</strong></td>
+<td>GPIO11</td>
+<td>From <strong>U2</strong> INT</td>
 </tr>
 <tr>
 <td><strong>UART</strong></td>
-<td>TX (GPIO43), RX (GPIO44)</td>
-<td>USB serial / teammate communication</td>
+<td>GPIO43 (RX), GPIO44 (TX)</td>
+<td>Header interconnect (<strong>J2</strong> / <strong>J4</strong>)</td>
 </tr>
 <tr>
-<td><strong>I2C</strong></td>
-<td>SDA (GPIO8), SCL (GPIO9)</td>
-<td>LSM9DS1 (avoids GPIO26–32)</td>
+<td><strong>Native USB</strong></td>
+<td>GPIO19 (D−), GPIO20 (D+)</td>
+<td><strong>J1</strong> Micro-B for firmware and USB serial</td>
 </tr>
 <tr>
-<td><strong>GPIO</strong></td>
-<td>GPIO21 (LED), GPIO0 (button)</td>
-<td>LED and pushbutton for testing</td>
+<td><strong>Status LEDs</strong></td>
+<td>GPIO15, GPIO16, GPIO17</td>
+<td>White (debug), blue (TX), red (RX)</td>
 </tr>
 <tr>
-<td><strong>Programming</strong></td>
-<td>EN, BOOT, IO0</td>
-<td>Per dev board</td>
+<td><strong>Digital input</strong></td>
+<td>GPIO8</td>
+<td>Bring-up / test net per schematic</td>
+</tr>
+<tr>
+<td><strong>Expansion GPIO</strong></td>
+<td>GPIO1–GPIO4</td>
+<td><strong>J2</strong> / <strong>J4</strong></td>
+</tr>
+<tr>
+<td><strong>Reset / boot strapping</strong></td>
+<td>EN, GPIO0</td>
+<td>Reset enable and boot mode</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Pin allocation analysis:</strong> Sufficient pins are available. I2C uses GPIO8/9 to avoid conflicted flash/PSRAM pins (GPIO26–32). GPIO0 is a strapping pin (boot mode); if used as a button, ensure a pull-up and that it does not impact boot behavior. Exact pin numbers should be validated against the datasheet and your dev board (e.g., ESP32-S3-DevKitC-1).</p>
+<p><strong>Pin allocation analysis:</strong> I2C and the IMU interrupt use GPIO9–11, clear of the flash/PSRAM pin block. UART uses GPIO43/44. USB uses the S3 native USB pins on GPIO19/20 to <strong>J1</strong>. <strong>GPIO0</strong> is a strapping pin for boot mode; firmware and reset behavior must keep strapping requirements in mind. Passives, switches, and test hardware are omitted from the tables above but remain on the schematic for implementation.</p>
 <h2 id="choice">Choice</h2>
 <ol>
 <li>
@@ -1314,7 +1493,7 @@
 </ol>
 <p><strong>Final Rationale:</strong> The ESP32-S3-WROOM-1-N4 is the optimal choice for the IMU subsystem based on the following data-driven rationale:</p>
 <ul>
-<li><strong>Meets requirements:</strong> Provides 1 I2C interface (LSM9DS1), 1 UART (teammate communication), GPIO for LED and pushbutton, and 3.3V operation compatible with the LM2575-3.3BU regulator and LSM9DS1.</li>
+<li><strong>Meets requirements:</strong> Provides 1 I2C interface to the LSM9DS1 (GPIO9/10) plus INT on GPIO11, 1 UART on GPIO43/44 for header interconnect, native USB on GPIO19/20, status LEDs and GPIO8 bring-up, and 3.3 V operation compatible with the LM2575-3.3BU regulator and LSM9DS1.</li>
 <li><strong>Exceeds requirements:</strong> Offers 2 I2C controllers, 3 UART interfaces, and abundant GPIO beyond current needs, with dual-core processing and Wi-Fi/Bluetooth for future expansion.</li>
 <li><strong>Compatibility:</strong> LSM9DS1 has proven Arduino (<a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit_LSM9DS1</a>) and CircuitPython (<a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">Adafruit CircuitPython LSM9DS1</a>) support; no known major conflicts analogous to BNO085 + CircuitPython.</li>
 <li><strong>Team coordination:</strong> Per assignment instructions, at least one team member uses an ESP32; this selection fulfills that role.</li>
@@ -1325,7 +1504,7 @@
 <ul>
 <li><strong>Microchip samples:</strong> N/A — ESP32 selected; PIC teammates may order free samples from Microchip (avoid BGA, QFN, flip chips for Peralta Labs).</li>
 <li><strong>MPLabX / MCC / Melody:</strong> N/A — required for PIC only.</li>
-<li><strong>ESP32:</strong> Finalize pinout and pin allocation; order ESP32-S3-WROOM-1 modules if needed for upcoming assignments.</li>
+<li><strong>ESP32:</strong> Pinout matches the Gyro_Subsystem schematic above; order ESP32-S3-WROOM-1 modules as needed for lab builds.</li>
 </ul>
 
 
