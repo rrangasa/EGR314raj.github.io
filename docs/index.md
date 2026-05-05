@@ -2,6 +2,13 @@
 title: Welcome
 ---
 
+<center>
+<font size= "6">Ragul Raj's Datasheet</font><br>
+as part of<br>
+<font size= "8"> Gyroscope Subsystem</font><br>
+for<br>
+<font size= "5"> Team 305 </font><br>
+
 <figure class="home-hero" markdown="0">
   <img
     src="05-Schematic/Soldered_Front.jpeg"
@@ -9,15 +16,7 @@ title: Welcome
     loading="eager"
     decoding="async"
   >
-  <figcaption class="home-hero__caption">Soldered assembly — component (front) side.</figcaption>
 </figure>
-
-<center>
-<font size= "6">Ragul Raj's Datasheet</font><br>
-as part of<br>
-<font size= "8"> Gyroscope Subsystem</font><br>
-for<br>
-<font size= "5"> Team 305 </font><br>
 
 **Submission: May, 05, 2026**
 </center>
