@@ -3,20 +3,13 @@ title: Appendix - Power Budget
 ---
 
 ## Overview
-Write a overview of what you did and why you did a Power Budget.
 
-> Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
+The full, datasheet-referenced power budget for Team 305’s gyroscope subsystem—including rail architecture, load tables, LM2575 efficiency, typical vs. peak Wi-Fi, and sleep estimates—is documented in the main body:
 
-![budget1](budgetPg1.png){style width:"350" height:"300;"}
+**[Power Budget](../../03-Component-Selection/Power-Budget.md)**
 
-![budget2](budgetPg2.png){style width:"350" height:"300;"}
-
-![budget3](budgetPg3.png){style width:"350" height:"300;"}
+Use that page for numeric tables, assumptions, and conclusions. This appendix entry exists only as a navigation shortcut within the Appendix section.
 
 ## Conclusions
 
-From the prepare Power Budget, .....
-
-## Resouces
-
-The power budget as a PDF download is available [*here*](PowerBudgetExample.pdf), and a Microsoft Excel Sheet [*here*](PowerBudgetExample.xlsx).
+Summaries and design conclusions are maintained in the linked document so figures, sections, and BOM cross-references stay in one place.

@@ -22,9 +22,6 @@ nav:
     - Microcontroller selection (ESP32): Appendix/02-Microcontroller-Selection/esp-32-table.md
     - Microcontroller selection (PIC): Appendix/02-Microcontroller-Selection/pic-table.md
     - Power Budget (appendix): Appendix/03-Power-Budget/Power-Budget.md
-    - Example — basic markdown: Appendix/04-Examples-to-Remove/basic-markdown-examples.md
-    - Example — charts: Appendix/04-Examples-to-Remove/charts.md
-    - Example — another subfile: Appendix/04-Examples-to-Remove/another-subfile.md
 
 theme:
   name: material
