@@ -18,6 +18,25 @@ blockquote{
 }
 
 /*
+ * Top navigation tabs: Material keeps tabs on one row with clipped overflow,
+ * so the last sections (e.g. Appendix) can sit off-screen. Wrapping exposes
+ * every top-level tab without relying on horizontal scroll.
+ */
+.md-tabs {
+    overflow: visible;
+}
+
+.md-tabs__inner {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.md-tabs__list {
+    flex-wrap: wrap;
+    row-gap: 0.125rem;
+}
+
+/*
  * BOM wide table — slightly break out of the prose column so fewer cells need
  * horizontal scrolling; URLs still wrap when possible.
  */
