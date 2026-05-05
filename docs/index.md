@@ -36,3 +36,4 @@ I am responsible for the **IMU (Inertial Measurement Unit) subsystem** on Team 3
   * [Schematic and PCB](https://rrangasa.github.io/EGR314raj.github.io/05-Schematic/schematic/) — KiCad schematic and PCB layout with PDFs and project downloads
   * [Hardware V2.0](https://rrangasa.github.io/EGR314raj.github.io/06-Hardware-V2/Hardware-V2/) — Planned improvements for a second hardware revision, grounded in the current schematic and PCB
   * [API and Code / Message Spec](https://rrangasa.github.io/EGR314raj.github.io/08-API/API/) — UART message protocol, receiver/sender behavior, and downloadable firmware archive
+  * [Resources](https://rrangasa.github.io/EGR314raj.github.io/Resources/Resources/) — Final ESP32/MPLab project ZIP and embedded demonstration video

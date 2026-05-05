@@ -14,6 +14,7 @@ nav:
   - Schematic and PCB: 05-Schematic/schematic.md
   - Hardware V2.0: 06-Hardware-V2/Hardware-V2.md
   - API: 08-API/API.md
+  - Resources: Resources/Resources.md
   - Appendix:
     - Overview: Appendix/index.md
     - Component Selection Process: Appendix/01-Componet-Selection/Component-Selection-Process.md
