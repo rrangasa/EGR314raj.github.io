@@ -1,3 +1,35 @@
+/* Homepage hero: soldered PCB (component side) banner */
+.home-hero {
+    margin: 0 0 2rem;
+    width: 100%;
+}
+
+.home-hero img {
+    width: 100%;
+    height: auto;
+    max-height: min(58vh, 36rem);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.4rem;
+    display: block;
+    box-shadow: var(--md-shadow-z2, 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15));
+}
+
+.home-hero__caption {
+    margin: 0.6rem 0 0;
+    font-size: 0.92rem;
+    color: var(--md-typeset-color);
+    opacity: 0.88;
+    text-align: center;
+    font-style: italic;
+}
+
+@media (max-width: 44.984375em) {
+    .home-hero img {
+        max-height: min(52vh, 22rem);
+    }
+}
+
 /* Estimation/conclusions narrative: avoid default bold heading weight (Material theme) */
 .md-typeset h2.pw-narr-normal,
 .md-typeset h3.pw-narr-normal {
