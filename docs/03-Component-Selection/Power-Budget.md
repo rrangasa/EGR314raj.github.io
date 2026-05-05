@@ -155,33 +155,33 @@ The **1 A** fuse and **1 A** regulator output limit remain **comfortable**: subs
 
 ---
 
-## How the power budget was used (estimation and conclusions)
+## How the power budget was used (estimation and conclusions){ .pw-narr-normal }
 
-### How estimates were built
+### How estimates were built{ .pw-narr-normal }
 
-1. **Define rails** — The subsystem has one **12 V** input (**J3**, after **F1**) and one regulated **3.3 V** rail from **U4**. **J1** (USB) is for programming/serial to the ESP32 and does **not** feed the buck; it is excluded from the 3.3 V rail totals (see Section E).
+1. Define rails — The subsystem has one 12 V input (J3, after F1) and one regulated 3.3 V rail from U4. J1 (USB) is for programming/serial to the ESP32 and does not feed the buck; it is excluded from the 3.3 V rail totals (see Section E).
 
-2. **Major IC currents (datasheets)** — The ESP32-S3-WROOM-1 supplies **typical high RF** (~240 mA) and **peak Wi-Fi TX** (**355 mA**) figures so the team can size the regulator for both “normal stress” and short RF peaks. The LSM9DS1 (via the Adafruit breakout) uses **~4.5 mA** with all sensing elements active, and **~6 µA** in power-down for the low-power scenario.
+2. Major IC currents (datasheets) — The ESP32-S3-WROOM-1 supplies typical high RF (~240 mA) and peak Wi-Fi TX (355 mA) figures so the team can size the regulator for both “normal stress” and short RF peaks. The LSM9DS1 (via the Adafruit breakout) uses ~4.5 mA with all sensing elements active, and ~6 µA in power-down for the low-power scenario.
 
-3. **Indicator and bias currents (schematic + BOM)** — LED currents were estimated from **3.3 V**, assumed **Vf**, and the **~470 Ω** series resistors listed on the [BOM](../04-BOM/BOM.md). I²C and reset/boot bias use **rounded** milliamp values that combine the on-board **5.1 kΩ** path and breakout behavior so the budget stays conservative without modeling every net.
+3. Indicator and bias currents (schematic + BOM) — LED currents were estimated from 3.3 V, assumed Vf, and the ~470 Ω series resistors listed on the [BOM](../04-BOM/BOM.md). I²C and reset/boot bias use rounded milliamp values that combine the on-board 5.1 kΩ path and breakout behavior so the budget stays conservative without modeling every net.
 
-4. **3.3 V rail sum** — All DC loads on the 3.3 V net are added for **typical high** and **peak RF** cases. That total sets approximate **output power** as rail voltage times total DC current.
+4. 3.3 V rail sum — All DC loads on the 3.3 V net are added for typical high and peak RF cases. That total sets approximate output power as rail voltage times total DC current.
 
-5. **12 V input current** — The buck’s **~77 %** efficiency at **~250 mA** class load (from the LM2575 family curve) translates output power to approximate **input power**, then divides by **12 V** for input current, plus **~5 mA** regulator quiescent current from the datasheet. Peak RF uses the same efficiency as a first-order bound (actual efficiency may differ slightly at **~370 mA** out).
+5. 12 V input current — The buck’s ~77 % efficiency at ~250 mA class load (from the LM2575 family curve) translates output power to approximate input power, then divides by 12 V for input current, plus ~5 mA regulator quiescent current from the datasheet. Peak RF uses the same efficiency as a first-order bound (actual efficiency may differ slightly at ~370 mA out).
 
-6. **Compare to limits** — Totals are compared to **U4**’s **1 A** output capability and **F1**’s **1 A** rating so the **Team 305** rover integration can see how much of the fuse and regulator budget this board consumes before adding teammates’ loads on shared 12 V distribution.
+6. Compare to limits — Totals are compared to U4’s 1 A output capability and F1’s 1 A rating so the Team 305 rover integration can see how much of the fuse and regulator budget this board consumes before adding teammates’ loads on shared 12 V distribution.
 
-### Conclusions
+### Conclusions{ .pw-narr-normal }
 
-- **The ESP32 sets the power envelope.** Even with all status LEDs on and the IMU active, the MCU (especially Wi-Fi) accounts for the vast majority of **3.3 V** current; sensor and LED power are comparatively small.
+- The ESP32 sets the power envelope. Even with all status LEDs on and the IMU active, the MCU (especially Wi-Fi) accounts for the vast majority of 3.3 V current; sensor and LED power are comparatively small.
 
-- **The LM2575D2T-3.3R4G is appropriately sized.** Typical-high load is **~253 mA**; datasheet-peak RF is **~368 mA** on **3.3 V** — both are far below the **1 A** device limit, leaving **hundreds of mA** of headroom for tolerance and small add-ons brought out on **J2** / **J4**.
+- The LM2575D2T-3.3R4G is appropriately sized. Typical-high load is ~253 mA; datasheet-peak RF is ~368 mA on 3.3 V — both are far below the 1 A device limit, leaving hundreds of mA of headroom for tolerance and small add-ons brought out on J2 / J4.
 
-- **12 V team impact is modest.** Typical-high **12 V** draw is **~95 mA**; peak RF case is **~137 mA**. Either is a small fraction of a **1 A** input fuse, so this subsystem should not dominate a multi-module **12 V** feed by itself, provided other teammates stay within their own budgets.
+- 12 V team impact is modest. Typical-high 12 V draw is ~95 mA; peak RF case is ~137 mA. Either is a small fraction of a 1 A input fuse, so this subsystem should not dominate a multi-module 12 V feed by itself, provided other teammates stay within their own budgets.
 
-- **Sleep modes matter for average power.** Modem-sleep and IMU power-down drop the **3.3 V** rail to **~22 mA** in this estimate; average rover current during navigation idle will be much lower than the Wi-Fi-active table.
+- Sleep modes matter for average power. Modem-sleep and IMU power-down drop the 3.3 V rail to ~22 mA in this estimate; average rover current during navigation idle will be much lower than the Wi-Fi-active table.
 
-- **USB vs barrel is clear for budgeting** — Treating **J1** as non-feeding for the buck avoids double-counting when the rover is powered from **J3** only; firmware flashing over USB does not change the **12 V → U4 → 3.3 V** story for field operation.
+- USB vs barrel is clear for budgeting — Treating J1 as non-feeding for the buck avoids double-counting when the rover is powered from J3 only; firmware flashing over USB does not change the 12 V → U4 → 3.3 V story for field operation.
 
 ---
 

@@ -8,6 +8,8 @@ The following bill of materials lists every component used in the Gyroscope Subs
 
 ## Bill of Materials
 
+<div class="bom-full-width" markdown="1">
+
 | **Part Name/Description** | **Qty** | **Unit Cost** | **Total Cost** | **Manufacturer** | **Manufacturer #** | **Vendor Link** | **Datasheet Link** | **Schematic Reference Designators** |
 |:--------------------------|:--------|:--------------|:---------------|:-----------------|:--------------------|:----------------|:--------------------|:------------------------------------|
 | ESP32-S3-WROOM-1-N4, WiFi+BLE MCU Module, 2.4 GHz | 1 | $3.30 | $3.30 | Espressif | ESP32-S3-WROOM-1-N4 | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) | U1 |
@@ -35,6 +37,8 @@ The following bill of materials lists every component used in the Gyroscope Subs
 | PCB Test Point, Loop Style, THT | 20 | $0.20 | $4.00 | Keystone | 5000 | [DigiKey](https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326) | — | TP1–TP33 (as populated) |
 | | | | | | | | | |
 | | | **Total** | **$46.47** | | | | | |
+
+</div>
 
 ## Resource
 
