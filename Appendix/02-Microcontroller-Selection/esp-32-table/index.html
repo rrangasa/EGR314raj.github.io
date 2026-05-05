@@ -729,12 +729,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -873,69 +867,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-Examples-to-Remove/basic-markdown-examples/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Example — basic markdown
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-Examples-to-Remove/charts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Example — charts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-Examples-to-Remove/another-subfile/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Example — another subfile
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -989,154 +920,137 @@
 <tr>
 <th>ESP Info</th>
 <th>Answer</th>
-<th>Help</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
-<td>?</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>4 MB flash variant used on Team 305 gyro subsystem</td>
 </tr>
 <tr>
-<td>Product Page URL</td>
-<td>?</td>
-<td>Found on Espressif.com</td>
+<td>Product page</td>
+<td><a href="https://www.espressif.com/en/products/socs/esp32-s3">Espressif ESP32-S3</a></td>
+<td>—</td>
 </tr>
 <tr>
-<td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td>Module datasheet</td>
+<td><a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 / WROOM-1U datasheet</a></td>
+<td>Pinout, electrical limits, RF current bands</td>
 </tr>
 <tr>
-<td>ESP32 S3 Datasheet URL</td>
-<td>?</td>
-<td>Has more detail on functions</td>
+<td>ESP32-S3 datasheet</td>
+<td><a href="https://documentation.espressif.com/esp32-s3_datasheet_en.pdf">ESP32-S3 Series datasheet</a></td>
+<td>Peripheral detail</td>
 </tr>
 <tr>
-<td>ESP32 S3 Technical Reference Manual URL</td>
-<td>?</td>
-<td>Has details on I/O multiplexing, USB, and others</td>
+<td>Technical reference manual</td>
+<td><a href="https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 TRM</a></td>
+<td>IO mux, timers, USB, etc.</td>
 </tr>
 <tr>
-<td>Vendor link</td>
-<td>?</td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td>Vendor (example)</td>
+<td><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">$2.95 @ DigiKey — ESP32-S3-WROOM-1-N4</a></td>
+<td>Team BOM may use another authorized distributor</td>
 </tr>
 <tr>
-<td>Code Examples</td>
-<td>?</td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
+<td>Code examples</td>
+<td><a href="https://github.com/adafruit/Adafruit_LSM9DS1">Adafruit LSM9DS1 (Arduino)</a>, <a href="https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1">CircuitPython driver</a></td>
+<td>Matches onboard IMU breakout</td>
 </tr>
 <tr>
-<td>External Resources URL(s)</td>
-<td>?</td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
+<td>External resources</td>
+<td><a href="https://learn.adafruit.com/adafruit-lsm9ds1-accelerometer-plus-gyro-plus-magnetometer-9-dof-breakout/overview">Adafruit LSM9DS1 guide</a></td>
+<td>Wiring and bring-up</td>
 </tr>
 <tr>
-<td>Unit cost</td>
-<td>?</td>
-<td>Find on Digikey, Jameco, MPJA, or octopart</td>
+<td>Unit cost (reference)</td>
+<td>~$2.95/module ( qty-1 DigiKey class pricing )</td>
+<td>Verify against current PO</td>
 </tr>
 <tr>
-<td>Absolute Maximum Current for entire IC</td>
-<td>?</td>
-<td>Find in the microcontroller datasheet</td>
+<td>Absolute maximum current (module)</td>
+<td>Budget uses <strong>~355 mA</strong> peak Wi-Fi TX envelope per datasheet discussion on <a href="../../../03-Component-Selection/Power-Budget/">Power Budget</a></td>
+<td>Full detail in WROOM datasheet</td>
 </tr>
 <tr>
-<td>Supply Voltage Range</td>
-<td>?</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
+<td>Supply voltage range</td>
+<td><strong>3.3 V</strong> nominal (regulated on-card from 12 V buck)</td>
+<td>Per module operating conditions</td>
 </tr>
 <tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Maximum GPIO current (per pin)</td>
+<td>Design stays within standard <strong>~40 mA</strong> class GPIO drive assumptions unless datasheet stricter; high current on LEDs uses series resistors</td>
+<td>See TRM GPIO chapter</td>
 </tr>
 <tr>
-<td>Maximum GPIO current <br> (per pin)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>External interrupts</td>
+<td>Yes — <strong>GPIO11</strong> wired to LSM9DS1 INT</td>
+<td></td>
 </tr>
 <tr>
-<td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Required Programming Hardware, Cost, URL</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Programming hardware</td>
+<td>Native <strong>USB</strong> (<strong>J1</strong>) to GPIO19/20; serial boot / UART optional</td>
+<td>No separate JTAG pod required for baseline bring-up</td>
 </tr>
 </tbody>
 </table>
+<p>Peripheral capacity vs. this design (see also <a href="../../../03-Component-Selection/Microcontroller/">Microcontroller</a> pin table):</p>
 <table>
 <thead>
 <tr>
 <th>Module</th>
-<th># Available</th>
+<th># Available (class)</th>
 <th>Needed</th>
-<th>Associated Pins (or * for any)</th>
+<th>Associated pins (this PCB)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>UART</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>3 controllers</td>
+<td>1</td>
+<td>GPIO43 (RX), GPIO44 (TX) — <strong>J2</strong> / <strong>J4</strong></td>
 </tr>
 <tr>
-<td>external SPI*</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>SPI</td>
+<td>4 (SoC)</td>
+<td>0</td>
+<td>Flash/PSRAM occupy module SPI; not broken out for sensors</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2</td>
+<td>1</td>
+<td>GPIO9 (SCL), GPIO10 (SDA), <strong>GPIO11</strong> INT — <strong>U2</strong>, <strong>J5</strong></td>
 </tr>
 <tr>
 <td>GPIO</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>Many free after flash pins</td>
+<td>Several</td>
+<td>LEDs, GPIO8, <strong>J2</strong>/<strong>J4</strong> expansion, strapping (<strong>EN</strong>, <strong>GPIO0</strong>)</td>
 </tr>
 <tr>
-<td>ADC</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>SAR ADC</td>
+<td>2</td>
+<td>0</td>
+<td>Available if future analog needed</td>
 </tr>
 <tr>
-<td>LED PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>LEDC PWM</td>
+<td>Multiple channels</td>
+<td>Status LEDs driven GPIO</td>
+<td>Simple on/off for D2–D5</td>
 </tr>
 <tr>
-<td>Motor PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>USB Programmer</td>
-<td>?</td>
+<td>USB device</td>
+<td>Native USB OTG-capable pairing</td>
 <td>1</td>
-<td>?</td>
-</tr>
-<tr>
-<td>...</td>
-<td></td>
-<td></td>
-<td></td>
+<td>GPIO19/GPIO20 → <strong>J1</strong></td>
 </tr>
 </tbody>
 </table>
-<p>* The ESP32-S2 has multiple SPI interfaces, but some are for internal use</p>
 
 
 
