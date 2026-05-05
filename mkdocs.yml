@@ -15,6 +15,7 @@ nav:
   - Hardware V2.0: 06-Hardware-V2/Hardware-V2.md
   - API: 08-API/API.md
   - Resources: Resources/Resources.md
+  - Reflection: 09-Reflection/Reflection.md
   - Appendix:
     - Overview: Appendix/index.md
     - Component Selection Process: Appendix/01-Componet-Selection/Component-Selection-Process.md
